@@ -2,3 +2,6 @@ node_modules
 .DS_Store
 .vscode
 dist
+
+# We use Yarn workspaces — npm lockfiles must not be committed
+package-lock.json
