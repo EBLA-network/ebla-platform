@@ -1,5 +1,5 @@
 {
-  "name": "@taraxa_project/explorer-shared",
+  "name": "@ebla-network/explorer-shared",
   "version": "0.0.1",
   "description": "Taraxa Explorer Shared",
   "main": "lib/src/index.js",

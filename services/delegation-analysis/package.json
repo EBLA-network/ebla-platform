@@ -1,5 +1,5 @@
 {
-  "name": "@taraxa_project/delegation-analysis",
+  "name": "@ebla-network/delegation-analysis",
   "version": "1.0.0",
   "description": "Package for CLI and general-purpose scripts used in the Taraxa Ecosystem",
   "main": "index.ts",

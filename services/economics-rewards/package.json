@@ -1,5 +1,5 @@
 {
-  "name": "@taraxa_project/economics-rewards",
+  "name": "@ebla-network/economics-rewards",
   "version": "0.0.1",
   "description": "Taraxa script for reading validators",
   "main": "index.js",
