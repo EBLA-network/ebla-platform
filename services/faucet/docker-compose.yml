@@ -6,7 +6,7 @@ services:
       context: ../../
       target: build
       dockerfile: services/faucet/Dockerfile
-    command: yarn workspace @taraxa_project/faucet start:prod
+    command: yarn workspace @ebla-network/faucet start:prod
     ports:
       - ${SERVER_PORT}:3002
     volumes:

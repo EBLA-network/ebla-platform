@@ -6,7 +6,7 @@ services:
       context: ../../
       target: build
       dockerfile: services/economics-rewards/Dockerfile
-    command: yarn workspace @taraxa_project/economics-rewards start:prod
+    command: yarn workspace @ebla-network/economics-rewards start:prod
     volumes:
       - ./data/economics:/app/data
       - /app/node_modules

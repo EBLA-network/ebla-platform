@@ -15,7 +15,7 @@ RUN yarn install --frozen-lockfile \
     && yarn cache clean
 
 COPY services/economics-rewards ./services/economics-rewards
-RUN yarn workspace @taraxa_project/economics-rewards build
+RUN yarn workspace @ebla-network/economics-rewards build
 
 FROM node:16.18.1-alpine AS release
 
@@ -29,4 +29,4 @@ COPY --from=build /app/services/economics-rewards/package.json ./services/econom
 COPY --from=build /app/services/economics-rewards/node_modules ./services/economics-rewards/node_modules
 COPY --from=build /app/services/economics-rewards/bin ./services/economics-rewards/bin
 
-CMD [ "yarn", "workspace", "@taraxa_project/economics-rewards", "start:prod"]
+CMD [ "yarn", "workspace", "@ebla-network/economics-rewards", "start:prod"]
