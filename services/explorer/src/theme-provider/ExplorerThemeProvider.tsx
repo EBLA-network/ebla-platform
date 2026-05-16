@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { StylesProvider, createGenerateClassName } from '@mui/styles';
-import { TaraxaThemeProvider } from '@taraxa_project/taraxa-ui';
+import { TaraxaThemeProvider } from '@ebla-network/taraxa-ui';
 
 interface Props {
   children: React.ReactNode;

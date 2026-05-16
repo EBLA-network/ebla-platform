@@ -10,7 +10,7 @@ import {
   Tooltip,
   ProfileSubmissionsCard,
   Checkbox,
-} from '@taraxa_project/taraxa-ui';
+} from '@ebla-network/taraxa-ui';
 
 import { useDelegationApi, useClaimApi } from '../../services/useApi';
 import BountyIcon from '../../assets/icons/bounties';

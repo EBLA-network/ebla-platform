@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { theme } from '@taraxa_project/taraxa-ui';
+import { theme } from '@ebla-network/taraxa-ui';
 import { zeroX } from '../../utils';
 
 export const AddressLink = ({

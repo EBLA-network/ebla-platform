@@ -1,4 +1,4 @@
-import { Box, Divider, Icons } from '@taraxa_project/taraxa-ui';
+import { Box, Divider, Icons } from '@ebla-network/taraxa-ui';
 import useStyles from './AddressDetails.styles';
 import { BlocksTable, TransactionsTable } from '../Tables';
 import { TransactionIcon } from '../icons';

@@ -3,7 +3,7 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom';
 import { MetaMaskProvider } from 'metamask-react';
 import { useMediaQuery } from 'react-responsive';
-import { Notification, TaraxaThemeProvider } from '@taraxa_project/taraxa-ui';
+import { Notification, TaraxaThemeProvider } from '@ebla-network/taraxa-ui';
 
 import { AuthProvider, useAuth } from './services/useAuth';
 import { LoadingProvider } from './services/useLoading';

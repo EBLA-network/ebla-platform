@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { ethers } from 'ethers';
-import { Button, Text, InputField } from '@taraxa_project/taraxa-ui';
+import { Button, Text, InputField } from '@ebla-network/taraxa-ui';
 
 import useDelegation from '../../../services/useDelegation';
 import useCMetamask from '../../../services/useCMetamask';

@@ -12,7 +12,7 @@ import {
   EmptyTable,
   theme,
   BaseTooltip,
-} from '@taraxa_project/taraxa-ui';
+} from '@ebla-network/taraxa-ui';
 import { AddressLink, HashLink } from '../Links';
 import { statusToLabel } from '../../utils/TransactionRow';
 import {

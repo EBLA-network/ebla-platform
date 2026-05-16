@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@taraxa_project/taraxa-ui';
+import { Button } from '@ebla-network/taraxa-ui';
 import useMainnet from '../../services/useMainnet';
 import useCMetamask from '../../services/useCMetamask';
 import { networks } from '../../utils/networks';

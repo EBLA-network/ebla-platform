@@ -1,5 +1,5 @@
 import React from 'react';
-import { Divider, Paper, Skeleton, Stack } from '@taraxa_project/taraxa-ui';
+import { Divider, Paper, Skeleton, Stack } from '@ebla-network/taraxa-ui';
 
 const PbftLoadingSkeleton = (): JSX.Element => {
   return (

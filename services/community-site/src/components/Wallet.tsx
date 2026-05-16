@@ -1,6 +1,6 @@
 import React from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { Button, Text } from '@taraxa_project/taraxa-ui';
+import { Button, Text } from '@ebla-network/taraxa-ui';
 import useCMetamask from '../services/useCMetamask';
 
 const Wallet = () => {

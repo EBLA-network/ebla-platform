@@ -6,7 +6,7 @@ import {
   Typography,
   CopyTo,
   Loading,
-} from '@taraxa_project/taraxa-ui';
+} from '@ebla-network/taraxa-ui';
 import { zeroX } from '../../utils';
 import useStyles from './AddressDetails.styles';
 import { useCopyToClipboard } from '../../hooks/useCopyToClipboard';

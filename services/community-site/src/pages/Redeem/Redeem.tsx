@@ -15,7 +15,7 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-} from '@taraxa_project/taraxa-ui';
+} from '@ebla-network/taraxa-ui';
 
 import WhiteCheckIcon from '../../assets/icons/checkWhite';
 import RedeemSidebar from '../../assets/icons/redeemSidebar';

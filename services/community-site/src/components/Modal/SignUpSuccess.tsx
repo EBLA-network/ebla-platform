@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text } from '@taraxa_project/taraxa-ui';
+import { Button, Text } from '@ebla-network/taraxa-ui';
 import EmailIcon from '../../assets/icons/email';
 
 const SignUpSuccess = ({ onSuccess }: { onSuccess: () => void }) => {

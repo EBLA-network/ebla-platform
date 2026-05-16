@@ -13,7 +13,7 @@ import {
   AwardCard,
   EmptyTable,
   MuiIcons,
-} from '@taraxa_project/taraxa-ui';
+} from '@ebla-network/taraxa-ui';
 import { PageTitle } from '../../components';
 import { useNodesEffects } from './Nodes.effects';
 

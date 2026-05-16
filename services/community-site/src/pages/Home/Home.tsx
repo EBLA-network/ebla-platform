@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useHistory, withRouter, RouteComponentProps } from 'react-router-dom';
 
-import { IconCard, ToggleButton, Notification } from '@taraxa_project/taraxa-ui';
+import { IconCard, ToggleButton, Notification } from '@ebla-network/taraxa-ui';
 
 import StakingIcon from '../../assets/icons/staking';
 import BountiesIcon from '../../assets/icons/bounties';

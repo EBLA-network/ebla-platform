@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Text, InputField } from '@taraxa_project/taraxa-ui';
+import { Button, Text, InputField } from '@ebla-network/taraxa-ui';
 
 import { blocksToDays } from '../../../utils/time';
 import { useWalletPopup } from '../../../services/useWalletPopup';

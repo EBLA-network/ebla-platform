@@ -12,7 +12,7 @@ import {
   TableBody,
   Table as MTable,
   TableCell,
-} from '@taraxa_project/taraxa-ui';
+} from '@ebla-network/taraxa-ui';
 
 export interface TableProps {
   columns: { path: string; name: string }[];

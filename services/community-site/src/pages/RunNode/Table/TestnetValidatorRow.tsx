@@ -1,5 +1,5 @@
 import React from 'react';
-import { MuiTooltip, Button, TableCell, TableRow } from '@taraxa_project/taraxa-ui';
+import { MuiTooltip, Button, TableCell, TableRow } from '@ebla-network/taraxa-ui';
 
 import Nickname from '../../../components/Nickname/Nickname';
 import { Validator, getValidatorStatusTooltip } from '../../../interfaces/Validator';

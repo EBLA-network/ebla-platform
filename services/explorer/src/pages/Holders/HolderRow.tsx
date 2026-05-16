@@ -1,4 +1,4 @@
-import { ProgressBar, Box } from '@taraxa_project/taraxa-ui';
+import { ProgressBar, Box } from '@ebla-network/taraxa-ui';
 import { HoldersTableData } from '../../models';
 import { HashLink, AddressLabel } from '../../components';
 import { HashLinkType } from '../../utils';

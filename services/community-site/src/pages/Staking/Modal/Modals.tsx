@@ -1,6 +1,6 @@
 import React from 'react';
 import { ethers } from 'ethers';
-import { Modal } from '@taraxa_project/taraxa-ui';
+import { Modal } from '@ebla-network/taraxa-ui';
 import Delegate from './Delegate';
 import Undelegate from './Undelegate';
 import CloseIcon from '../../../assets/icons/close';

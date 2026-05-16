@@ -1,4 +1,4 @@
-import { theme as TaraxaTheme } from '@taraxa_project/taraxa-ui';
+import { theme as TaraxaTheme } from '@ebla-network/taraxa-ui';
 
 declare module '@mui/styles' {
   // eslint-disable-next-line @typescript-eslint/no-empty-interface

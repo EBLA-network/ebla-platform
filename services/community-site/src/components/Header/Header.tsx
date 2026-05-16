@@ -1,7 +1,7 @@
 import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import { Button, Header as THeader } from '@taraxa_project/taraxa-ui';
+import { Button, Header as THeader } from '@ebla-network/taraxa-ui';
 
 import TaraxaIcon from '../../assets/icons/taraxaIcon';
 import HamburgerIcon from '../../assets/icons/hamburger';

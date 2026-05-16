@@ -18,7 +18,7 @@ import {
   TableRow,
   TableSortLabel,
   MuiIcons,
-} from '@taraxa_project/taraxa-ui';
+} from '@ebla-network/taraxa-ui';
 
 import { blocksToDays } from '../../utils/time';
 import { useAuth } from '../../services/useAuth';

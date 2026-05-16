@@ -1,5 +1,5 @@
 import React from 'react';
-import { Paper, Skeleton, Stack } from '@taraxa_project/taraxa-ui';
+import { Paper, Skeleton, Stack } from '@ebla-network/taraxa-ui';
 
 const AddressLoadingSkeleton = (): JSX.Element => {
   return (

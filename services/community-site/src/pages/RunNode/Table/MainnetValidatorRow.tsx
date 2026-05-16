@@ -1,6 +1,6 @@
 import React from 'react';
 import { ethers } from 'ethers';
-import { Button, MuiTooltip, TableCell, TableRow } from '@taraxa_project/taraxa-ui';
+import { Button, MuiTooltip, TableCell, TableRow } from '@ebla-network/taraxa-ui';
 import { stripEth, weiToEth } from '../../../utils/eth';
 import { Validator, getValidatorStatusTooltip } from '../../../interfaces/Validator';
 import Nickname from '../../../components/Nickname/Nickname';

@@ -1,4 +1,4 @@
-import { BaseToggleButtonGroup, Box } from '@taraxa_project/taraxa-ui';
+import { BaseToggleButtonGroup, Box } from '@ebla-network/taraxa-ui';
 import { DataRow } from '../DataRow';
 import { useState } from 'react';
 

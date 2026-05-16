@@ -1,4 +1,4 @@
-import { Box, Dropdown, Typography } from '@taraxa_project/taraxa-ui';
+import { Box, Dropdown, Typography } from '@ebla-network/taraxa-ui';
 import { useState } from 'react';
 import useStyles from '../../components/DataRow/DataRow.styles';
 

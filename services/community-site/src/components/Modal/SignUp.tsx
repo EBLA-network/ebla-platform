@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
-import { Button, Text, InputField, Checkbox } from '@taraxa_project/taraxa-ui';
+import { Button, Text, InputField, Checkbox } from '@ebla-network/taraxa-ui';
 import { useAuth } from '../../services/useAuth';
 
 type SignUpProps = {

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Modal } from '@taraxa_project/taraxa-ui';
+import { Modal } from '@ebla-network/taraxa-ui';
 import { ethers } from 'ethers';
 import { formatEth, roundEth, weiToEth } from '../../../utils/eth';
 import CloseIcon from '../../../assets/icons/close';

@@ -1,4 +1,4 @@
-import { ITaraxaNode } from '@taraxa_project/explorer-shared';
+import { ITaraxaNode } from '@ebla-network/explorer-shared';
 import { BlockData, Transaction } from '../models';
 
 export const MAINNET_API = `${process.env.REACT_APP_MAINNET_API_HOST}`;

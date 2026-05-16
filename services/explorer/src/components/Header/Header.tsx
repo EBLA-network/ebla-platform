@@ -10,7 +10,7 @@ import {
   SearchInput,
   MuiIcons,
   theme,
-} from '@taraxa_project/taraxa-ui';
+} from '@ebla-network/taraxa-ui';
 import { TaraxaIcon } from '../icons';
 import { IS_PRNET } from '../../api';
 import { HeaderBtn, useHeaderEffects } from './Header.effects';

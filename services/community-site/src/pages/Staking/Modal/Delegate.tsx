@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
-import { Button, Text, InputField, AmountCard } from '@taraxa_project/taraxa-ui';
+import { Button, Text, InputField, AmountCard } from '@ebla-network/taraxa-ui';
 
 import useDelegation from '../../../services/useDelegation';
 

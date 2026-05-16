@@ -6,7 +6,7 @@ import {
   NetworkMenu,
   theme,
   MuiIcons,
-} from '@taraxa_project/taraxa-ui';
+} from '@ebla-network/taraxa-ui';
 import { useExplorerNetwork } from '../../hooks/useExplorerNetwork';
 import { HeaderBtn } from './Header.effects';
 

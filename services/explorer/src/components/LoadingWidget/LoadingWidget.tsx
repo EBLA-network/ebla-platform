@@ -1,5 +1,5 @@
 import React from 'react';
-import { LoadingWidget as TWidget } from '@taraxa_project/taraxa-ui';
+import { LoadingWidget as TWidget } from '@ebla-network/taraxa-ui';
 import { useExplorerLoader } from '../../hooks/useLoader';
 
 import './loading-widget.scss';

@@ -1,4 +1,4 @@
-import { Container, Box } from '@taraxa_project/taraxa-ui';
+import { Container, Box } from '@ebla-network/taraxa-ui';
 import { Navigate, Route, Routes } from 'react-router-dom';
 import { Provider as UrqlProvider } from 'urql';
 import { Header, Footer } from './components';
