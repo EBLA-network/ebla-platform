@@ -20,13 +20,13 @@ ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package.json yarn.lock /app/
 COPY services/community-site/package.json /app/services/community-site/
-COPY packages/taraxa-ui/package.json /app/packages/taraxa-ui/
+COPY packages/ebla-ui/package.json /app/packages/ebla-ui/
 
 RUN yarn install
 
 COPY . /app
-RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @taraxa_project/taraxa-ui build
-RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @taraxa_project/taraxa-community-site build
+RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/taraxa-ui build
+RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/taraxa-community-site build
 
 # nginx
 FROM nginx:1.18-alpine

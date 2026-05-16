@@ -21,7 +21,7 @@
   },
   "references": [
     {
-      "path": "../../packages/taraxa-ui"
+      "path": "../../packages/ebla-ui"
     }
   ],
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],

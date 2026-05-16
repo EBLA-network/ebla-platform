@@ -22,7 +22,7 @@ WORKDIR /app
 ENV PATH /app/node_modules/.bin:$PATH
 
 COPY package.json yarn.lock /app/
-COPY packages/taraxa-ui/package.json /app/packages/taraxa-ui/
+COPY packages/ebla-ui/package.json /app/packages/ebla-ui/
 COPY packages/explorer-shared/package.json /app/packages/explorer-shared/
 COPY services/explorer/package.json /app/services/explorer/
 
@@ -34,13 +34,13 @@ COPY .prettierrc.js /app/
 COPY .eslintignore /app/
 COPY .eslintrc.js /app/
 
-COPY packages/taraxa-ui /app/packages/taraxa-ui
+COPY packages/ebla-ui /app/packages/ebla-ui
 COPY packages/explorer-shared /app/packages/explorer-shared
 COPY services/explorer /app/services/explorer
 
-RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @taraxa_project/taraxa-ui build
-RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @taraxa_project/explorer-shared build
-RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @taraxa_project/explorer build
+RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/taraxa-ui build
+RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/explorer-shared build
+RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/explorer build
 
 # nginx
 FROM nginx:1.25.1-alpine
