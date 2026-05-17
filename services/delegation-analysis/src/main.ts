@@ -47,11 +47,11 @@ async function main() {
       databaseConfig.delegationDatabase,
     );
     const userDataConnection = new PostgresConnector(
-      databaseConfig.taraxaProdHost,
-      databaseConfig.taraxaProdPort,
-      databaseConfig.taraxaProdUser,
-      databaseConfig.taraxaProdPassword,
-      databaseConfig.taraxaProdDatabase,
+      databaseConfig.eblaProdHost,
+      databaseConfig.eblaProdPort,
+      databaseConfig.eblaProdUser,
+      databaseConfig.eblaProdPassword,
+      databaseConfig.eblaProdDatabase,
     );
     const filePath = await getCurrentStakes(Number(options.first), Number(options.skip));
     const usersWithStake = await getAddressesWithPositiveStake(filePath);

@@ -2,7 +2,7 @@ import DiscordIcon from './discord';
 import SendIcon from './send';
 import TwitterIcon from './twitter';
 import HamburgerIcon from './hamburger';
-import EblaIcon from './taraxaIcon';
+import EblaIcon from './eblaIcon';
 import GreenRightArrow from './greenRightArrow';
 import TransactionIcon from './transaction';
 import CopyIcon from './copy';

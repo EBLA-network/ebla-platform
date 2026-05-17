@@ -8,11 +8,11 @@ export const databaseConfig = {
   delegationUser: `${process.env.DELEGATION_USER}`,
   delegationPassword: `${process.env.DELEGATION_PASS}`,
   delegationDatabase: `${process.env.DELEGATION_DB}`,
-  taraxaProdHost: `${process.env.USERDATA_HOST}`,
-  taraxaProdPort: Number(`${process.env.USERDATA_PORT}`),
-  taraxaProdUser: `${process.env.USERDATA_USER}`,
-  taraxaProdPassword: `${process.env.USERDATA_PASS}`,
-  taraxaProdDatabase: `${process.env.USERDATA_DB}`,
+  eblaProdHost: `${process.env.USERDATA_HOST}`,
+  eblaProdPort: Number(`${process.env.USERDATA_PORT}`),
+  eblaProdUser: `${process.env.USERDATA_USER}`,
+  eblaProdPassword: `${process.env.USERDATA_PASS}`,
+  eblaProdDatabase: `${process.env.USERDATA_DB}`,
 };
 
 export const runtimeConfig = {

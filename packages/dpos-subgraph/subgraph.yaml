@@ -1,5 +1,5 @@
 specVersion: 0.0.4
-description: DPOS Contract indexing for Taraxa
+description: DPOS Contract indexing for EBLA
 schema:
   file: ./schema.graphql
 dataSources:
