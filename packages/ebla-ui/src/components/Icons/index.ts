@@ -36,7 +36,7 @@ export {
   Trophy,
   Exclamation,
   Check,
-  EBLA,
+  Ebla,
   Search,
   MenuDots,
   RightArrow,
