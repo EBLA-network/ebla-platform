@@ -5,7 +5,7 @@ import { Validator, ValidatorApi, ValidatorStatus, ValidatorType } from '../inte
 import { useLoading } from './useLoading';
 
 export default () => {
-  const basePath = process.env.REACT_APP_API_TARAXA_HOST || '';
+  const basePath = process.env.REACT_APP_API_EBLA_HOST || '';
   const { get } = useApi(basePath);
   const { startLoading, finishLoading } = useLoading();
 

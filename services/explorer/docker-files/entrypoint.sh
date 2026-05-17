@@ -1,12 +1,12 @@
 #!/bin/sh
 
-export MAINNET_API_HOST=${MAINNET_API_HOST:="https://api-mainnet.qa.explorer.taraxa.io"}
-export TESTNET_API_HOST=${TESTNET_API_HOST:="https://api-testnet.qa.explorer.taraxa.io"}
-export DEVNET_API_HOST=${DEVNET_API_HOST:="https://api-devnet.qa.explorer.taraxa.io"}
+export MAINNET_API_HOST=${MAINNET_API_HOST:="https://api-mainnet.qa.explorer.eblanetwork.com"}
+export TESTNET_API_HOST=${TESTNET_API_HOST:="https://api-testnet.qa.explorer.eblanetwork.com"}
+export DEVNET_API_HOST=${DEVNET_API_HOST:="https://api-devnet.qa.explorer.eblanetwork.com"}
 export DISPLAY_TXES_FOR_LAST_BLOCK=${DISPLAY_TXES_FOR_LAST_BLOCK:=25}
-export TARAXA_MAINNET_PROVIDER=${TARAXA_MAINNET_PROVIDER:="https://rpc.mainnet.taraxa.io/"}
-export TARAXA_TESTNET_PROVIDER=${TARAXA_TESTNET_PROVIDER:="https://rpc.testnet.taraxa.io/"}
-export TARAXA_DEVNET_PROVIDER=${TARAXA_DEVNET_PROVIDER:="https://rpc.devnet.taraxa.io/"}
+export EBLA_MAINNET_PROVIDER=${EBLA_MAINNET_PROVIDER:="https://rpc.eblanetwork.com/"}
+export EBLA_TESTNET_PROVIDER=${EBLA_TESTNET_PROVIDER:="https://testnet-rpc.eblanetwork.com/"}
+export EBLA_DEVNET_PROVIDER=${EBLA_DEVNET_PROVIDER:="https://devnet-rpc.eblanetwork.com/"}
 export OVERRIDE_RPC_PROVIDER=${OVERRIDE_RPC_PROVIDER:=""}
 export OVERRIDE_GRAPHQL=${OVERRIDE_GRAPHQL:=""}
 export OVERRIDE_API=${OVERRIDE_API:=""}
@@ -27,9 +27,9 @@ find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_MAINNET_API_HOST_STRING_RE
 find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_TESTNET_API_HOST_STRING_REPLACE,$TESTNET_API_HOST,g" {} \;
 find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_DEVNET_API_HOST_STRING_REPLACE,$DEVNET_API_HOST,g" {} \;
 find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_DISPLAY_TXES_FOR_LAST_BLOCK_STRING_REPLACE,$DISPLAY_TXES_FOR_LAST_BLOCK,g" {} \;
-find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_TARAXA_MAINNET_PROVIDER_STRING_REPLACE,$TARAXA_MAINNET_PROVIDER,g" {} \;
-find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_TARAXA_TESTNET_PROVIDER_STRING_REPLACE,$TARAXA_TESTNET_PROVIDER,g" {} \;
-find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_TARAXA_DEVNET_PROVIDER_STRING_REPLACE,$TARAXA_DEVNET_PROVIDER,g" {} \;
+find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_EBLA_MAINNET_PROVIDER_STRING_REPLACE,$EBLA_MAINNET_PROVIDER,g" {} \;
+find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_EBLA_TESTNET_PROVIDER_STRING_REPLACE,$EBLA_TESTNET_PROVIDER,g" {} \;
+find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_EBLA_DEVNET_PROVIDER_STRING_REPLACE,$EBLA_DEVNET_PROVIDER,g" {} \;
 find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_OVERRIDE_RPC_PROVIDER_STRING_REPLACE,$OVERRIDE_RPC_PROVIDER,g" {} \;
 find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_OVERRIDE_GRAPHQL_STRING_REPLACE,$OVERRIDE_GRAPHQL,g" {} \;
 find $STATIC_FOLDER -type f -exec sed -i "s,REACT_APP_OVERRIDE_API_STRING_REPLACE,$OVERRIDE_API,g" {} \;

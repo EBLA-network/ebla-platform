@@ -5,9 +5,9 @@ export const MAINNET_API = `${process.env.REACT_APP_MAINNET_API_HOST}`;
 export const TESTNET_API = `${process.env.REACT_APP_TESTNET_API_HOST}`;
 export const DEVNET_API = `${process.env.REACT_APP_DEVNET_API_HOST}`;
 
-export const MAINNET_RPC_API = `${process.env.REACT_APP_TARAXA_MAINNET_PROVIDER}`;
-export const TESTNET_RPC_API = `${process.env.REACT_APP_TARAXA_TESTNET_PROVIDER}`;
-export const DEVNET_RPC_API = `${process.env.REACT_APP_TARAXA_DEVNET_PROVIDER}`;
+export const MAINNET_RPC_API = `${process.env.REACT_APP_EBLA_MAINNET_PROVIDER}`;
+export const TESTNET_RPC_API = `${process.env.REACT_APP_EBLA_TESTNET_PROVIDER}`;
+export const DEVNET_RPC_API = `${process.env.REACT_APP_EBLA_DEVNET_PROVIDER}`;
 
 export const OVERRIDE_RPC_PROVIDER = `${
   process.env.REACT_APP_OVERRIDE_RPC_PROVIDER ?? ''
