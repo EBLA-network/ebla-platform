@@ -35,9 +35,9 @@ export async function blockNumber() {
 }
 
 export async function dagBlockLevel() {
-  return send(request('taraxa_dagBlockLevel'));
+  return send(request('ebla_dagBlockLevel'));
 }
 
 export async function dagBlockPeriod() {
-  return send(request('taraxa_dagBlockPeriod'));
+  return send(request('ebla_dagBlockPeriod'));
 }

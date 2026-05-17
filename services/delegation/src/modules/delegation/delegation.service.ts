@@ -397,52 +397,14 @@ export class DelegationService {
   async getDelegationsFor(
     type: 'mainnet' | 'testnet',
   ): Promise<{ [address: string]: string }> {
-    let endpoint: string;
-    let delegatorAddress: string;
-    if (type === 'mainnet') {
-      endpoint = this.config.get<string>('ethereum.mainnetEndpoint');
-      delegatorAddress = this.stakingService.mainnetWalletAddress;
-    } else {
-      endpoint = this.config.get<string>('ethereum.testnetEndpoint');
-      delegatorAddress = this.stakingService.testnetWalletAddress;
-    }
-    const formattedAddress = delegatorAddress.toLowerCase();
-    const state = await this.httpService
-      .post(
-        endpoint,
-        {
-          jsonrpc: '2.0',
-          method: 'taraxa_queryDPOS',
-          params: [
-            {
-              account_queries: {
-                [formattedAddress]: {
-                  inbound_deposits_addrs_only: false,
-                  outbound_deposits_addrs_only: false,
-                  with_inbound_deposits: true,
-                  with_outbound_deposits: true,
-                  with_staking_balance: true,
-                },
-              },
-              with_eligible_count: true,
-            },
-          ],
-          id: 1,
-        },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-        },
-      )
-      .toPromise();
-
-    if (state.status !== 200) {
-      throw new Error('Failed to get DPOS stake');
-    }
-
-    return state.data.result.account_results[formattedAddress]
-      .outbound_deposits;
+    // TODO(EBLA Phase 4): taraxa_queryDPOS was removed from the EBLA node's
+    // JSON-RPC interface. To restore this functionality we must refactor to
+    // make eth_call requests against the DPOS precompile contract.
+    // See ebla-node libraries/core_libs/network/rpc/Ebla.jsonrpc.json for the
+    // current EBLA RPC surface. Until then this returns empty so callers
+    // (rebalanceMainnet) gracefully no-op.
+    void type;
+    return {};
   }
 
   async rebalanceMainnet() {
@@ -467,7 +429,7 @@ export class DelegationService {
         endpoint,
         {
           jsonrpc: '2.0',
-          method: 'taraxa_getConfig',
+          method: 'ebla_getConfig',
           params: [],
           id: 1,
         },
