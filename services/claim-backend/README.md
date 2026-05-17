@@ -26,7 +26,7 @@ Notes:
 
 ## Security
 
-The backend app stores the [private key](https://github.com/Taraxa-project/taraxa-claim-backend/blob/main/.env.example#L9) for the signing wallet. This key is sensitive as anyone with access to the key can generate valid signatures for the Claim contract. Currently we read it from an env var and that gets set in the Kubernetes cluster via a secret.
+The backend app stores the [private key](https://github.com/Taraxa-project/ebla-claim-backend/blob/main/.env.example#L9) for the signing wallet. This key is sensitive as anyone with access to the key can generate valid signatures for the Claim contract. Currently we read it from an env var and that gets set in the Kubernetes cluster via a secret.
 
 ## Installation
 

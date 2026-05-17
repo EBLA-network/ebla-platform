@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
-import { Button, Text, InputField } from '@ebla-network/taraxa-ui';
+import { Button, Text, InputField } from '@ebla-network/ebla-ui';
 
 import { useDelegationApi } from '../../../services/useApi';
 import useValidators from '../../../services/useValidators';

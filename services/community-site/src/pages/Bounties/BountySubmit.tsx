@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useParams, useHistory, Redirect } from 'react-router-dom';
 import * as CryptoJS from 'crypto-js';
 
-import { Text, Card, Button, File, Icons, InputField } from '@ebla-network/taraxa-ui';
+import { Text, Card, Button, File, Icons, InputField } from '@ebla-network/ebla-ui';
 
 import Title from '../../components/Title/Title';
 import Markdown from '../../components/Markdown';

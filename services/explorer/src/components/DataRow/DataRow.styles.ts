@@ -1,5 +1,5 @@
 import { makeStyles } from '@mui/styles';
-import { theme } from '@ebla-network/taraxa-ui';
+import { theme } from '@ebla-network/ebla-ui';
 
 const useStyles = makeStyles(
   () => {

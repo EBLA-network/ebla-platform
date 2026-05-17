@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Box, theme } from '@ebla-network/taraxa-ui';
+import { Box, theme } from '@ebla-network/ebla-ui';
 import { HashLinkType, zeroX } from '../../utils';
 
 export const HashLink = ({

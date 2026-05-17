@@ -1,5 +1,5 @@
 {
-  "name": "@ebla-network/taraxa-node-status",
+  "name": "@ebla-network/ebla-node-status",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@ebla-network/taraxa-ui": "^0.0.1",
+    "@ebla-network/ebla-ui": "^0.0.1",
     "axios": "^0.26.1",
     "eslint-config-next": "13.2.4",
     "ethers": "^5.6.0",

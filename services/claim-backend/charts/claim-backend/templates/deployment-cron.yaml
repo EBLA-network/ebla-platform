@@ -39,7 +39,7 @@ spec:
                 name: {{ include "claim-backend.fullname" . }}
             - secretRef:
                 name: {{ include "claim-backend.fullname" . }}
-          command: ["yarn", "workspace", "@ebla-network/taraxa-claim-backend", "start-cron:prod"]
+          command: ["yarn", "workspace", "@ebla-network/ebla-claim-backend", "start-cron:prod"]
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

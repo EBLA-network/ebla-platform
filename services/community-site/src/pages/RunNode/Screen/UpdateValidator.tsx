@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, Button, InputField, Modal, useInterval } from '@ebla-network/taraxa-ui';
+import { Text, Button, InputField, Modal, useInterval } from '@ebla-network/ebla-ui';
 import { blocksToDays } from '../../../utils/time';
 import { useWalletPopup } from '../../../services/useWalletPopup';
 import { Validator } from '../../../interfaces/Validator';

@@ -16,13 +16,13 @@ import {
   TableContainer,
   TableHead,
   TableRow,
-} from '@ebla-network/taraxa-ui';
+} from '@ebla-network/ebla-ui';
 import { useAuth } from '../../services/useAuth';
 import useCMetamask from '../../services/useCMetamask';
 import useMainnet from '../../services/useMainnet';
 import useChain from '../../services/useChain';
 import { useDelegationApi } from '../../services/useApi';
-import useTaraxaApi from '../../services/useTaraxaApi';
+import useTaraxaApi from '../../services/useEblaApi';
 
 import NodeIcon from '../../assets/icons/node';
 import InfoIcon from '../../assets/icons/info';

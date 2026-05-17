@@ -2,7 +2,7 @@ import DiscordIcon from './discord';
 import SendIcon from './send';
 import TwitterIcon from './twitter';
 import HamburgerIcon from './hamburger';
-import TaraxaIcon from './taraxaIcon';
+import EblaIcon from './taraxaIcon';
 import GreenRightArrow from './greenRightArrow';
 import TransactionIcon from './transaction';
 import CopyIcon from './copy';
@@ -12,7 +12,7 @@ export {
   SendIcon,
   TwitterIcon,
   HamburgerIcon,
-  TaraxaIcon,
+  EblaIcon,
   GreenRightArrow,
   TransactionIcon,
   CopyIcon,
@@ -22,7 +22,7 @@ export default {
   SendIcon,
   TwitterIcon,
   HamburgerIcon,
-  TaraxaIcon,
+  EblaIcon,
   GreenRightArrow,
   TransactionIcon,
   CopyIcon,

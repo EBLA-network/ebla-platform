@@ -7,7 +7,7 @@ import {
   CopyTo,
   Icons,
   BaseTooltip,
-} from '@ebla-network/taraxa-ui';
+} from '@ebla-network/ebla-ui';
 import { useParams } from 'react-router-dom';
 import {
   DataRow,

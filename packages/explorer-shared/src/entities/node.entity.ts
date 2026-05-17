@@ -1,12 +1,12 @@
 import { ViewEntity, ViewColumn } from 'typeorm';
-import { ITaraxaNode } from '../models';
+import { IEblaNode } from '../models';
 
 @ViewEntity({
   expression: `
       SELECT "miner" AS "address", COUNT("hash") AS "pbftCount" FROM "pbfts" GROUP BY "miner"
   `,
 })
-export class NodeEntity implements ITaraxaNode {
+export class NodeEntity implements IEblaNode {
   @ViewColumn()
   address: string;
 

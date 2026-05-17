@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Tooltip } from '@ebla-network/taraxa-ui';
+import { Text, Tooltip } from '@ebla-network/ebla-ui';
 
 import InfoIcon from '../../assets/icons/info';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Text, Button } from '@ebla-network/taraxa-ui';
+import { Text, Button } from '@ebla-network/ebla-ui';
 
 interface ReferencesProps {
   canRegisterValidator: boolean;

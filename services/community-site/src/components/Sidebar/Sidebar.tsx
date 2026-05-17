@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { withRouter, useHistory } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import { Button, Sidebar as MSidebar } from '@ebla-network/taraxa-ui';
+import { Button, Sidebar as MSidebar } from '@ebla-network/ebla-ui';
 import useCMetamask from '../../services/useCMetamask';
 
 import BountiesSidebar from '../../assets/icons/bountiesSidebar';

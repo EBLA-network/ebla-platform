@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button } from '@ebla-network/taraxa-ui';
+import { Button } from '@ebla-network/ebla-ui';
 import './warning.scss';
 import WarningSign from '../../../assets/icons/warningSign';
 

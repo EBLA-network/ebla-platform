@@ -1,5 +1,5 @@
 import React from 'react';
-import { RewardCard } from '@ebla-network/taraxa-ui';
+import { RewardCard } from '@ebla-network/ebla-ui';
 
 import Markdown from '../../components/Markdown';
 

@@ -1,5 +1,5 @@
 import React from 'react';
-import { ProfileIcon } from '@ebla-network/taraxa-ui';
+import { ProfileIcon } from '@ebla-network/ebla-ui';
 import './nickname.scss';
 
 interface NickNameProps {

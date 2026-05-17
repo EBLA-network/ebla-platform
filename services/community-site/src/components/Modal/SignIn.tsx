@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Button, Text, InputField } from '@ebla-network/taraxa-ui';
+import { Button, Text, InputField } from '@ebla-network/ebla-ui';
 import { useModal } from '../../services/useModal';
 import { useAuth } from '../../services/useAuth';
 

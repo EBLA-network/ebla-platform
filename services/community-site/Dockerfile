@@ -25,8 +25,8 @@ COPY packages/ebla-ui/package.json /app/packages/ebla-ui/
 RUN yarn install
 
 COPY . /app
-RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/taraxa-ui build
-RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/taraxa-community-site build
+RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/ebla-ui build
+RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/ebla-community-site build
 
 # nginx
 FROM nginx:1.18-alpine

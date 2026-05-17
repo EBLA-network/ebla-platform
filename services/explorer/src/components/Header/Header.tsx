@@ -10,8 +10,8 @@ import {
   SearchInput,
   MuiIcons,
   theme,
-} from '@ebla-network/taraxa-ui';
-import { TaraxaIcon } from '../icons';
+} from '@ebla-network/ebla-ui';
+import { EblaIcon } from '../icons';
 import { IS_PRNET } from '../../api';
 import { HeaderBtn, useHeaderEffects } from './Header.effects';
 import { DrawerElements } from './DrawerElements';
@@ -91,7 +91,7 @@ export const Header = (): JSX.Element => {
       color='primary'
       position='relative'
       maxWidth='xl'
-      Icon={TaraxaIcon}
+      Icon={EblaIcon}
       elevation={0}
     >
       <SearchInput

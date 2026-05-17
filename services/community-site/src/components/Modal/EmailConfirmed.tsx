@@ -1,5 +1,5 @@
 import React from 'react';
-import { Button, Text } from '@ebla-network/taraxa-ui';
+import { Button, Text } from '@ebla-network/ebla-ui';
 import EmailIcon from '../../assets/icons/email';
 
 const EmailConfirmed = ({ onSuccess }: { onSuccess: () => void }) => {

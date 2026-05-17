@@ -1,5 +1,5 @@
 import React from 'react';
-import { Footer as TFooter } from '@ebla-network/taraxa-ui';
+import { Footer as TFooter } from '@ebla-network/ebla-ui';
 import { useFooterEffects } from './Footer.effects';
 
 export const Footer = (): JSX.Element => {

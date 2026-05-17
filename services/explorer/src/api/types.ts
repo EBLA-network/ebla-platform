@@ -1,4 +1,4 @@
-import { ITaraxaNode } from '@ebla-network/explorer-shared';
+import { IEblaNode } from '@ebla-network/explorer-shared';
 import { BlockData, Transaction } from '../models';
 
 export const MAINNET_API = `${process.env.REACT_APP_MAINNET_API_HOST}`;
@@ -100,7 +100,7 @@ export interface HoldersResponse {
   balance: string;
 }
 
-export interface RankedNode extends ITaraxaNode {
+export interface RankedNode extends IEblaNode {
   rank: number;
   address: string;
   pbftCount: number;
@@ -120,7 +120,7 @@ export interface Paginate<T> {
 export type PbftsPaginate = Paginate<AddressPbftsResponse>;
 export type DagsPaginate = Paginate<AddressDagsResponse>;
 export type TxPaginate = Paginate<AddressTxResponse>;
-export type NodesPaginate = Paginate<ITaraxaNode>;
+export type NodesPaginate = Paginate<IEblaNode>;
 
 export interface TablePagination<T> {
   data: T[];

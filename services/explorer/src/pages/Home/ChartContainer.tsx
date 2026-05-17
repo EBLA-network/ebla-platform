@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Grid, theme } from '@ebla-network/taraxa-ui';
+import { BarChart, Grid, theme } from '@ebla-network/ebla-ui';
 import {
   calculateDagEfficiency,
   calculateDagsPerSecond,

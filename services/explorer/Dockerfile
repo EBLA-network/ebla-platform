@@ -38,7 +38,7 @@ COPY packages/ebla-ui /app/packages/ebla-ui
 COPY packages/explorer-shared /app/packages/explorer-shared
 COPY services/explorer /app/services/explorer
 
-RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/taraxa-ui build
+RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/ebla-ui build
 RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/explorer-shared build
 RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/explorer build
 

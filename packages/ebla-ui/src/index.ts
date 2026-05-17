@@ -62,7 +62,7 @@ import theme from './components/theme';
 import LoadingTable from './components/LoadingTable';
 import { useInterval } from './hooks/useInterval';
 import InfoCard from './components/InfoCard';
-import TaraxaThemeProvider from './TaraxaThemeProvider';
+import EblaThemeProvider from './EblaThemeProvider';
 import ButtonGroup from './components/ButtonGroup';
 import BaseToggleButtonGroup from './components/BaseToggleButtonGroup';
 import Dropdown from './components/Dropdown';
@@ -93,7 +93,7 @@ import {
 import { FormControl, FormHelperText, Select } from './components/FormElements';
 
 export {
-  TaraxaThemeProvider,
+  EblaThemeProvider,
   AmountCard,
   Button,
   Text,

@@ -1,5 +1,5 @@
 import React, { FC, SyntheticEvent, useState } from 'react';
-import { Box, Tabs, Tab } from '@ebla-network/taraxa-ui';
+import { Box, Tabs, Tab } from '@ebla-network/ebla-ui';
 import { TableTabsProps, TabPanelProps, TabModel } from '../../models';
 
 const TabPanel: FC<TabPanelProps> = ({

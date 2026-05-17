@@ -3,7 +3,7 @@ import { GoogleReCaptchaProvider } from 'react-google-recaptcha-v3';
 import { BrowserRouter, Switch, Route, useLocation } from 'react-router-dom';
 import { MetaMaskProvider } from 'metamask-react';
 import { useMediaQuery } from 'react-responsive';
-import { Notification, TaraxaThemeProvider } from '@ebla-network/taraxa-ui';
+import { Notification, EblaThemeProvider } from '@ebla-network/ebla-ui';
 
 import { AuthProvider, useAuth } from './services/useAuth';
 import { LoadingProvider } from './services/useLoading';
@@ -139,7 +139,7 @@ function App() {
         <LoadingProvider>
           <AuthProvider>
             <BrowserRouter>
-              <TaraxaThemeProvider>
+              <EblaThemeProvider>
                 <ModalProvider>
                   <WalletPopupProvider>
                     <SidebarProvider>
@@ -153,7 +153,7 @@ function App() {
                     </SidebarProvider>
                   </WalletPopupProvider>
                 </ModalProvider>
-              </TaraxaThemeProvider>
+              </EblaThemeProvider>
             </BrowserRouter>
           </AuthProvider>
         </LoadingProvider>

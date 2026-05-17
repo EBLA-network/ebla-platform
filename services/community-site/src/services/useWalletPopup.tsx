@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-unused-vars */
-import { Text, Modal, Loading, Button } from '@ebla-network/taraxa-ui';
+import { Text, Modal, Loading, Button } from '@ebla-network/ebla-ui';
 import { ethers } from 'ethers';
 import React, { useState, useContext, createContext } from 'react';
 import { useMediaQuery } from 'react-responsive';

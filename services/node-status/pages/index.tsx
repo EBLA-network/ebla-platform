@@ -4,7 +4,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import Head from 'next/head';
 import { ethers } from 'ethers';
 import axios from 'axios';
-import { Header, Footer, Text, BaseCard, Button } from '@ebla-network/taraxa-ui';
+import { Header, Footer, Text, BaseCard, Button } from '@ebla-network/ebla-ui';
 
 interface ApiStatusResponse {
   blk_count: number;

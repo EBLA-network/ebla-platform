@@ -18,7 +18,7 @@ import {
 } from '../../api';
 import { DagBlock, PbftBlock } from '../../models';
 import cleanDeep from 'clean-deep';
-import { BaseTooltip } from '@ebla-network/taraxa-ui';
+import { BaseTooltip } from '@ebla-network/ebla-ui';
 
 export const useHomeEffects = () => {
   const { finalBlock, dagBlockPeriod } = useNodeStateContext();

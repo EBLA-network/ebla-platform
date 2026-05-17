@@ -1,5 +1,5 @@
 {
-  "name": "@ebla-network/taraxa-ui",
+  "name": "@ebla-network/ebla-ui",
   "version": "0.0.1",
   "description": "Taraxa UI Library",
   "main": "lib/index.js",

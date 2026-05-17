@@ -1,6 +1,6 @@
 import React, { useEffect, useState, useCallback } from 'react';
 import stringify from 'qs-stringify';
-import { Text, Switch, Pagination } from '@ebla-network/taraxa-ui';
+import { Text, Switch, Pagination } from '@ebla-network/ebla-ui';
 import { useHistory } from 'react-router-dom';
 
 import PinnedIcon from '../../assets/icons/pinned';

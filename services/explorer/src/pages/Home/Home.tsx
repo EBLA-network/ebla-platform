@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, BlockCard } from '@ebla-network/taraxa-ui';
+import { Box, BlockCard } from '@ebla-network/ebla-ui';
 import { PageTitle } from '../../components';
 import { useHomeEffects } from './Home.effects';
 import ChartContainer from './ChartContainer';

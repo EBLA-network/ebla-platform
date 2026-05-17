@@ -1,7 +1,7 @@
 import React from 'react';
 import clsx from 'clsx';
 import { BigNumber, ethers } from 'ethers';
-import { MuiTooltip, Button, TableCell, TableRow } from '@ebla-network/taraxa-ui';
+import { MuiTooltip, Button, TableCell, TableRow } from '@ebla-network/ebla-ui';
 import NodeCommissionChangeIcon from '../../../assets/icons/nodeCommissionChange';
 import { stripEth, weiToEth } from '../../../utils/eth';
 

@@ -18,7 +18,7 @@ import {
   TableRow,
   TableSortLabel,
   MuiIcons,
-} from '@ebla-network/taraxa-ui';
+} from '@ebla-network/ebla-ui';
 
 import { blocksToDays } from '../../utils/time';
 import { useAuth } from '../../services/useAuth';
@@ -28,7 +28,7 @@ import WrongNetwork from '../../components/WrongNetwork';
 
 import useCMetamask from '../../services/useCMetamask';
 import useMainnet from '../../services/useMainnet';
-import useTaraxaApi from '../../services/useTaraxaApi';
+import useTaraxaApi from '../../services/useEblaApi';
 import useDelegation from '../../services/useDelegation';
 import useChain from '../../services/useChain';
 

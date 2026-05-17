@@ -21,8 +21,8 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "paths": {
-      "@ebla-network/taraxa-ui": ["packages/ebla-ui/src/index.ts"],
-      "@ebla-network/taraxa-community-site": ["services/community-site/src/index.ts"],
+      "@ebla-network/ebla-ui": ["packages/ebla-ui/src/index.ts"],
+      "@ebla-network/ebla-community-site": ["services/community-site/src/index.ts"],
       "@ebla-network/explorer": ["services/explorer/src/index.ts"],
       "@ebla-network/faucet": ["services/faucet/src/index.ts"],
       "@ebla-network/explorer-shared": ["packages/explorer-shared/src/index.ts"],

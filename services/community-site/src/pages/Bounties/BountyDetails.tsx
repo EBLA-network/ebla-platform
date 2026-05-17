@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useHistory } from 'react-router-dom';
 
-import { Text, Button, Pagination } from '@ebla-network/taraxa-ui';
+import { Text, Button, Pagination } from '@ebla-network/ebla-ui';
 
 import UserIcon from '../../assets/icons/user';
 

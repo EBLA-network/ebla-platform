@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, Button, InputField } from '@ebla-network/taraxa-ui';
+import { Text, Button, InputField } from '@ebla-network/ebla-ui';
 
 import { useAuth, UpdateUserPayload } from '../../services/useAuth';
 

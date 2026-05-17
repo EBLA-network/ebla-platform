@@ -16,7 +16,7 @@ RUN yarn install --frozen-lockfile \
     && yarn cache clean
 
 COPY . /app
-RUN yarn workspace @ebla-network/taraxa-claim-backend build
+RUN yarn workspace @ebla-network/ebla-claim-backend build
 
 # Production image
 # Make sure you always lock to the correct sha256
@@ -35,4 +35,4 @@ COPY --from=build /app/services/claim-backend/package.json /app/services/claim-b
 COPY --from=build /app/services/claim-backend/node_modules /app/services/claim-backend/node_modules
 COPY --from=build /app/services/claim-backend/dist /app/services/claim-backend/dist
 
-CMD ["yarn", "workspace", "@ebla-network/taraxa-claim-backend", "start:prod"]
+CMD ["yarn", "workspace", "@ebla-network/ebla-claim-backend", "start:prod"]

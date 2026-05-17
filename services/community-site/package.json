@@ -1,5 +1,5 @@
 {
-  "name": "@ebla-network/taraxa-community-site",
+  "name": "@ebla-network/ebla-community-site",
   "description": "Taraxa Community Site",
   "version": "0.0.1",
   "main": "template.json",
@@ -7,7 +7,7 @@
   "dependencies": {
     "@emotion/react": "^11.10.0",
     "@emotion/styled": "^11.10.0",
-    "@ebla-network/taraxa-ui": "^0.0.1",
+    "@ebla-network/ebla-ui": "^0.0.1",
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
     "@testing-library/user-event": "^12.1.10",

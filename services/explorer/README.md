@@ -30,7 +30,7 @@ The current version of the Explorer is an [`EIP-3091`](https://eips.ethereum.org
 The Explorer is dependent on the following Taraxa specific packages:
 
 - `@taraxa_project/explorer-shared` for types and interfaces + util methods.
-- `@taraxa_project/taraxa-ui` for reusable components and styling.
+- `@taraxa_project/ebla-ui` for reusable components and styling.
 
 ## Available Scripts
 

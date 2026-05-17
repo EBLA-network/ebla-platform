@@ -18,7 +18,7 @@ COPY tsconfig.json /app/
 COPY packages/ebla-ui /app/packages/ebla-ui
 COPY services/node-status /app/services/node-status
 
-RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/taraxa-ui build
-RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/taraxa-node-status build
+RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/ebla-ui build
+RUN SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/ebla-node-status build
 
-CMD ["yarn", "workspace", "@ebla-network/taraxa-node-status", "start"]
+CMD ["yarn", "workspace", "@ebla-network/ebla-node-status", "start"]

@@ -5,7 +5,7 @@ import {
   Divider,
   Skeleton,
   Stack,
-} from '@ebla-network/taraxa-ui';
+} from '@ebla-network/ebla-ui';
 import useStyles from './BlockCardSkeleton.styles';
 
 const BlockCardSkeleton = (): JSX.Element => {

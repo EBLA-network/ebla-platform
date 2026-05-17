@@ -1,5 +1,5 @@
 import React from 'react';
-import { LoadingWidget as TLoadingWidget } from '@ebla-network/taraxa-ui';
+import { LoadingWidget as TLoadingWidget } from '@ebla-network/ebla-ui';
 import { useLoading } from '../../services/useLoading';
 
 import './loading-widget.scss';

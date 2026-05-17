@@ -1,6 +1,6 @@
 import React from 'react';
 
-const TaraxaIcon = () => {
+const EblaIcon = () => {
   return (
     <svg
       version="1.1"
@@ -40,4 +40,4 @@ const TaraxaIcon = () => {
   );
 };
 
-export default TaraxaIcon;
+export default EblaIcon;

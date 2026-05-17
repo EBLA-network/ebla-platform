@@ -1,7 +1,7 @@
 import React, { useState, useContext, createContext } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import { Modal } from '@ebla-network/taraxa-ui';
+import { Modal } from '@ebla-network/ebla-ui';
 import { useAuth } from './useAuth';
 import SignIn from '../components/Modal/SignIn';
 import EmailConfirmed from '../components/Modal/EmailConfirmed';

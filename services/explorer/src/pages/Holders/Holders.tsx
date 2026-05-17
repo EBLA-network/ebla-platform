@@ -9,7 +9,7 @@ import {
   TableCell,
   TableBody,
   EmptyTable,
-} from '@ebla-network/taraxa-ui';
+} from '@ebla-network/ebla-ui';
 import { PageTitle } from '../../components';
 import { useHoldersEffects } from './Holders.effects';
 

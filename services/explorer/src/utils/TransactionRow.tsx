@@ -4,7 +4,7 @@ import {
   CircularProgress,
   Icons,
   Label,
-} from '@ebla-network/taraxa-ui';
+} from '@ebla-network/ebla-ui';
 import { HashLink } from '../components/Links';
 import {
   BlockData,

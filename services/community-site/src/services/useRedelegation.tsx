@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext, createContext } from 'react';
 import { useLocation } from 'react-router-dom';
-import { Button, Text, Skeleton } from '@ebla-network/taraxa-ui';
+import { Button, Text, Skeleton } from '@ebla-network/ebla-ui';
 import { Validator } from '../interfaces/Validator';
 import Nickname from '../components/Nickname/Nickname';
 

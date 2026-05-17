@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Typography } from '@ebla-network/taraxa-ui';
+import { Box, Typography } from '@ebla-network/ebla-ui';
 import useStyles from './DataRow.styles';
 
 export const DataRow: React.FC<{

@@ -6,7 +6,7 @@ services:
       context: ../../
       target: build
       dockerfile: services/claim-backend/Dockerfile
-    command: yarn workspace @ebla-network/taraxa-claim-backend start:prod
+    command: yarn workspace @ebla-network/ebla-claim-backend start:prod
     ports:
       - ${SERVER_PORT}:3000
     volumes:

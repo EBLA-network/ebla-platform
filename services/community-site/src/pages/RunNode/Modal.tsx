@@ -1,7 +1,7 @@
 import React from 'react';
 import { ethers } from 'ethers';
 import { useMediaQuery } from 'react-responsive';
-import { Modal } from '@ebla-network/taraxa-ui';
+import { Modal } from '@ebla-network/ebla-ui';
 
 import CloseIcon from '../../assets/icons/close';
 import RegisterNode from './Modal/RegisterNode';

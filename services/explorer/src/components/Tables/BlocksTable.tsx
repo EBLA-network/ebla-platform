@@ -11,7 +11,7 @@ import {
   TablePagination,
   TableContainer,
   BaseTooltip,
-} from '@ebla-network/taraxa-ui';
+} from '@ebla-network/ebla-ui';
 import { HashLink } from '..';
 import { BlockData } from '../../models';
 import {

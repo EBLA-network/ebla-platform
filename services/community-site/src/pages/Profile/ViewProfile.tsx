@@ -10,11 +10,11 @@ import {
   Tooltip,
   ProfileSubmissionsCard,
   Checkbox,
-} from '@ebla-network/taraxa-ui';
+} from '@ebla-network/ebla-ui';
 
 import { useDelegationApi, useClaimApi } from '../../services/useApi';
 import BountyIcon from '../../assets/icons/bounties';
-import TaraxaIcon from '../../assets/icons/taraxaIcon';
+import EblaIcon from '../../assets/icons/eblaIcon';
 import InfoIcon from '../../assets/icons/info';
 
 import { formatTime } from '../../utils/time';
@@ -136,7 +136,7 @@ function ViewProfileDetails({ points, openEditProfile }: ViewProfileDetailsProps
         wallet={
           auth.user!.eth_wallet ? auth.user!.eth_wallet : 'No Ethereum Wallet Address was set'
         }
-        Icon={TaraxaIcon}
+        Icon={EblaIcon}
         buttonOptions={buttons}
       />
       <ProfileBasicCard

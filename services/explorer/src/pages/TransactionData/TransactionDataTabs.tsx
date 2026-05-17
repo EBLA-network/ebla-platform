@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { ethers } from 'ethers';
-import { Box, Divider, Typography, Icons } from '@ebla-network/taraxa-ui';
+import { Box, Divider, Typography, Icons } from '@ebla-network/ebla-ui';
 
 import { CallData, TableTabsProps, Transaction } from '../../models';
 import {

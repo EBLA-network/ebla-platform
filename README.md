@@ -26,8 +26,8 @@ To run only the claim backend either use `yarn delegation-start` for development
 
 #### Community Site
 
-The community site is the interaction medium for users, a simple react app that uses the prebuilt reusable components from the `taraxa-ui`.
-To run only the community site either use `yarn watch:community` for development mode(it tracks changes in the taraxa-ui compoents and enables hot-reloading too) or `yarn community-build` and `yarn community-start:prod` for production mode.
+The community site is the interaction medium for users, a simple react app that uses the prebuilt reusable components from the `ebla-ui`.
+To run only the community site either use `yarn watch:community` for development mode(it tracks changes in the ebla-ui compoents and enables hot-reloading too) or `yarn community-build` and `yarn community-start:prod` for production mode.
 
 #### Code management
 

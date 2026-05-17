@@ -1,9 +1,9 @@
 import React, { useState, useRef } from 'react';
 import { useHistory } from 'react-router-dom';
 import { useMediaQuery } from 'react-responsive';
-import { Button, Header as THeader } from '@ebla-network/taraxa-ui';
+import { Button, Header as THeader } from '@ebla-network/ebla-ui';
 
-import TaraxaIcon from '../../assets/icons/taraxaIcon';
+import EblaIcon from '../../assets/icons/eblaIcon';
 import HamburgerIcon from '../../assets/icons/hamburger';
 
 import { useAuth } from '../../services/useAuth';
@@ -98,7 +98,7 @@ const Header = () => {
       className="header"
       color="primary"
       position="relative"
-      Icon={TaraxaIcon}
+      Icon={EblaIcon}
       elevation={0}
     >
       <Wallet />
