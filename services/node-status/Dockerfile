@@ -1,11 +1,11 @@
 FROM node:16-slim
 
-ENV NODE_ENV production
-ENV NEXT_TELEMETRY_DISABLED 1
-ENV SKIP_PREFLIGHT_CHECK true
+ENV NODE_ENV=production
+ENV NEXT_TELEMETRY_DISABLED=1
+ENV SKIP_PREFLIGHT_CHECK=true
 
 WORKDIR /app
-ENV PATH /app/node_modules/.bin:$PATH
+ENV PATH=/app/node_modules/.bin:$PATH
 
 COPY package.json yarn.lock /app/
 COPY packages/ebla-ui/package.json /app/packages/ebla-ui/
