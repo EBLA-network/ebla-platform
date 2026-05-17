@@ -259,7 +259,7 @@ const RegisterNode = ({
           className="node-control-reference-button"
           onClick={() =>
             window.open(
-              `https://docs.taraxa.io/node-setup/node_address`,
+              `https://docs.eblanetwork.com/node-setup/node_address`,
               '_blank',
               'noreferrer noopener',
             )
@@ -273,7 +273,7 @@ const RegisterNode = ({
           className="node-control-reference-button"
           onClick={() =>
             window.open(
-              `https://docs.taraxa.io/node-setup/vrf_key`,
+              `https://docs.eblanetwork.com/node-setup/vrf_key`,
               '_blank',
               'noreferrer noopener',
             )
@@ -287,7 +287,7 @@ const RegisterNode = ({
           className="node-control-reference-button"
           onClick={() =>
             window.open(
-              `https://docs.taraxa.io/node-setup/proof_owership`,
+              `https://docs.eblanetwork.com/node-setup/proof_owership`,
               '_blank',
               'noreferrer noopener',
             )

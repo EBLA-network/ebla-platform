@@ -14,52 +14,52 @@ interface Networks {
   [key: number]: Network;
 }
 export const networks: Networks = {
-  841: {
+  60186: {
     chainName: 'Taraxa Mainnet',
-    rpcUrl: 'https://rpc.mainnet.taraxa.io/',
-    iconUrl: 'https://community.taraxa.io/logo192.png',
-    blockExplorerUrl: 'https://mainnet.explorer.taraxa.io/',
+    rpcUrl: 'https://rpc.eblanetwork.com/',
+    iconUrl: '/logo192.png',
+    blockExplorerUrl: 'https://explorer.eblanetwork.com/',
     nativeCurrency: {
       name: 'TARA',
       symbol: 'TARA',
       decimals: 18,
     },
-    indexerUrl: 'https://indexer.mainnet.explorer.taraxa.io',
+    indexerUrl: 'https://indexer.mainnet.explorer.eblanetwork.com',
   },
-  842: {
+  60187: {
     chainName: 'Taraxa Testnet',
-    rpcUrl: 'https://rpc.testnet.taraxa.io/',
-    iconUrl: 'https://community.taraxa.io/logo192.png',
-    blockExplorerUrl: 'https://testnet.explorer.taraxa.io/',
+    rpcUrl: 'https://testnet-rpc.eblanetwork.com/',
+    iconUrl: '/logo192.png',
+    blockExplorerUrl: 'https://testnet.explorer.eblanetwork.com/',
     nativeCurrency: {
       name: 'TARA',
       symbol: 'TARA',
       decimals: 18,
     },
-    indexerUrl: 'https://indexer.testnet.explorer.taraxa.io',
+    indexerUrl: 'https://indexer.testnet.explorer.eblanetwork.com',
   },
-  843: {
+  60188: {
     chainName: 'Taraxa Devnet',
-    rpcUrl: 'https://rpc.devnet.taraxa.io/',
-    iconUrl: 'https://community.taraxa.io/logo192.png',
-    blockExplorerUrl: 'https://devnet.explorer.taraxa.io/',
+    rpcUrl: 'https://devnet-rpc.eblanetwork.com/',
+    iconUrl: '/logo192.png',
+    blockExplorerUrl: 'https://devnet.explorer.eblanetwork.com/',
     nativeCurrency: {
       name: 'TARA',
       symbol: 'TARA',
       decimals: 18,
     },
-    indexerUrl: 'https://indexer.devnet.explorer.taraxa.io',
+    indexerUrl: 'https://indexer.devnet.explorer.eblanetwork.com',
   },
   200: {
     chainName: 'Taraxa PRnet',
-    rpcUrl: 'https://rpc-pr-2460.prnet.taraxa.io/',
-    iconUrl: 'https://community.taraxa.io/logo192.png',
-    blockExplorerUrl: 'https://explorer-pr-2460.prnet.taraxa.io/',
+    rpcUrl: 'https://rpc-pr-2460.prnet.eblanetwork.com/',
+    iconUrl: '/logo192.png',
+    blockExplorerUrl: 'https://explorer-pr-2460.prnet.eblanetwork.com/',
     nativeCurrency: {
       name: 'TARA',
       symbol: 'TARA',
       decimals: 18,
     },
-    indexerUrl: 'https://indexer-pr-2460.prnet.taraxa.io',
+    indexerUrl: 'https://indexer-pr-2460.prnet.eblanetwork.com',
   },
 };

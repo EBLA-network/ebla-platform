@@ -14,7 +14,7 @@ export enum Network {
 }
 
 export enum NetworkGraphQLEndpoints {
-  MAINNET = 'https://graphql.mainnet.taraxa.io/',
-  TESTNET = 'https://graphql.testnet.taraxa.io/',
-  DEVNET = 'https://graphql.devnet.taraxa.io/',
+  MAINNET = 'https://graphql.mainnet.eblanetwork.com/',
+  TESTNET = 'https://graphql.testnet.eblanetwork.com/',
+  DEVNET = 'https://graphql.devnet.eblanetwork.com/',
 }

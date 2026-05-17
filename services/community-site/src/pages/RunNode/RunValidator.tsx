@@ -354,7 +354,7 @@ const RunValidator = () => {
                 onClickText="Set up a node"
                 onClickButton={() =>
                   window.open(
-                    'https://docs.taraxa.io/node-setup/testnet_node_setup',
+                    'https://docs.eblanetwork.com/node-setup/testnet_node_setup',
                     '_blank',
                     'noreferrer noopener',
                   )

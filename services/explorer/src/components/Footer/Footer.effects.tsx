@@ -11,7 +11,7 @@ export const useFooterEffects = (): { items: FooterItem[] } => {
     {
       label: 'Send',
       Icon: (
-        <a href='https://www.taraxa.io/tg' target='_blank' rel='noreferrer'>
+        <a href='https://t.me/EBLAnetwork' target='_blank' rel='noreferrer'>
           <SendIcon />
         </a>
       ),
@@ -20,7 +20,7 @@ export const useFooterEffects = (): { items: FooterItem[] } => {
       label: 'Discord',
       Icon: (
         <a
-          href='https://www.taraxa.io/discord'
+          href='https://discord.com/invite/gCkYC9h8S6'
           target='_blank'
           rel='noreferrer'
         >
@@ -32,7 +32,7 @@ export const useFooterEffects = (): { items: FooterItem[] } => {
       label: 'Twitter',
       Icon: (
         <a
-          href='https://www.taraxa.io/twitter'
+          href='https://x.com/EBLAnetwork'
           target='_blank'
           rel='noreferrer'
         >

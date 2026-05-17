@@ -245,7 +245,7 @@ export default function Home() {
                   variant="contained"
                   onClick={() =>
                     // eslint-disable-next-line no-undef
-                    window.open('https://community.taraxa.io/node', '_blank', 'noreferrer noopener')
+                    window.open('https://community.eblanetwork.com/node', '_blank', 'noreferrer noopener')
                   }
                 />
               </div>
@@ -255,19 +255,19 @@ export default function Home() {
 
         <Footer
           description="Taraxa has the world's highest TPS/$, lowest node operating cost and lowest gas cost, on the world's only blockDAG & 100% EVM-compatible Layer-1 network."
-          links={[{ label: 'Privacy Policy', link: 'https://taraxa.io/privacy' }]}
+          links={[{ label: 'Privacy Policy', link: 'https://eblanetwork.com/privacy' }]}
           items={[
             {
               label: 'Send',
-              Icon: <a href="https://www.taraxa.io/tg" target="_blank" rel="noreferrer" />,
+              Icon: <a href="https://t.me/EBLAnetwork" target="_blank" rel="noreferrer" />,
             },
             {
               label: 'Discord',
-              Icon: <a href="https://www.taraxa.io/discord" target="_blank" rel="noreferrer" />,
+              Icon: <a href="https://discord.com/invite/gCkYC9h8S6" target="_blank" rel="noreferrer" />,
             },
             {
               label: 'Twitter',
-              Icon: <a href="https://www.taraxa.io/twitter" target="_blank" rel="noreferrer" />,
+              Icon: <a href="https://x.com/EBLAnetwork" target="_blank" rel="noreferrer" />,
             },
           ]}
         />

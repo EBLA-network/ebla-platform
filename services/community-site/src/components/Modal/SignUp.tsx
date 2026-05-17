@@ -198,7 +198,7 @@ const SignUp = ({ onSuccess }: SignUpProps) => {
             color="primary"
           />
           &nbsp;
-          <a href="https://taraxa.io/privacy" target="_blank" rel="noreferrer">
+          <a href="https://eblanetwork.com/privacy" target="_blank" rel="noreferrer">
             <Text
               style={{ lineHeight: '42px' }}
               label="Privacy Policy"

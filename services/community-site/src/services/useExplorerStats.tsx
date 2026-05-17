@@ -146,7 +146,7 @@ export default () => {
       const newValidators = await Promise.all(
         validators.map(async (validator) => {
           const ranking = await get(
-            `${networks[842].indexerUrl}/validators/${validator.address.toLowerCase()}`,
+            `${networks[60187].indexerUrl}/validators/${validator.address.toLowerCase()}`,
           );
 
           if (!ranking.success) {

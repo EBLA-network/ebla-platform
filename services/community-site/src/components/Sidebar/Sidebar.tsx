@@ -73,7 +73,7 @@ const Sidebar = () => {
             <NavLink
               label="Taraxa Explorer"
               Icon={ExplorerSidebar}
-              to={{ pathname: 'https://mainnet.explorer.taraxa.io/' }}
+              to={{ pathname: 'https://explorer.eblanetwork.com/' }}
               target="_blank"
               rel="noopener noreferrer"
             />
@@ -84,7 +84,7 @@ const Sidebar = () => {
             <NavLink
               label="Deploy DApps"
               Icon={DeploySidebar}
-              to={{ pathname: 'https://www.taraxa.io/build/' }}
+              to={{ pathname: 'https://www.eblanetwork.com/build/' }}
               target="_blank"
               rel="noopener noreferrer"
             />

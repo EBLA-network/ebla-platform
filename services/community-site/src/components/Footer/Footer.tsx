@@ -8,12 +8,12 @@ const Footer = () => {
   return (
     <TFooter
       description="Taraxa has the world's highest TPS/$, lowest node operating cost and lowest gas cost, on the world's only blockDAG & 100% EVM-compatible Layer-1 network."
-      links={[{ label: 'Privacy Policy', link: 'https://taraxa.io/privacy' }]}
+      links={[{ label: 'Privacy Policy', link: 'https://eblanetwork.com/privacy' }]}
       items={[
         {
           label: 'Send',
           Icon: (
-            <a href="https://www.taraxa.io/tg" target="_blank" rel="noreferrer" aria-label="Send">
+            <a href="https://t.me/EBLAnetwork" target="_blank" rel="noreferrer" aria-label="Send">
               <SendIcon />
             </a>
           ),
@@ -22,7 +22,7 @@ const Footer = () => {
           label: 'Discord',
           Icon: (
             <a
-              href="https://www.taraxa.io/discord"
+              href="https://discord.com/invite/gCkYC9h8S6"
               target="_blank"
               rel="noreferrer"
               aria-label="Discord"
@@ -35,7 +35,7 @@ const Footer = () => {
           label: 'Twitter',
           Icon: (
             <a
-              href="https://www.taraxa.io/twitter"
+              href="https://x.com/EBLAnetwork"
               target="_blank"
               rel="noreferrer"
               aria-label="Twitter"

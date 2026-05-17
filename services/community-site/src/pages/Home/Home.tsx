@@ -137,7 +137,7 @@ const Home = ({ match }: RouteComponentProps<HomeProps>) => {
             description="Explore the ledger and find the transaction’s data."
             onClickText="Get Started"
             onClickButton={() =>
-              window.open('https://mainnet.explorer.taraxa.io/', '_blank', 'noreferrer noopener')
+              window.open('https://explorer.eblanetwork.com/', '_blank', 'noreferrer noopener')
             }
             Icon={ExplorerIcon}
           />
@@ -146,7 +146,7 @@ const Home = ({ match }: RouteComponentProps<HomeProps>) => {
             description="Earn rewards while learning about Taraxa and grow it’s ecosystem."
             onClickText="Get Started"
             onClickButton={() =>
-              window.open('https://www.taraxa.io/build/', '_blank', 'noreferrer noopener')
+              window.open('https://www.eblanetwork.com/build/', '_blank', 'noreferrer noopener')
             }
             Icon={DeployIcon}
           />

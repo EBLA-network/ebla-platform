@@ -93,7 +93,7 @@ export const getNetworkSubdomain = (network: string): string => {
 export const networkRedirect = (network: string): void => {
   const currentUrl = window.location.href;
   const isLocalhost = currentUrl.includes('localhost');
-  const isQa = currentUrl.includes('qa.explorer.taraxa.io');
+  const isQa = currentUrl.includes('qa.explorer.eblanetwork.com');
   const networkSubdomain = getNetworkSubdomain(network);
 
   let redirectUrl;
@@ -105,7 +105,7 @@ export const networkRedirect = (network: string): void => {
     )[2];
     redirectUrl = currentUrl.replace(
       baseDomain,
-      `${networkSubdomain}.qa.explorer.taraxa.io`
+      `${networkSubdomain}.qa.explorer.eblanetwork.com`
     );
   } else {
     const baseDomain = currentUrl.match(
@@ -113,7 +113,7 @@ export const networkRedirect = (network: string): void => {
     )[2];
     redirectUrl = currentUrl.replace(
       baseDomain,
-      `${networkSubdomain}.explorer.taraxa.io`
+      `${networkSubdomain}.explorer.eblanetwork.com`
     );
   }
 

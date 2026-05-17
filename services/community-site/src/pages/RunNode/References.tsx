@@ -16,7 +16,7 @@ const References = ({ canRegisterValidator, openRegisterValidatorModal }: Refere
         variant="contained"
         onClick={() =>
           window.open(
-            'https://docs.taraxa.io/node-setup/testnet_node_setup',
+            'https://docs.eblanetwork.com/node-setup/testnet_node_setup',
             '_blank',
             'noreferrer noopener',
           )
@@ -28,7 +28,7 @@ const References = ({ canRegisterValidator, openRegisterValidatorModal }: Refere
         variant="contained"
         onClick={() =>
           window.open(
-            'https://docs.taraxa.io/node-setup/node_address',
+            'https://docs.eblanetwork.com/node-setup/node_address',
             '_blank',
             'noreferrer noopener',
           )
@@ -47,7 +47,7 @@ const References = ({ canRegisterValidator, openRegisterValidatorModal }: Refere
         variant="contained"
         onClick={() =>
           window.open(
-            'https://docs.taraxa.io/node-setup/upgrade-a-node/software-upgrade',
+            'https://docs.eblanetwork.com/node-setup/upgrade-a-node/software-upgrade',
             '_blank',
             'noreferrer noopener',
           )
@@ -59,7 +59,7 @@ const References = ({ canRegisterValidator, openRegisterValidatorModal }: Refere
         variant="contained"
         onClick={() =>
           window.open(
-            'https://docs.taraxa.io/node-setup/upgrade-a-node/data-reset',
+            'https://docs.eblanetwork.com/node-setup/upgrade-a-node/data-reset',
             '_blank',
             'noreferrer noopener',
           )
@@ -69,7 +69,7 @@ const References = ({ canRegisterValidator, openRegisterValidatorModal }: Refere
         label="I need help!"
         className="referenceButton"
         variant="contained"
-        onClick={() => window.open('https://taraxa.io/discord', '_blank', 'noreferrer noopener')}
+        onClick={() => window.open('https://discord.com/invite/gCkYC9h8S6', '_blank', 'noreferrer noopener')}
       />
     </div>
   );
