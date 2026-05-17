@@ -12,10 +12,12 @@ app:
 
   environment: default
   dbHost: default-db.address
+  # TODO(EBLA): replace with EBLA cluster DB name
   dbDelegationName: taraxa-delegation-default
+  # TODO(EBLA): replace with EBLA cluster DB name
   dbCommunityName: taraxa-community-default
   queueHost: default-queue.address
-  indexerStakingUrl: http://default-taraxa-indexer:8000/subgraphs/name/taraxa_project/staking
+  indexerStakingUrl: http://default-ebla-indexer:8000/subgraphs/name/ebla_network/staking
 
   serverPort: 3000
   dbPort: 5432
@@ -30,10 +32,11 @@ app:
     testnetWallet: ''
 
 nodeSelector:
+  # TODO(EBLA): replace with EBLA-specific GKE nodepool label or remove if using different infra
   cloud.google.com/gke-nodepool: taraxa-community-default
 
 image:
-  repository: gcr.io/jovial-meridian-249123/taraxa/delegation-develop
+  repository: ghcr.io/ebla-network/delegation
   # pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: "latest"

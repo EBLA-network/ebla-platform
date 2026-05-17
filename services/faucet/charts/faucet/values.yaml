@@ -13,10 +13,10 @@ app:
   dbName: faucet
   queueHost: "queue-host"
   queuePort: 6379
-  provider: "https://rpc.default.taraxa.io/"
+  provider: "https://rpc.default.eblanetwork.com/"
 
 image:
-  repository: gcr.io/jovial-meridian-249123/taraxa/faucet-develop
+  repository: ghcr.io/ebla-network/faucet
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ""

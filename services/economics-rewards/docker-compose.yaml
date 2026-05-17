@@ -15,12 +15,24 @@ services:
       DB_DATABASE: /app/data/economics.sql
       DPOS_CONTRACT_ADDRESS: "0x00000000000000000000000000000000000000fe"
     depends_on:
-      taraxa-node:
+      ebla-node:
         condition: service_healthy
     restart: always
     network_mode: host
-  taraxa-node:
-    image: gcr.io/jovial-meridian-249123/taraxa-node:pr-2253-9150
+  ebla-node:
+    # TODO(EBLA): this entire service definition uses Taraxa CLI shape and data layout.
+    # ebla-node verification (May 2026, ebla-stable @ a83f38efd) confirms:
+    #   - Binary is named "eblad" (not "taraxad")
+    #   - Default config path: /root/.ebla/conf_ebla.json (via EBLA_CONF_PATH)
+    #   - Default persistent path: /root/.ebla (via EBLA_PERSISTENT_PATH)
+    #   - CLI flags differ: uses --config and --chain-id; --chain/--wallet/--data-dir status unverified
+    # Before deploy:
+    #   1. Pin a real image tag instead of :latest
+    #   2. Rewrite the command line using eblad's actual flag set
+    #      (run `eblad --help` or read ebla-node/programs/eblad/main.cpp)
+    #   3. Update volume mount path /opt/taraxa_data/data to /root/.ebla
+    #      or set EBLA_PERSISTENT_PATH to the desired location
+    image: ghcr.io/ebla-network/ebla-node:latest
     restart: always
     entrypoint: /usr/bin/sh
     command: >

@@ -21,7 +21,7 @@ metadata:
   {{- if .Values.ingress.auth.enabled }}
     nginx.ingress.kubernetes.io/auth-type: basic
     nginx.ingress.kubernetes.io/auth-secret: {{ .Release.Name }}
-    nginx.ingress.kubernetes.io/auth-realm: "Authentication Required - Taraxa Community"
+    nginx.ingress.kubernetes.io/auth-realm: "Authentication Required - EBLA Community"
   {{- end }}
 spec:
   {{- if and .Values.ingress.className (semverCompare ">=1.18-0" .Capabilities.KubeVersion.GitVersion) }}

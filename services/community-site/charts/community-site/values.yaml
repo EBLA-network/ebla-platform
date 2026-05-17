@@ -4,15 +4,15 @@ frontend:
 
   replicaCount: 2
 
-  apiHost: "http://api.default.community.taraxa.io"
-  apiTaraxaHost: "https://api.taraxa.io"
+  apiHost: "http://api.default.community.eblanetwork.com"
+  apiEblaHost: "https://api.eblanetwork.com"
   taraAddress: "0x0000000000000000000000000000000000000000"
   claimAddress: "0x0000000000000000000000000000000000000000"
   stakingAddress: "0x0000000000000000000000000000000000000000"
 
   imagePullSecrets: []
   image:
-    repository: gcr.io/jovial-meridian-249123/taraxa-community-frontend-main
+    repository: ghcr.io/ebla-network/community-frontend
     # pullPolicy: IfNotPresent
     tag: "latest"
 
@@ -61,6 +61,7 @@ frontend:
     # targetMemoryUtilizationPercentage: 80
 
   nodeSelector:
+    # TODO(EBLA): replace with EBLA-specific GKE nodepool label or remove if using different infra
     cloud.google.com/gke-nodepool: taraxa-community-default
 
 

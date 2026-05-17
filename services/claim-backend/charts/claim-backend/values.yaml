@@ -6,7 +6,7 @@ replicaCount: 3
 
 app:
   environment: prod
-  indexerGraphQLEndpoint: 'http://taraxa-indexer:8000/subgraphs/name/taraxa_project/claim'
+  indexerGraphQLEndpoint: 'http://ebla-indexer:8000/subgraphs/name/ebla_network/claim'
 
   name: claim
   component: api
@@ -17,7 +17,7 @@ app:
   dbName: claim
 
 image:
-  repository: taraxa/claim-backend
+  repository: ghcr.io/ebla-network/claim-backend
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
   tag: ''
@@ -92,4 +92,5 @@ tolerations: []
 affinity: {}
 
 nodeSelector:
+  # TODO(EBLA): replace with EBLA-specific GKE nodepool label or remove if using different infra
   cloud.google.com/gke-nodepool: taraxa-community-prod
