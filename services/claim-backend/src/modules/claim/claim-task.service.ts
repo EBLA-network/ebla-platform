@@ -1,6 +1,6 @@
 import { Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { Cron } from '@nestjs/schedule';
-import { ClaimService } from '@taraxa-claim/claim';
+import { ClaimService } from '@ebla-claim/claim';
 
 @Injectable()
 export class ClaimTaskService implements OnModuleInit {

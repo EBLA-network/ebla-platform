@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
-import { AuthModule } from '@taraxa-claim/auth';
-import { ClaimModule } from '@taraxa-claim/claim';
+import { AuthModule } from '@ebla-claim/auth';
+import { ClaimModule } from '@ebla-claim/claim';
 import { GeneralModule } from './general.module';
 
 @Module({

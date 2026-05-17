@@ -1,6 +1,6 @@
-# Graph Protocol Indexer for Taraxa DPOS
+# Graph Protocol Indexer for EBLA DPOS
 
-The indexer is used to gather all relevant onchain economics data for Taraxa.
+The indexer is used to gather all relevant onchain economics data for EBLA.
 
 ## Entities
 

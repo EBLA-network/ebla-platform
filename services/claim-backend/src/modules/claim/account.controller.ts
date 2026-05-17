@@ -14,14 +14,14 @@ import {
   ApiNotFoundResponse,
   ApiQuery,
 } from '@nestjs/swagger';
-import { JwtAuthGuard } from '@taraxa-claim/auth';
+import { JwtAuthGuard } from '@ebla-claim/auth';
 import { ClaimService } from './claim.service';
 import {
   Query,
   QueryDto,
   PaginationInterceptor,
   CollectionResponse,
-} from '@taraxa-claim/common';
+} from '@ebla-claim/common';
 import { AccountEntity } from './entity/account.entity';
 import { ClaimEntity } from './entity/claim.entity';
 

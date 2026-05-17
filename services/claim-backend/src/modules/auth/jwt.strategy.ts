@@ -2,7 +2,7 @@ import { ExtractJwt, Strategy } from 'passport-jwt';
 import { PassportStrategy } from '@nestjs/passport';
 import { Inject, Injectable } from '@nestjs/common';
 import { ConfigType } from '@nestjs/config';
-import { auth } from '@taraxa-claim/config';
+import { auth } from '@ebla-claim/config';
 import { JwtPayloadInterface } from './interface/jwt-payload.interface';
 
 @Injectable()

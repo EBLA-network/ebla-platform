@@ -1,7 +1,7 @@
 {
   "name": "@ebla-network/economics-rewards",
   "version": "0.0.1",
-  "description": "Taraxa script for reading validators",
+  "description": "EBLA script for reading validators",
   "main": "index.js",
   "scripts": {
     "start": "ts-node src/index.ts",
@@ -13,7 +13,6 @@
     "typescript",
     "nodejs"
   ],
-  "author": "Florin Georgescu <florin.georgescu@taraxa.io>",
   "license": "UNLICENSED",
   "dependencies": {
     "@fast-csv/format": "^4.3.5",

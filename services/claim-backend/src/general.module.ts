@@ -7,7 +7,7 @@ import {
   auth,
   ethereum,
   reward,
-} from '@taraxa-claim/config';
+} from '@ebla-claim/config';
 
 @Module({
   imports: [

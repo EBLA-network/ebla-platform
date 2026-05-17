@@ -2,8 +2,8 @@ import { CronJob } from 'cron';
 import { Inject, Injectable, Logger, OnModuleInit } from '@nestjs/common';
 import { ConfigType } from '@nestjs/config';
 import { SchedulerRegistry } from '@nestjs/schedule';
-import { general } from '@taraxa-claim/config';
-import { ClaimService } from '@taraxa-claim/claim';
+import { general } from '@ebla-claim/config';
+import { ClaimService } from '@ebla-claim/claim';
 
 @Injectable()
 export class UnlockerService implements OnModuleInit {

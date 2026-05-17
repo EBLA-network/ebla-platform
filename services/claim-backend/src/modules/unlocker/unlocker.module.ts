@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { ClaimModule } from '@taraxa-claim/claim';
+import { ClaimModule } from '@ebla-claim/claim';
 import { UnlockerService } from './unlocker.service';
 
 @Module({

@@ -1,9 +1,8 @@
 {
   "name": "@ebla-network/delegation-analysis",
   "version": "1.0.0",
-  "description": "Package for CLI and general-purpose scripts used in the Taraxa Ecosystem",
+  "description": "Package for CLI and general-purpose scripts used in the EBLA Ecosystem",
   "main": "index.ts",
-  "author": "Elod Varga <elod.varga@taraxa.io>",
   "license": "UNLICENSED",
   "private": true,
   "scripts": {

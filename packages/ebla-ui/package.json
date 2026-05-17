@@ -1,7 +1,7 @@
 {
   "name": "@ebla-network/ebla-ui",
   "version": "0.0.1",
-  "description": "Taraxa UI Library",
+  "description": "EBLA UI Library",
   "main": "lib/index.js",
   "module": "lib/index.esm.js",
   "types": "lib/src/index.d.ts",
@@ -20,7 +20,6 @@
     "react",
     "typescript"
   ],
-  "author": "Taraxa",
   "license": "MIT",
   "peerDependencies": {
     "react": "^18.1.0",

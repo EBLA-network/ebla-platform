@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { ScheduleModule } from '@nestjs/schedule';
-import { UnlockerModule } from '@taraxa-claim/unlocker';
+import { UnlockerModule } from '@ebla-claim/unlocker';
 import { GeneralModule } from './general.module';
 import { ClaimModule } from './modules/claim/claim.module';
 

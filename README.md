@@ -1,6 +1,6 @@
-# taraxa-platform
+# ebla-platform
 
-Monorepo containing all the repositories that build up the Taraxa Community site.
+Monorepo containing all the repositories that build up the EBLA Community site.
 
 ## Getting started
 

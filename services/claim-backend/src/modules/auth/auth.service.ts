@@ -2,7 +2,7 @@ import { compare } from 'bcryptjs';
 import { Repository } from 'typeorm';
 import { Inject, Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
-import { auth } from '@taraxa-claim/config';
+import { auth } from '@ebla-claim/config';
 import { LoginDto } from './dto/login.dto';
 import { AuthEntity } from './entity/auth.entity';
 import { JwtInterface } from './interface/jwt.interface';

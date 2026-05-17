@@ -14,12 +14,12 @@
     "esModuleInterop": true,
     "skipLibCheck": true,
     "paths": {
-      "@taraxa-claim/config": ["config"],
-      "@taraxa-claim/common": ["src/modules/common"],
-      "@taraxa-claim/auth": ["src/modules/auth"],
-      "@taraxa-claim/claim": ["src/modules/claim"],
-      "@taraxa-claim/unlocker": ["src/modules/unlocker"],
-      "@taraxa-claim/blockchain": ["src/modules/blockchain"]
+      "@ebla-claim/config": ["config"],
+      "@ebla-claim/common": ["src/modules/common"],
+      "@ebla-claim/auth": ["src/modules/auth"],
+      "@ebla-claim/claim": ["src/modules/claim"],
+      "@ebla-claim/unlocker": ["src/modules/unlocker"],
+      "@ebla-claim/blockchain": ["src/modules/blockchain"]
     }
   },
   "exclude": ["node_modules", "dist"]
