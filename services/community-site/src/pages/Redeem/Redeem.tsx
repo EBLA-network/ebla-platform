@@ -174,13 +174,13 @@ function Redeem() {
     } catch (e) {}
   };
 
-  const columns = ['TARA', 'Date', 'Status', ''];
+  const columns = ['EBLA', 'Date', 'Status', ''];
 
   return (
     <div className="redeem">
       {isWarnOpen && !isOnWrongChain && (
         <RedeemModals
-          taraAmount={claims[underClaim].numberOfTokens}
+          eblaAmount={claims[underClaim].numberOfTokens}
           warningModal={isWarnOpen}
           onWarningModalClose={() => setWarnOpen(false)}
           onWarningModalAccept={() => onClaim(underClaim)}
@@ -190,8 +190,8 @@ function Redeem() {
         <div className="claim">
           <div className="claim-content">
             <Title
-              title="Redeem TARA Points"
-              subtitle="Earn rewards and help test &amp; secure the Taraxa’s network"
+              title="Redeem EBLA Points"
+              subtitle="Earn rewards and help test &amp; secure the EBLA’s network"
             />
             <div className="notification">
               <Notification
@@ -213,7 +213,7 @@ function Redeem() {
               <div className="notification">
                 <Notification
                   title="Notice:"
-                  text="You need to be connected to the Taraxa Mainnet network"
+                  text="You need to be connected to the EBLA Mainnet network"
                   variant="danger"
                 >
                   <WrongNetwork />
@@ -223,11 +223,11 @@ function Redeem() {
             <div className="cardContainer">
               <BaseCard
                 title={formatEth(roundEth(weiToEth(availableToBeClaimed)))}
-                description="TARA points"
+                description="EBLA points"
               />
               <BaseCard
                 title={formatEth(roundEth(weiToEth(claimed)))}
-                description="TARA claimed total"
+                description="EBLA claimed total"
               />
               <BaseCard
                 title={formatEth(roundEth(weiToEth(balance)))}

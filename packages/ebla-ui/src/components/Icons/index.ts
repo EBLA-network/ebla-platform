@@ -7,7 +7,7 @@ import Attachment from './Attachment';
 import Submit from './Submit';
 import Trophy from './Trophy';
 import Exclamation from './Exclamation';
-import Taraxa from './Taraxa';
+import Ebla from './Ebla';
 import Search from './Search';
 import MenuDots from './MenuDots';
 import Check from './Check';
@@ -36,7 +36,7 @@ export {
   Trophy,
   Exclamation,
   Check,
-  Taraxa,
+  EBLA,
   Search,
   MenuDots,
   RightArrow,
@@ -80,4 +80,5 @@ export default {
   TransactionBlock,
   File,
   Tips,
+  Ebla,
 };

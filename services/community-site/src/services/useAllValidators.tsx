@@ -1,6 +1,6 @@
 import React, { useState, useContext, createContext, useEffect, useCallback } from 'react';
 import { Validator } from '../interfaces/Validator';
-import useTaraxaApi from './useTaraxaApi';
+import useEblaApi from './useEblaApi';
 import useExplorerStats from './useExplorerStats';
 import { useLoading } from './useLoading';
 
@@ -16,7 +16,7 @@ const ValidatorsContext = createContext<Context>(initialState);
 
 const useProvideValidators = () => {
   const [allValidatorsWithStats, setAllValidatorsWithStats] = useState<Validator[]>([]);
-  const { getValidators } = useTaraxaApi();
+  const { getValidators } = useEblaApi();
 
   const { updateValidatorsRank, updateValidatorsStats } = useExplorerStats();
   const { startLoading, finishLoading } = useLoading();

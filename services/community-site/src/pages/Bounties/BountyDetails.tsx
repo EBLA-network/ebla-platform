@@ -180,8 +180,8 @@ function BountyDetails() {
     <div className="bounties">
       <div className="bounties-content">
         <Title
-          title="Taraxa ecosystem bounties"
-          subtitle="Earn rewards and help grow the Taraxa's ecosystem"
+          title="EBLA ecosystem bounties"
+          subtitle="Earn rewards and help grow the EBLA's ecosystem"
         />
         <BountyCard
           bounty={bounty as Bounty}

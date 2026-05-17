@@ -3,7 +3,7 @@ import { useQuery } from 'urql';
 import { dagDetailsQuery } from '../../api';
 import { useExplorerLoader, useExplorerNetwork } from '../../hooks';
 import { DagBlock, Transaction } from '../../models';
-import { displayWeiOrTara, getTransactionType } from '../../utils';
+import { displayWeiOrEbla, getTransactionType } from '../../utils';
 
 export const useDAGDataContainerEffects = (
   hash: string
@@ -39,7 +39,7 @@ export const useDAGDataContainerEffects = (
         data?.dagBlock?.transactions?.map((tx: Transaction) => {
           return {
             ...tx,
-            value: displayWeiOrTara(tx.value),
+            value: displayWeiOrEbla(tx.value),
             gasUsed: `${tx.gasUsed}`,
             gas: tx.gas?.toString(),
             action: getTransactionType(tx),

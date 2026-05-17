@@ -28,7 +28,7 @@ import WrongNetwork from '../../components/WrongNetwork';
 
 import useCMetamask from '../../services/useCMetamask';
 import useMainnet from '../../services/useMainnet';
-import useTaraxaApi from '../../services/useEblaApi';
+import useEblaApi from '../../services/useEblaApi';
 import useDelegation from '../../services/useDelegation';
 import useChain from '../../services/useChain';
 
@@ -54,7 +54,7 @@ const Delegation = ({ location }: { location: Location }) => {
   const { isLoading } = useLoading();
   const { asyncCallback } = useWalletPopup();
 
-  const { getValidators, getValidatorsWith } = useTaraxaApi();
+  const { getValidators, getValidatorsWith } = useEblaApi();
   const { updateValidatorsStats, updateValidatorsRank } = useExplorerStats();
   const { getDelegations, getUndelegations, confirmUndelegate, cancelUndelegate } = useDelegation();
   const { validatorFrom, showPopup, clearRedelegation } = useRedelegation();
@@ -267,7 +267,7 @@ const Delegation = ({ location }: { location: Location }) => {
     return accumulator.add(currentUndelegation.stake);
   }, ethers.BigNumber.from(0));
 
-  const undelegatedTara = totalUndelegationOfAddress.gt(totalDelegationOfAddress)
+  const undelegatedEbla = totalUndelegationOfAddress.gt(totalDelegationOfAddress)
     ? totalUndelegationOfAddress.sub(totalDelegationOfAddress)
     : ethers.BigNumber.from(0);
 
@@ -345,7 +345,7 @@ const Delegation = ({ location }: { location: Location }) => {
         onUndelegateFinish={() => setUndelegateFromValidator(null)}
       />
       <div className="runnode-content">
-        <Title title="Staking" subtitle="Earn rewards and help secure the Taraxa network." />
+        <Title title="Staking" subtitle="Earn rewards and help secure the EBLA network." />
         {status !== 'connected' && (
           <div className="notification">
             <Notification
@@ -359,7 +359,7 @@ const Delegation = ({ location }: { location: Location }) => {
           <div className="notification">
             <Notification
               title="Notice:"
-              text="You need to be logged into your Taraxa account in order to delegate / un-delegate."
+              text="You need to be logged into your EBLA account in order to delegate / un-delegate."
               variant="danger"
             />
           </div>
@@ -368,7 +368,7 @@ const Delegation = ({ location }: { location: Location }) => {
           <div className="notification">
             <Notification
               title="Notice:"
-              text="You need to be connected to the Taraxa Mainnet network in order to delegate / un-delegate."
+              text="You need to be connected to the EBLA Mainnet network in order to delegate / un-delegate."
               variant="danger"
             >
               <WrongNetwork />
@@ -416,10 +416,10 @@ const Delegation = ({ location }: { location: Location }) => {
                   undelegation.block < currentBlock
                     ? `You can claim the ${ethers.utils.commify(
                         weiToEth(undelegation.stake),
-                      )} TARA.`
+                      )} EBLA.`
                     : `You can cancel the Undelegation Request to return ${ethers.utils.commify(
                         weiToEth(undelegation.stake),
-                      )} TARA to validator ${undelegation.address}`
+                      )} EBLA to validator ${undelegation.address}`
                 }
                 variant={undelegation.block < currentBlock ? 'success' : 'info'}
               >
@@ -476,12 +476,12 @@ const Delegation = ({ location }: { location: Location }) => {
             />
             <BaseCard
               title={stripEth(averageDelegation)}
-              description="Average TARA delegatated to validators"
+              description="Average EBLA delegatated to validators"
               isLoading={isLoading}
             />
             <BaseCard
               title={stripEth(totalDelegation)}
-              description="Total TARA delegated to validators"
+              description="Total EBLA delegated to validators"
               isLoading={isLoading}
             />
           </div>
@@ -495,17 +495,17 @@ const Delegation = ({ location }: { location: Location }) => {
             />
             <BaseCard
               title={stripEth(totalDelegationOfAddress)}
-              description="My Delegated TARA - total number of delegated tokens"
+              description="My Delegated EBLA - total number of delegated tokens"
               isLoading={isLoading}
             />
             <BaseCard
               title={stripEth(totalClaimableRewards)}
-              description="Claimable TARA - Staking rewards that are instantly claimable."
+              description="Claimable EBLA - Staking rewards that are instantly claimable."
               isLoading={isLoading}
             />
             <BaseCard
-              title={stripEth(undelegatedTara)}
-              description="Undelegated TARA - TARA that is awaiting release from delegation and can be claimed or the undelegation request can be canceled."
+              title={stripEth(undelegatedEbla)}
+              description="Undelegated EBLA - EBLA that is awaiting release from delegation and can be claimed or the undelegation request can be canceled."
               isLoading={isLoading}
             />
           </div>

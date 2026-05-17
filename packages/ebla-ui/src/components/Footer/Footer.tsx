@@ -18,7 +18,7 @@ const Footer = ({ items, description, links }: FooterProps) => {
     <div className={isMobile ? classes.footerMobile : classes.footer}>
       <div className={isMobile ? classes.logoMobile : classes.logo}>
         <div className={isMobile ? classes.footerSVGMobile : classes.footerSVG}>
-          <img src={logo} width={160} alt='Taraxa' />
+          <img src={logo} width={160} alt='EBLA' />
         </div>
         {items && !isMobile && (
           <ul className={classes.footerUl}>

@@ -181,7 +181,7 @@ function BountySubmit() {
       <div className="bounties-content">
         <Title
           title="Bounty submission"
-          subtitle="Earn rewards and help grow the Taraxa's ecosystem"
+          subtitle="Earn rewards and help grow the EBLA's ecosystem"
         />
         <div className="bounties-details">
           <form onSubmit={submit}>

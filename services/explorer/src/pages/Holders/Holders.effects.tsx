@@ -106,7 +106,7 @@ export const useHoldersEffects = (): {
   };
 
   const title = `Holders`;
-  const description = `Current holders on Taraxa ${currentNetwork}`;
+  const description = `Current holders on EBLA ${currentNetwork}`;
 
   return {
     title,
@@ -119,7 +119,7 @@ export const useHoldersEffects = (): {
         label: findLabelFor(holder.address),
         balance: BigNumber.from(holder.balance || '0'),
         totalSupply: totalSupply || BigNumber.from(0),
-        taraPrice: (tokenPriceData?.data[0].current_price as number) || 0,
+        eblaPrice: (tokenPriceData?.data[0].current_price as number) || 0,
       })
     ),
     rowsPerPage,

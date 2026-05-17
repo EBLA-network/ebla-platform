@@ -1,14 +1,14 @@
-# Getting started with Exploring Taraxa
+# Getting started with Exploring EBLA
 
 <p align="center">
-  <a href="http://taraxa.io/" target="blank"><img src="https://taraxa.io/static/taraxa_io/img/taraxa_logo_transparent_dark_bg.png" width="200" alt="Taraxa Logo" /></a>
+  <a href="http://taraxa.io/" target="blank"><img src="https://taraxa.io/static/taraxa_io/img/taraxa_logo_transparent_dark_bg.png" width="200" alt="EBLA Logo" /></a>
 </p>
 
 <a href="https://www.npmjs.com/~taraxa_project" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
 <a href="https://www.npmjs.com/~taraxa_project" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://circleci.com/gh/Taraxa-project/taraxa-platform" target="_blank"><img src="https://img.shields.io/circleci/build/github/Taraxa-project/taraxa-platform/main" alt="CircleCI" /></a>
+<a href="https://circleci.com/gh/EBLA-project/taraxa-platform" target="_blank"><img src="https://img.shields.io/circleci/build/github/EBLA-project/taraxa-platform/main" alt="CircleCI" /></a>
 <a href="https://discord.gg/Sqf9MHD2" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://github.com/Taraxa-project" target="_blank"><img src="https://img.shields.io/github/followers/Taraxa-project?style=social" alt="GitHub Followers" /></a>
+<a href="https://github.com/EBLA-project" target="_blank"><img src="https://img.shields.io/github/followers/EBLA-project?style=social" alt="GitHub Followers" /></a>
 <a href="https://twitter.com/taraxa_project" target="_blank"><img src="https://img.shields.io/twitter/follow/taraxa_project?style=social"></a>
 
 The current version of the Explorer is an [`EIP-3091`](https://eips.ethereum.org/EIPS/eip-3091) compatible. To browse through our data take a look at the standard.
@@ -27,7 +27,7 @@ The current version of the Explorer is an [`EIP-3091`](https://eips.ethereum.org
 
 ## Dependencies
 
-The Explorer is dependent on the following Taraxa specific packages:
+The Explorer is dependent on the following EBLA specific packages:
 
 - `@ebla-network/explorer-shared` for types and interfaces + util methods.
 - `@ebla-network/ebla-ui` for reusable components and styling.

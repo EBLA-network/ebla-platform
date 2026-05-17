@@ -10,7 +10,7 @@ import {
   useGetAddressStats,
   useGetTransactionsByAddress,
 } from '../../api';
-import { balanceWeiToTara } from '../../utils';
+import { balanceWeiToEbla } from '../../utils';
 import { useGetTokenPrice } from '../../api/fetchTokenPrice';
 import { PaginationDataResults, useIndexer } from '../../hooks/useIndexer';
 import { useAddressLabel } from '../../hooks/useAddressLabel';
@@ -77,13 +77,13 @@ export const useAddressInfoEffects = (
 
     if (accountDetails) {
       const account = accountDetails?.block?.account;
-      addressDetails.balance = balanceWeiToTara(account?.balance);
+      addressDetails.balance = balanceWeiToEbla(account?.balance);
       addressDetails.transactionCount = account?.transactionCount;
     }
 
     if (tokenPriceData?.data) {
       const price = tokenPriceData.data[0].current_price as number;
-      addressDetails.pricePerTara = price;
+      addressDetails.pricePerEbla = price;
       addressDetails.valueCurrency = 'USD';
 
       if (accountDetails?.block?.account) {

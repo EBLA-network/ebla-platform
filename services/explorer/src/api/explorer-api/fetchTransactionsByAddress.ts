@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { ethers } from 'ethers';
-import { displayWeiOrTara, getAddressTransactionType } from '../../utils';
+import { displayWeiOrEbla, getAddressTransactionType } from '../../utils';
 import {
   FetchWithPagination,
   AddressTxResponse,
@@ -26,7 +26,7 @@ export const useGetTransactionsByAddress = (
           number: tx.blockNumber,
           timestamp: tx.timestamp,
         },
-        value: displayWeiOrTara(ethers.BigNumber.from(tx.value)),
+        value: displayWeiOrEbla(ethers.BigNumber.from(tx.value)),
         gasCost: tx.gasCost,
         status: tx.status ? 1 : 0,
         from: {

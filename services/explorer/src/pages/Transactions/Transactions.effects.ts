@@ -12,7 +12,7 @@ import {
 import { blocksQueryWithTransactions } from '../../api';
 import {
   formatTransactionStatus,
-  fromWeiToTara,
+  fromWeiToEbla,
   MIN_WEI_TO_CONVERT,
   toTransactionTableRow,
 } from '../../utils';
@@ -72,8 +72,8 @@ export const useTransactionEffects = (): {
                 value:
                   Number(tx.value) < MIN_WEI_TO_CONVERT
                     ? `${tx.value}`
-                    : `${fromWeiToTara(ethers.BigNumber.from(tx.value))}`,
-                token: Number(tx.value) < MIN_WEI_TO_CONVERT ? `Wei` : `TARA`,
+                    : `${fromWeiToEbla(ethers.BigNumber.from(tx.value))}`,
+                token: Number(tx.value) < MIN_WEI_TO_CONVERT ? `Wei` : `EBLA`,
               };
             });
             txData = [...txData, ...rows];

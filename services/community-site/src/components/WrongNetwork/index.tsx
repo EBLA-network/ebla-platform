@@ -38,7 +38,7 @@ const WrongNetwork = () => {
     <Button
       variant="contained"
       color="error"
-      label="Switch to Taraxa Mainnet"
+      label="Switch to EBLA Mainnet"
       size="small"
       className="smallBtn"
       onClick={() => switchNetwork()}

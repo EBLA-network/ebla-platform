@@ -9,21 +9,21 @@ export interface RedeemModalsProps {
   warningModal: boolean;
   onWarningModalClose: () => void;
   onWarningModalAccept: () => void;
-  taraAmount: ethers.BigNumber;
+  eblaAmount: ethers.BigNumber;
 }
 
 const RedeemModals = (props: RedeemModalsProps) => {
-  const { warningModal, onWarningModalClose, onWarningModalAccept, taraAmount } = props;
+  const { warningModal, onWarningModalClose, onWarningModalAccept, eblaAmount } = props;
   return (
     <>
       {warningModal && (
         <Modal
           id="warningModal"
-          title={`You are redeeming ${taraAmount} TARA`}
+          title={`You are redeeming ${eblaAmount} EBLA`}
           show={warningModal}
           children={
             <RedeemWarning
-              amount={formatEth(roundEth(weiToEth(taraAmount)))}
+              amount={formatEth(roundEth(weiToEth(eblaAmount)))}
               onDenial={onWarningModalClose}
               onAccept={onWarningModalAccept}
             />

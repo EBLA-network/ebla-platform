@@ -60,7 +60,7 @@ const ProfileCard = ({
               className={classes.label}
               color='textSecondary'
             >
-              TARA address:
+              EBLA address:
             </Typography>
             <Typography
               variant='body1'

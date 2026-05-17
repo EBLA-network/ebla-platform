@@ -50,7 +50,7 @@ export interface HoldersTableData {
   label: string | null;
   balance: BigNumber;
   totalSupply: BigNumber;
-  taraPrice: number;
+  eblaPrice: number;
 }
 
 export interface ColumnData {

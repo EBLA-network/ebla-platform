@@ -10,7 +10,7 @@ export const toHolderTableRow = ({
   label,
   balance,
   totalSupply,
-  taraPrice,
+  eblaPrice,
 }: HoldersTableData): {
   rank: number;
   address: JSX.Element;
@@ -42,7 +42,7 @@ export const toHolderTableRow = ({
   const percentageBar = <ProgressBar percentage={percentageWithFourDecimals} />;
   const etherBalance = utils.formatEther(balance);
   const value = `$${(
-    Number.parseFloat(etherBalance) * taraPrice
+    Number.parseFloat(etherBalance) * eblaPrice
   ).toLocaleString('USD')}`;
   return {
     rank,

@@ -21,7 +21,7 @@ import {
   formatTransactionStatus,
   getTransactionType,
   TransactionType,
-  displayWeiOrTara,
+  displayWeiOrEbla,
   timestampToFormattedTime,
   timestampToDate,
 } from '../../utils';
@@ -149,7 +149,7 @@ const TransactionDataContainer = (): JSX.Element => {
                   data={`${transactionData.value}`}
                   initialState={EncodedType.DEC}
                   primitiveType={PrimitiveType.UINT}
-                  formatDecimal={displayWeiOrTara}
+                  formatDecimal={displayWeiOrEbla}
                 />
               )}
               {transactionData?.from &&

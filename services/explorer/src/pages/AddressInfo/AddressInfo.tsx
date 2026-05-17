@@ -23,7 +23,7 @@ const AddressInfoPage = (): JSX.Element => {
     <>
       <PageTitle
         title='Address info'
-        subtitle='Detailed TARAXA address information'
+        subtitle='Detailed EBLA address information'
       />
       {showLoadingSkeleton ? (
         <AddressLoadingSkeleton />

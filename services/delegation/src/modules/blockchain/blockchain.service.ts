@@ -114,7 +114,7 @@ export class BlockchainService {
       return true;
     } catch (e) {
       console.error(
-        `Could not delegate ${amount.toString()} TARA to validator ${address}`,
+        `Could not delegate ${amount.toString()} EBLA to validator ${address}`,
         e,
       );
     }

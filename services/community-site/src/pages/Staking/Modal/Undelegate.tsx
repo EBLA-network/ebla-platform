@@ -63,13 +63,13 @@ const Undelegate = ({ validator, onSuccess, onFinish }: UndelegateProps) => {
       parseFloat(undelegationTotal) > parseFloat(totalDelegation) - 1000
     ) {
       setError(
-        'you can either undelegate all of your TARA or as many as you want but keep the minimum delegation (1000 TARA)',
+        'you can either undelegate all of your EBLA or as many as you want but keep the minimum delegation (1000 EBLA)',
       );
       return;
     }
 
     if (parseFloat(undelegationTotal) > parseFloat(totalDelegation)) {
-      setError('cannot exceed TARA available for delegation');
+      setError('cannot exceed EBLA available for delegation');
       return;
     }
 
@@ -103,10 +103,10 @@ const Undelegate = ({ validator, onSuccess, onFinish }: UndelegateProps) => {
           <span className="nodeAddress">{validator.address}</span>
         </p>
       </div>
-      <div className="taraInputWrapper">
+      <div className="eblaInputWrapper">
         <p className="maxDelegatableDescription">Available to undelegate</p>
         <p className="maxDelegatableTotal">{totalDelegation}</p>
-        <p className="maxDelegatableUnit">TARA</p>
+        <p className="maxDelegatableUnit">EBLA</p>
         <InputField
           error={!!error}
           helperText={error}
@@ -126,7 +126,7 @@ const Undelegate = ({ validator, onSuccess, onFinish }: UndelegateProps) => {
               parseFloat(inputValue) > parseFloat(totalDelegation) - 1000
             ) {
               setError(
-                'you can either undelegate all of your TARA or as many as you want but keep the minimum delegation (1000 TARA)',
+                'you can either undelegate all of your EBLA or as many as you want but keep the minimum delegation (1000 EBLA)',
               );
             } else if (parseFloat(inputValue) > parseFloat(totalDelegation)) {
               setError(`must be a number smaller than or equal to the total current delegation`);

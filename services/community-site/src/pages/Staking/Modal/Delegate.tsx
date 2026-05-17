@@ -50,13 +50,13 @@ const Delegate = ({ balance, validator, ownDelegation, onSuccess, onFinish }: De
     }
 
     if (parseFloat(delegationTotal) > parseFloat(ethers.utils.formatEther(balance))) {
-      setError('cannot exceed TARA available for delegation');
+      setError('cannot exceed EBLA available for delegation');
       return;
     }
 
     if (parseFloat(delegationTotal) === parseFloat(ethers.utils.formatEther(balance))) {
       setError(
-        'Cannot use entire TARA balance. The transaction also requires you pay the gas fee.',
+        'Cannot use entire EBLA balance. The transaction also requires you pay the gas fee.',
       );
       return;
     }
@@ -98,22 +98,22 @@ const Delegate = ({ balance, validator, ownDelegation, onSuccess, onFinish }: De
           <span className="nodeAddress">{validator.address}</span>
         </p>
       </div>
-      <div className="taraContainerWrapper">
-        <div className="taraContainer taraContainerBalance">
-          <p className="taraContainerAmountDescription">My available TARA for delegation</p>
-          <AmountCard amount={stripEth(balance)} unit="TARA" />
+      <div className="eblaContainerWrapper">
+        <div className="eblaContainer eblaContainerBalance">
+          <p className="eblaContainerAmountDescription">My available EBLA for delegation</p>
+          <AmountCard amount={stripEth(balance)} unit="EBLA" />
         </div>
-        <div className="taraContainer">
-          <p className="taraContainerAmountDescription">
+        <div className="eblaContainer">
+          <p className="eblaContainerAmountDescription">
             Validator’s availability to receive delegation
           </p>
-          <AmountCard amount={stripEth(validator.availableForDelegation)} unit="TARA" />
+          <AmountCard amount={stripEth(validator.availableForDelegation)} unit="EBLA" />
         </div>
       </div>
-      <div className="taraInputWrapper">
+      <div className="eblaInputWrapper">
         <p className="maxDelegatableDescription">Maximum delegate-able</p>
         <p className="maxDelegatableTotal">{maximumDelegatable}</p>
-        <p className="maxDelegatableUnit">TARA</p>
+        <p className="maxDelegatableUnit">EBLA</p>
         <InputField
           error={!!error}
           helperText={error}
@@ -129,10 +129,10 @@ const Delegate = ({ balance, validator, ownDelegation, onSuccess, onFinish }: De
           onKeyUp={(event) => {
             const inputValue = (event.target as HTMLInputElement).value;
             if (parseFloat(inputValue) > parseFloat(ethers.utils.formatEther(balance))) {
-              setError('cannot exceed TARA available for delegation');
+              setError('cannot exceed EBLA available for delegation');
             } else if (parseFloat(inputValue) === parseFloat(ethers.utils.formatEther(balance))) {
               setError(
-                'Cannot use entire TARA balance. The transaction also requires you pay the gas fee.',
+                'Cannot use entire EBLA balance. The transaction also requires you pay the gas fee.',
               );
             } else if (!ownDelegation && compareDelegationTo(inputValue, '1000')) {
               setError('must be a number greater than 1,000');

@@ -18,7 +18,7 @@ const Template: Story<FooterProps> = (args) => <Footer {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   description:
-    'Taraxa is a public ledger platform purpose-built for audit logging of informal transactions. ',
+    'EBLA is a public ledger platform purpose-built for audit logging of informal transactions. ',
   links: [
     { label: 'Privacy Policy', link: '#' },
     { label: 'Terms of Use', link: '#' },

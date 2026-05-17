@@ -12,7 +12,7 @@ interface RedeemWarningProps {
 export const TX_FEE_WARN = `Once you click on the Redeem button, you are locked
 into this transaction and it cannot be cancelled. 
 
-If you wish to accumulate more TARA to claim
+If you wish to accumulate more EBLA to claim
 later on, in order to minimize transaction fees, please do NOT click on Redeem right now.`;
 
 const RedeemWarning = (props: RedeemWarningProps) => {
@@ -21,7 +21,7 @@ const RedeemWarning = (props: RedeemWarningProps) => {
     <div className="redeem-warning">
       <WarningSign />
       <br />
-      <span className="wide-title">{`You are redeeming ${amount} TARA`}</span>
+      <span className="wide-title">{`You are redeeming ${amount} EBLA`}</span>
       <br />
       <div className="central-container">
         <span>
@@ -36,7 +36,7 @@ const RedeemWarning = (props: RedeemWarningProps) => {
         className="redeemable"
         color="secondary"
         onClick={() => onAccept()}
-        label={`Redeem ${amount} TARA`}
+        label={`Redeem ${amount} EBLA`}
       />
       <br />
       <Button

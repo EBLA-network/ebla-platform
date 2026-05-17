@@ -1,6 +1,6 @@
 import React from 'react';
 
-const Taraxa = () => {
+const Ebla = () => {
   return (
     <svg width={26} height={26} fill='none' xmlns='http://www.w3.org/2000/svg'>
       <g clipPath='url(#a)' fill='#15AC5B'>
@@ -15,4 +15,4 @@ const Taraxa = () => {
   );
 };
 
-export default Taraxa;
+export default Ebla;

@@ -139,7 +139,7 @@ export const useNodesEffects = (): {
     weekPagination?.startDate
   )} - ${formatDate(weekPagination?.endDate)})`;
   const description = 'Total blocks produced this week';
-  const pageSubtitle = `List of TARAXA nodes on ${currentNetwork}`;
+  const pageSubtitle = `List of EBLA nodes on ${currentNetwork}`;
 
   return {
     blocks: blocks?.data,

@@ -7,7 +7,7 @@ import DiscordIcon from '../../assets/icons/discord';
 const Footer = () => {
   return (
     <TFooter
-      description="Taraxa has the world's highest TPS/$, lowest node operating cost and lowest gas cost, on the world's only blockDAG & 100% EVM-compatible Layer-1 network."
+      description="EBLA has the world's highest TPS/$, lowest node operating cost and lowest gas cost, on the world's only blockDAG & 100% EVM-compatible Layer-1 network."
       links={[{ label: 'Privacy Policy', link: 'https://eblanetwork.com/privacy' }]}
       items={[
         {

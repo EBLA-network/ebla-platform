@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
 
-    .taraContainerAmountDescription {
+    .eblaContainerAmountDescription {
       font-size: medium;
     }
   }
@@ -47,43 +47,43 @@
     padding: 7px 10px;
     font-size: 14px;
   }
-  .taraContainer {
+  .eblaContainer {
     float: left;
     max-width: 200px;
   }
-  .taraContainerAmountDescription {
+  .eblaContainerAmountDescription {
     text-align: left;
     font-size: 12px;
     margin-top: 0;
   }
-  .taraContainerBalance {
+  .eblaContainerBalance {
     margin-right: 12px;
   }
-  .taraContainerWrapper {
+  .eblaContainerWrapper {
     overflow: auto;
     display: flex;
     justify-content: center;
     align-items: flex-end;
   }
-  .taraContainerAmount {
+  .eblaContainerAmount {
     text-align: left;
     background-color: #31364b;
     border: 1px solid #4f5368;
     border-radius: 4px;
     letter-spacing: -0.02em;
   }
-  .taraContainerAmountTotal {
+  .eblaContainerAmountTotal {
     margin: 10px 0 0 10px;
     font-size: 22px;
     font-weight: 700;
   }
-  .taraContainerUnit {
+  .eblaContainerUnit {
     margin: 5px 0 10px 10px;
     color: #878ca4;
     text-align: left;
     font-size: 12px;
   }
-  .taraInputWrapper {
+  .eblaInputWrapper {
     width: 312px;
     padding: 20px;
     border: 1px solid #15ac5b;

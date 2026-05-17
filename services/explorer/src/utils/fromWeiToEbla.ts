@@ -2,7 +2,7 @@ import { BigNumber, ethers, utils } from 'ethers';
 
 export const MIN_WEI_TO_CONVERT = Math.pow(10, 3);
 
-export const fromWeiToTara = (amount: string | number | BigNumber): string => {
+export const fromWeiToEbla = (amount: string | number | BigNumber): string => {
   if (!amount) {
     return;
   }
@@ -12,7 +12,7 @@ export const fromWeiToTara = (amount: string | number | BigNumber): string => {
     : parseFloat(result?.toFixed(4))?.toString();
 };
 
-export const balanceWeiToTara = (amount: string): string => {
+export const balanceWeiToEbla = (amount: string): string => {
   if (!amount) {
     return;
   }
@@ -33,13 +33,13 @@ export const formatBalance = (balance: string): string => {
   return balanceFormatted;
 };
 
-export const displayWeiOrTara = (
+export const displayWeiOrEbla = (
   amount: string | number | BigNumber
 ): string => {
   if (amount !== undefined && amount !== null) {
     return Number(amount) < MIN_WEI_TO_CONVERT
       ? `${amount} Wei`
-      : `${fromWeiToTara(ethers.BigNumber.from(amount))} TARA`;
+      : `${fromWeiToEbla(ethers.BigNumber.from(amount))} EBLA`;
   }
   return 'NA';
 };

@@ -169,7 +169,7 @@ const Sidebar = ({
       </div>
       <div>
         <Text
-          label={`© Taraxa ${new Date().getFullYear()}`}
+          label={`© EBLA ${new Date().getFullYear()}`}
           variant='body1'
           color='textSecondary'
         />

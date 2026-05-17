@@ -11,7 +11,7 @@ async function bootstrap() {
   if (!configService.get<boolean>('isProd')) {
     const swagger = new DocumentBuilder()
       .setTitle('delegation')
-      .setDescription('Taraxa Delegation Service')
+      .setDescription('EBLA Delegation Service')
       .setVersion('0.1')
       .addBearerAuth()
       .build();

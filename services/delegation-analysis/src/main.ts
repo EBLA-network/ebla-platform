@@ -22,11 +22,11 @@ async function main() {
   await ensureTargetFolder();
   const program = new Command();
 
-  console.log(figlet.textSync('Taraxa Staking/Delegation'));
+  console.log(figlet.textSync('EBLA Staking/Delegation'));
 
   program
     .version('1.0.0')
-    .description(chalk.green('Scipt CLI for managing Taraxa relevant scripts'))
+    .description(chalk.green('Scipt CLI for managing EBLA relevant scripts'))
     .option('-f, --first <first>', 'Number of staking events to retrieve', parseInt)
     .option('-s, --skip <skip>', 'Number of staking events to skip', parseInt)
     .option(
@@ -71,7 +71,7 @@ async function main() {
     const totalGlobalUndelegated = totalGlobalStake.sub(totalGlobalDelegation);
     console.log(
       chalk.magenta(
-        `Currently ${totalGlobalStake.toString()} is staked, from which ${totalGlobalDelegation.toString()} is delegated to TARA validators. ${totalGlobalUndelegated.toString()} is not delegated, consisting of ${totalGlobalUndelegated
+        `Currently ${totalGlobalStake.toString()} is staked, from which ${totalGlobalDelegation.toString()} is delegated to EBLA validators. ${totalGlobalUndelegated.toString()} is not delegated, consisting of ${totalGlobalUndelegated
           .mul(BigNumber.from('100'))
           .div(totalGlobalStake)
           .toString()} % of the total value staked.`,

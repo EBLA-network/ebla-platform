@@ -9,7 +9,7 @@ import {
   useGetDecodedTransactionsByTxHash,
   useGetInternalTransactionsByTxHash,
 } from '../../api';
-import { displayWeiOrTara, getAddressTransactionType } from '../../utils';
+import { displayWeiOrEbla, getAddressTransactionType } from '../../utils';
 import { useExplorerNetwork } from '../../hooks';
 import useStyles from './TransactionData.styles';
 import { TransactionsTable } from '../../components/Tables';
@@ -55,7 +55,7 @@ const TransactionDataTabs = ({
             number: tx.blockNumber,
             timestamp: tx.timestamp,
           },
-          value: displayWeiOrTara(ethers.BigNumber.from(tx.value)),
+          value: displayWeiOrEbla(ethers.BigNumber.from(tx.value)),
           gasCost: tx.gasCost,
           status: tx.status ? 1 : 0,
           gasUsed: tx.gasUsed?.toString(),

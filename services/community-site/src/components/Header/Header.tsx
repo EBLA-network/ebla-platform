@@ -94,7 +94,7 @@ const Header = () => {
 
   return (
     <THeader
-      title="Taraxa Community"
+      title="EBLA Community"
       className="header"
       color="primary"
       position="relative"

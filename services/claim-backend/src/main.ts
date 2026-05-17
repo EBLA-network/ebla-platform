@@ -7,8 +7,8 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()
-    .setTitle('Taraxa Claim Backend')
-    .setDescription('Taraxa Claim Backend')
+    .setTitle('EBLA Claim Backend')
+    .setDescription('EBLA Claim Backend')
     .setVersion('1.0')
     .addBearerAuth()
     .build();

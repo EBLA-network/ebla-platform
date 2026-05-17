@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { BigNumber } from 'ethers';
-import { displayWeiOrTara, getAddressTransactionType } from '../../utils';
+import { displayWeiOrEbla, getAddressTransactionType } from '../../utils';
 import {
   AddressTxResponse,
   FetchWithPagination,
@@ -19,10 +19,10 @@ export const useGetGenesisBlock = async (
       ...tx,
       status: tx.status ? 1 : 0,
       gasUsed: tx.gasUsed?.toString(),
-      gasPrice: displayWeiOrTara(tx.gasPrice?.toString()),
+      gasPrice: displayWeiOrEbla(tx.gasPrice?.toString()),
       gas: tx.gas?.toString(),
       action: getAddressTransactionType(tx.type),
-      value: displayWeiOrTara(BigNumber.from(tx.value)),
+      value: displayWeiOrEbla(BigNumber.from(tx.value)),
     })),
   };
 };

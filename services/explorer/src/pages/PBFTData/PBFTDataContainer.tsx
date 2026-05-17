@@ -39,7 +39,7 @@ const Title = ({ currentNetwork }: { currentNetwork: string }): JSX.Element => {
   return (
     <PageTitle
       title='PBFT Block Info'
-      subtitle={`Detailed TARAXA PBFT block information on the ${currentNetwork}.`}
+      subtitle={`Detailed EBLA PBFT block information on the ${currentNetwork}.`}
     />
   );
 };

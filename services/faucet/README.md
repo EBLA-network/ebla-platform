@@ -1,6 +1,6 @@
-# Taraxa Explorer
+# EBLA Explorer
 
-The faucet drips 1,5,10 or 50 TARA tokens on the designed test network for each address.
+The faucet drips 1,5,10 or 50 EBLA tokens on the designed test network for each address.
 In the initial implementation the delimiting period is one week for requests.
 
 ## Env var explanator
@@ -17,13 +17,13 @@ In the initial implementation the delimiting period is one week for requests.
 
 Source of funds:
 
-- _addresses(1) - TARA Wallet Address - Internal wallet that holds TARA Tokens_
+- _addresses(1) - EBLA Wallet Address - Internal wallet that holds EBLA Tokens_
 
-- _addresses(2) - TARA private Signing Wallet - Internal wallet that we use to generate the signatures for the Claim smart contract_
+- _addresses(2) - EBLA private Signing Wallet - Internal wallet that we use to generate the signatures for the Claim smart contract_
 
 ## Security
 
-The backend app stores the [private key](https://github.com/Taraxa-project/faucet/blob/main/.env.example#L9) for the signing wallet. This key is sensitive as anyone with access to the key can spend the TARA tokens destined to end up in tester's wallets. Currently we read it from an env var and that gets set in the Kubernetes cluster via a secret.
+The backend app stores the [private key](https://github.com/EBLA-project/faucet/blob/main/.env.example#L9) for the signing wallet. This key is sensitive as anyone with access to the key can spend the EBLA tokens destined to end up in tester's wallets. Currently we read it from an env var and that gets set in the Kubernetes cluster via a secret.
 
 ## Installation
 

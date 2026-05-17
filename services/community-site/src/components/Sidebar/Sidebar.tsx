@@ -71,7 +71,7 @@ const Sidebar = () => {
         {
           Link: (
             <NavLink
-              label="Taraxa Explorer"
+              label="EBLA Explorer"
               Icon={ExplorerSidebar}
               to={{ pathname: 'https://explorer.eblanetwork.com/' }}
               target="_blank"

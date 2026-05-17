@@ -61,7 +61,7 @@ const Home = ({ match }: RouteComponentProps<HomeProps>) => {
   return (
     <div className={isMobile ? 'home-mobile' : 'home'}>
       <div className="home-content">
-        <Title title="Get started" subtitle="Welcome to Taraxa's community site!" />
+        <Title title="Get started" subtitle="Welcome to EBLA's community site!" />
         {isMobile && (
           <ToggleButton
             exclusive
@@ -87,21 +87,21 @@ const Home = ({ match }: RouteComponentProps<HomeProps>) => {
         >
           <IconCard
             title="Staking"
-            description="Earn rewards and help secure the Taraxa network."
+            description="Earn rewards and help secure the EBLA network."
             onClickText="Get Started"
             onClickButton={() => history.push('/staking')}
             Icon={StakingIcon}
           />
           <IconCard
             title="Bounties"
-            description="Earn rewards while learning about Taraxa and grow it’s ecosystem."
+            description="Earn rewards while learning about EBLA and grow it’s ecosystem."
             onClickText="Get Started"
             onClickButton={() => history.push('/bounties')}
             Icon={BountiesIcon}
           />
           <IconCard
             title="Redeem"
-            description="Redeem TARA points for $TARA tokens and cool Taraxa swag."
+            description="Redeem EBLA points for $EBLA tokens and cool EBLA swag."
             onClickText="Get Started"
             onClickButton={() => history.push('/redeem')}
             Icon={RedeemIcon}
@@ -115,7 +115,7 @@ const Home = ({ match }: RouteComponentProps<HomeProps>) => {
         >
           <Notification
             title="Participate"
-            text="Participate in Taraxa`s public networks."
+            text="Participate in EBLA`s public networks."
             variant="success"
           />
         </div>
@@ -127,13 +127,13 @@ const Home = ({ match }: RouteComponentProps<HomeProps>) => {
         >
           <IconCard
             title="Run a node"
-            description="Earn rewards while helping to secure Taraxa’s network."
+            description="Earn rewards while helping to secure EBLA’s network."
             onClickText="Get Started"
             onClickButton={() => history.push('/node')}
             Icon={NodeIcon}
           />
           <IconCard
-            title="Taraxa explorer"
+            title="EBLA explorer"
             description="Explore the ledger and find the transaction’s data."
             onClickText="Get Started"
             onClickButton={() =>
@@ -143,7 +143,7 @@ const Home = ({ match }: RouteComponentProps<HomeProps>) => {
           />
           <IconCard
             title="Deploy DApps"
-            description="Earn rewards while learning about Taraxa and grow it’s ecosystem."
+            description="Earn rewards while learning about EBLA and grow it’s ecosystem."
             onClickText="Get Started"
             onClickButton={() =>
               window.open('https://www.eblanetwork.com/build/', '_blank', 'noreferrer noopener')

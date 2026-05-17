@@ -166,16 +166,16 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Taraxa Node Status :: {status}</title>
+        <title>EBLA Node Status :: {status}</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Header title="Taraxa Node Status" color="primary" position="relative" elevation={0} />
+      <Header title="EBLA Node Status" color="primary" position="relative" elevation={0} />
 
       <main className="App">
-        <Text label="Taraxa Node Status" variant="h1" color="primary" className="title" />
+        <Text label="EBLA Node Status" variant="h1" color="primary" className="title" />
         <Text
-          label="Track the current status and performance of your Taraxa Node."
+          label="Track the current status and performance of your EBLA Node."
           variant="body2"
           color="textSecondary"
           className="subtitle"
@@ -254,7 +254,7 @@ export default function Home() {
         )}
 
         <Footer
-          description="Taraxa has the world's highest TPS/$, lowest node operating cost and lowest gas cost, on the world's only blockDAG & 100% EVM-compatible Layer-1 network."
+          description="EBLA has the world's highest TPS/$, lowest node operating cost and lowest gas cost, on the world's only blockDAG & 100% EVM-compatible Layer-1 network."
           links={[{ label: 'Privacy Policy', link: 'https://eblanetwork.com/privacy' }]}
           items={[
             {

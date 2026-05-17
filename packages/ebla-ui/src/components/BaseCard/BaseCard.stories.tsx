@@ -14,4 +14,4 @@ export default {
 const Template: Story<BaseCardProps> = (args) => <BaseCard {...args} />;
 
 export const Primary = Template.bind({});
-Primary.args = { title: '0', description: 'TARA Staked' };
+Primary.args = { title: '0', description: 'EBLA Staked' };

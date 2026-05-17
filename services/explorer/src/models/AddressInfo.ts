@@ -7,5 +7,5 @@ export interface AddressInfoDetails {
   transactionCount: number;
   dagBlocks: number;
   pbftBlocks: number;
-  pricePerTara: number;
+  pricePerEbla: number;
 }

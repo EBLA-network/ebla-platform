@@ -12,4 +12,4 @@ const Template: Story<ProfileBasicCardProps> = (args) => (
 );
 
 export const Primary = Template.bind({});
-Primary.args = { title: 'Test', value: '41,234', description: 'TARA' };
+Primary.args = { title: 'Test', value: '41,234', description: 'EBLA' };

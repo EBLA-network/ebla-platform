@@ -45,8 +45,8 @@ const Claim = ({ amount, validator, onSuccess, onFinish, commissionMode = false 
         </p>
       </div>
       <div className="claimContainer">
-        <p className="taraContainerAmountDescription">Amount to be claimed:</p>
-        <AmountCard amount={stripEth(amount)} unit="TARA" />
+        <p className="eblaContainerAmountDescription">Amount to be claimed:</p>
+        <AmountCard amount={stripEth(amount)} unit="EBLA" />
         <br />
         <Button
           type="submit"

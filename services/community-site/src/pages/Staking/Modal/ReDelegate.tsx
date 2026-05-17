@@ -128,23 +128,23 @@ const ReDelegate = ({ reDelegatableBalance, onSuccess, onFinish }: ReDelegatePro
         </div>
       )}
       {/* {validatorTo && reDelegationTotal && (
-        <div className="taraContainerWrapper" style={{ marginTop: '1rem' }}>
-          <div className="taraContainer taraContainerBalance">
-            <p className="taraContainerAmountDescription">Available TARA for re-delegation</p>
-            <AmountCard amount={reDelegationTotal} unit="TARA" />
+        <div className="eblaContainerWrapper" style={{ marginTop: '1rem' }}>
+          <div className="eblaContainer eblaContainerBalance">
+            <p className="eblaContainerAmountDescription">Available EBLA for re-delegation</p>
+            <AmountCard amount={reDelegationTotal} unit="EBLA" />
           </div>
-          <div className="taraContainer">
-            <p className="taraContainerAmountDescription">
+          <div className="eblaContainer">
+            <p className="eblaContainerAmountDescription">
               Validator's availability to receive delegation
             </p>
-            <AmountCard amount={stripEth(validatorTo.availableForDelegation)} unit="TARA" />
+            <AmountCard amount={stripEth(validatorTo.availableForDelegation)} unit="EBLA" />
           </div>
         </div>
       )} */}
-      <div className="taraInputWrapper">
+      <div className="eblaInputWrapper">
         <p className="maxDelegatableDescription">Maximum delegate-able</p>
         <p className="maxDelegatableTotal">{reDelegationTotal}</p>
-        <p className="maxDelegatableUnit">TARA</p>
+        <p className="maxDelegatableUnit">EBLA</p>
         <InputField
           error={!!error}
           helperText={error}

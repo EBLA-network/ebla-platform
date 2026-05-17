@@ -22,7 +22,7 @@ import useCMetamask from '../../services/useCMetamask';
 import useMainnet from '../../services/useMainnet';
 import useChain from '../../services/useChain';
 import { useDelegationApi } from '../../services/useApi';
-import useTaraxaApi from '../../services/useEblaApi';
+import useEblaApi from '../../services/useEblaApi';
 
 import NodeIcon from '../../assets/icons/node';
 import InfoIcon from '../../assets/icons/info';
@@ -52,7 +52,7 @@ const RunValidator = () => {
   const { status, account } = useCMetamask();
   const { chainId: mainnetChainId } = useMainnet();
 
-  const { getValidatorsFor } = useTaraxaApi();
+  const { getValidatorsFor } = useEblaApi();
   const { allValidatorsWithStats } = useAllValidators();
   const { updateTestnetValidatorsStats, updateTestnetValidatorsRank } = useExplorerStats();
   const delegationApi = useDelegationApi();
@@ -264,7 +264,7 @@ const RunValidator = () => {
           <div className="notification">
             <Notification
               title="Notice:"
-              text="You need to be connected to the Taraxa Mainnet network in order to delegate / un-delegate."
+              text="You need to be connected to the EBLA Mainnet network in order to delegate / un-delegate."
               variant="danger"
             >
               <WrongNetwork />
@@ -350,7 +350,7 @@ const RunValidator = () => {
               />
               <IconCard
                 title="Set up a node"
-                description="Learn how to set up a node on Taraxa’s testnet."
+                description="Learn how to set up a node on EBLA’s testnet."
                 onClickText="Set up a node"
                 onClickButton={() =>
                   window.open(

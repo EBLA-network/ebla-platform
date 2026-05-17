@@ -154,16 +154,16 @@ function ViewProfileDetails({ points, openEditProfile }: ViewProfileDetailsProps
         }
       >
         <div className="flexExpand">
-          {!account && 'TARA'}
-          {account && isTotalPointsChecked && 'Total TARA'}
-          {account && !isTotalPointsChecked && 'Redeemable TARA'}
+          {!account && 'EBLA'}
+          {account && isTotalPointsChecked && 'Total EBLA'}
+          {account && !isTotalPointsChecked && 'Redeemable EBLA'}
           <div className="lockedPointsCheckbox">
             <Checkbox
               checked={isTotalPointsChecked}
               disabled={!account}
               onChange={(e) => setShowTotalPoints(e.target.checked)}
             />
-            Show total TARA
+            Show total EBLA
           </div>
         </div>
       </ProfileBasicCard>
@@ -192,7 +192,7 @@ function ViewProfileBounties({ approved, rejected, review }: ViewProfileBounties
             color="primary"
           />
           {sub.submission_reward && (
-            <Text label={`${sub.submission_reward} TARA`} variant="body2" color="textSecondary" />
+            <Text label={`${sub.submission_reward} EBLA`} variant="body2" color="textSecondary" />
           )}
         </div>
         <div className="gridRight">

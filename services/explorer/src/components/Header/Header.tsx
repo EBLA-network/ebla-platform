@@ -86,7 +86,7 @@ export const Header = (): JSX.Element => {
 
   return (
     <THeader
-      title='Taraxa Explorer'
+      title='EBLA Explorer'
       className='header'
       color='primary'
       position='relative'

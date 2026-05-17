@@ -6,7 +6,7 @@ import { useExplorerLoader, useExplorerNetwork } from '../../hooks';
 import { PbftBlock, Transaction } from '../../models';
 import { useIndexer } from '../../hooks/useIndexer';
 import { useGetGenesisBlock } from '../../api';
-import { displayWeiOrTara, getTransactionType } from '../../utils';
+import { displayWeiOrEbla, getTransactionType } from '../../utils';
 
 export const usePBFTDataContainerEffects = (
   blockNumber?: number,
@@ -82,7 +82,7 @@ export const usePBFTDataContainerEffects = (
         trx
           .map((tx: Transaction) => ({
             ...tx,
-            value: displayWeiOrTara(tx.value),
+            value: displayWeiOrEbla(tx.value),
             gasUsed: `${tx.gasUsed}`,
             gas: tx.gas?.toString(),
             action: getTransactionType(tx),

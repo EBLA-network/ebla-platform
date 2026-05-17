@@ -93,7 +93,7 @@ const DAGDataContainer = (): JSX.Element => {
     <>
       <PageTitle
         title='DAG Block Info'
-        subtitle={`Detailed TARAXA DAG block information on the ${currentNetwork}.`}
+        subtitle={`Detailed EBLA DAG block information on the ${currentNetwork}.`}
       />
       {showLoadingSkeleton ? (
         <DagLoadingSkeleton />

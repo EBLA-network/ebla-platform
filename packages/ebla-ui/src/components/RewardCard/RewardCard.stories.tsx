@@ -17,6 +17,6 @@ const Template: Story<RewardCardProps> = (args) => <RewardCard {...args} />;
 export const Primary = Template.bind({});
 Primary.args = {
   title: 'Staking',
-  description: "Earn rewards while helping to secure Taraxa's network",
+  description: "Earn rewards while helping to secure EBLA's network",
   onClickText: 'Get Started',
 };

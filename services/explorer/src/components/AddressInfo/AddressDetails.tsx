@@ -68,14 +68,14 @@ export const AddressDetails = ({
           )}
           <DataRow
             title='Balance'
-            data={`${details?.balance ? details?.balance : '0'} TARA`}
+            data={`${details?.balance ? details?.balance : '0'} EBLA`}
           />
           {details?.value &&
             details?.valueCurrency &&
-            details?.pricePerTara && (
+            details?.pricePerEbla && (
               <DataRow
                 title='Value'
-                data={`${details.value} ${details.valueCurrency} ( ${details.pricePerTara} / TARA )`}
+                data={`${details.value} ${details.valueCurrency} ( ${details.pricePerEbla} / EBLA )`}
               />
             )}
         </Box>

@@ -170,8 +170,8 @@ function Bounties() {
     <div className="bounties">
       <div className="bounties-content">
         <Title
-          title="Taraxa ecosystem bounties"
-          subtitle="Earn rewards and help grow the Taraxa's ecosystem"
+          title="EBLA ecosystem bounties"
+          subtitle="Earn rewards and help grow the EBLA's ecosystem"
         />
         <PinnedBounties bounties={pinnedBounties} goTo={goTo} />
         <div className="list-header">
