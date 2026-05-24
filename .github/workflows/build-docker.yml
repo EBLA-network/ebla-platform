@@ -1,0 +1,91 @@
+name: Build Docker Image (node-status)
+
+on:
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ebla-network/ebla-node-status
+  DOCKERFILE: services/node-status/Dockerfile
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    outputs:
+      image-digest: ${{ steps.build-push.outputs.digest }}
+      image-tags: ${{ steps.meta.outputs.tags }}
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Log in to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ${{ env.REGISTRY }}
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Prepare environment variables
+        id: prepare
+        run: |
+          COMMIT_SHA="${{ github.sha }}"
+          COMMIT_SHA_SHORT="${COMMIT_SHA:0:8}"
+
+          # workflow_dispatch: github.ref_name is the branch chosen in the UI
+          BRANCH_NAME="${{ github.ref_name }}"
+
+          echo "commit_sha=${COMMIT_SHA}" >> $GITHUB_OUTPUT
+          echo "commit_sha_short=${COMMIT_SHA_SHORT}" >> $GITHUB_OUTPUT
+          echo "branch_name=${BRANCH_NAME}" >> $GITHUB_OUTPUT
+
+      - name: Generate image tags
+        id: meta
+        run: |
+          REGISTRY_URL="${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}"
+          BRANCH="${{ steps.prepare.outputs.branch_name }}"
+          SHORT_SHA="${{ steps.prepare.outputs.commit_sha_short }}"
+
+          # Tag with branch-name (floating) and branch-sha (immutable forensic anchor)
+          TAGS="${REGISTRY_URL}:${BRANCH}"
+          TAGS="${TAGS},${REGISTRY_URL}:${BRANCH}-${SHORT_SHA}"
+
+          echo "tags=${TAGS}" >> $GITHUB_OUTPUT
+
+      - name: Build Docker image
+        id: build-push
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ${{ env.DOCKERFILE }}
+          push: true
+          platforms: linux/amd64
+          tags: ${{ steps.meta.outputs.tags }}
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+          provenance: true
+
+      - name: Image build summary
+        run: |
+          echo "## Docker Image Build Summary (node-status)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "**Commit:** \`${{ steps.prepare.outputs.commit_sha }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Branch:** \`${{ steps.prepare.outputs.branch_name }}\`" >> $GITHUB_STEP_SUMMARY
+          echo "**Event:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Registry:** ${{ env.REGISTRY }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Dockerfile:** ${{ env.DOCKERFILE }}" >> $GITHUB_STEP_SUMMARY
+          echo "**Pushed:** ✅ Yes" >> $GITHUB_STEP_SUMMARY
+          echo "**Tags:**" >> $GITHUB_STEP_SUMMARY
+          IFS=',' read -ra TAGS <<< "${{ steps.meta.outputs.tags }}"
+          for tag in "${TAGS[@]}"; do
+            echo "- \`${tag// /}\`" >> $GITHUB_STEP_SUMMARY
+          done
+          echo "**Image Digest:** \`${{ steps.build-push.outputs.digest }}\`" >> $GITHUB_STEP_SUMMARY
