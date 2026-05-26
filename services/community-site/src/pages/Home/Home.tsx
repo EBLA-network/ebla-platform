@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import { useHistory, withRouter, RouteComponentProps } from 'react-router-dom';
 
@@ -18,7 +18,7 @@ interface HomeProps {
   code: string | undefined;
 }
 
-const Home = ({ match }: RouteComponentProps<HomeProps>) => {
+const Home = (_props: RouteComponentProps<HomeProps>) => {
 
   const history = useHistory();
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });

@@ -22,11 +22,11 @@ const initialState: Context = {
   content: '',
   code: undefined,
   modal: null,
-  setIsOpen: () => {},
-  setContent: () => {},
-  signIn: () => {},
-  reset: () => {},
-  setCode: () => {},
+  setIsOpen: () => { /* noop */ },
+  setContent: () => { /* noop */ },
+  signIn: () => { /* noop */ },
+  reset: () => { /* noop */ },
+  setCode: () => { /* noop */ },
 };
 
 const ModalContext = createContext<Context>(initialState);
