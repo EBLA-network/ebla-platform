@@ -28,9 +28,9 @@ export const networks: Networks = {
   },
   60187: {
     chainName: 'EBLA Testnet',
-    rpcUrl: 'https://testnet-rpc.eblanetwork.com/',
+    rpcUrl: 'https://rpc.testnet.eblanetwork.com/',
     iconUrl: '/logo192.png',
-    blockExplorerUrl: 'https://testnet.explorer.eblanetwork.com/',
+    blockExplorerUrl: 'https://explorer.testnet.eblanetwork.com/',
     nativeCurrency: {
       name: 'EBLA',
       symbol: 'EBLA',
