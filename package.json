@@ -2,7 +2,8 @@
   "private": true,
   "workspaces": [
     "services/*",
-    "packages/*"
+    "packages/ebla-ui",
+    "packages/explorer-shared"
   ],
   "scripts": {
     "build-storybook": "cross-env SKIP_PREFLIGHT_CHECK=true yarn workspace @ebla-network/ebla-ui build-storybook",
