@@ -95,7 +95,7 @@ export default () => {
 
       const newValidators = await Promise.all(
         validators.map(async (validator) => {
-          return getStats(validator, 842);
+          return getStats(validator, 60187);
         }),
       );
 
