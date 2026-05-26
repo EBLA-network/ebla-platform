@@ -69,7 +69,9 @@ const References = ({ canRegisterValidator, openRegisterValidatorModal }: Refere
         label="I need help!"
         className="referenceButton"
         variant="contained"
-        onClick={() => window.open('https://discord.com/invite/gCkYC9h8S6', '_blank', 'noreferrer noopener')}
+        onClick={() =>
+          window.open('https://discord.com/invite/gCkYC9h8S6', '_blank', 'noreferrer noopener')
+        }
       />
     </div>
   );
