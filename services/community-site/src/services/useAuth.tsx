@@ -1,5 +1,9 @@
-import React, { useState, useEffect, useContext, createContext } from 'react';
-import useApi from './useApi';
+import React, { useContext, createContext } from 'react';
+
+// Auth is disabled for testnet wallet-only flow. The original Strapi
+// auth backend is not deployed; wallet-connect via MetaMask is the
+// only identity. This stub preserves the original interface so existing
+// consumers compile, while no-op'ing every method.
 
 type User = {
   id: number;
@@ -38,162 +42,28 @@ type Context = {
   isLoggedIn?: boolean;
 };
 
+const stubResult = { success: false, response: null };
+
 const initialState: Context = {
   user: null,
+  signin: async () => stubResult,
+  signup: async () => stubResult,
+  signout: () => {},
+  sendPasswordResetEmail: async () => stubResult,
+  resetPassword: async () => stubResult,
+  emailConfirmation: async () => stubResult,
+  updateUser: async () => stubResult,
+  refreshUser: async () => {},
+  setSessionExpired: () => {},
+  clearSessionExpired: () => {},
+  isSessionExpired: false,
+  isLoggedIn: false,
 };
 
 const AuthContext = createContext<Context>(initialState);
 
-function useProvideAuth() {
-  const [user, setUser] = useState<User | null>(null);
-  const [isSessionExpired, setIsSessionExpired] = useState(false);
-  const api = useApi();
-
-  const signin = async (username: string, password: string) => {
-    const result = await api.post('/auth/local', {
-      identifier: username,
-      password,
-    });
-
-    if (result.success) {
-      if (result.response.jwt) {
-        localStorage.setItem('auth', result.response.jwt);
-      }
-
-      if (result.response.user) {
-        const { user } = result.response;
-        localStorage.setItem('user', JSON.stringify(user));
-        setUser(user);
-      }
-    }
-
-    return result;
-  };
-  const signup = async (
-    username: string,
-    email: string,
-    ethWallet: string,
-    password: string,
-    token: string,
-  ) => {
-    const result = await api.post('/auth/local/register', {
-      username,
-      password,
-      eth_wallet: ethWallet,
-      email,
-      token,
-    });
-
-    // If email confirmation is disabled, backend returns JWT - auto-login the user
-    if (result.success && result.response.jwt) {
-      localStorage.setItem('auth', result.response.jwt);
-      if (result.response.user) {
-        localStorage.setItem('user', JSON.stringify(result.response.user));
-        setUser(result.response.user);
-      }
-    }
-
-    return result;
-  };
-  const signout = () => {
-    localStorage.removeItem('auth');
-    localStorage.removeItem('user');
-    setUser(null);
-  };
-  const sendPasswordResetEmail = async (email: string, token: string) => {
-    return await api.post('/auth/forgot-password', {
-      email,
-      token,
-    });
-  };
-  const resetPassword = async (code: string, password: string, passwordConfirmation: string) => {
-    const result = await api.post('/auth/reset-password', {
-      code,
-      password,
-      passwordConfirmation,
-    });
-
-    if (result.success) {
-      const { user } = result.response;
-
-      if (user.confirmed) {
-        if (result.response.jwt) {
-          localStorage.setItem('auth', result.response.jwt);
-        }
-
-        if (result.response.user) {
-          localStorage.setItem('user', JSON.stringify(user));
-          setUser(user);
-        }
-      }
-    }
-
-    return result;
-  };
-  const emailConfirmation = async (email?: string) => {
-    const result = await api.post('/auth/send-email-confirmation', {
-      email: email ?? user!.email,
-    });
-    return result;
-  };
-  const updateUser = async (payload: Partial<UpdateUserPayload>) => {
-    const result = await api.put(`/users/${user!.id}`, payload, true);
-
-    if (result.success) {
-      const user = result.response;
-      localStorage.setItem('user', JSON.stringify(user));
-      setUser(user);
-    }
-
-    return result;
-  };
-  const refreshUser = async () => {
-    const result = await api.get('/users/me', true);
-    if (result.success) {
-      if (result.response) {
-        const user = result.response;
-        localStorage.setItem('user', JSON.stringify(user));
-        setUser(user);
-      }
-    }
-  };
-
-  const setSessionExpired = () => {
-    setIsSessionExpired(true);
-    signout();
-  };
-
-  const clearSessionExpired = () => setIsSessionExpired(false);
-
-  useEffect(() => {
-    const user = localStorage.getItem('user');
-    if (user) {
-      setUser(JSON.parse(user));
-    }
-  }, []);
-
-  const isLoggedIn = !!user?.id;
-
-  return {
-    user,
-    signin,
-    signup,
-    signout,
-    sendPasswordResetEmail,
-    resetPassword,
-    emailConfirmation,
-    updateUser,
-    refreshUser,
-    setSessionExpired,
-    clearSessionExpired,
-    isLoggedIn,
-    isSessionExpired,
-  };
-}
-
 export const AuthProvider = ({ children }: { children: React.ReactNode }) => {
-  const auth = useProvideAuth();
-  return <AuthContext.Provider value={auth}>{children}</AuthContext.Provider>;
+  return <AuthContext.Provider value={initialState}>{children}</AuthContext.Provider>;
 };
 
 export const useAuth = () => {

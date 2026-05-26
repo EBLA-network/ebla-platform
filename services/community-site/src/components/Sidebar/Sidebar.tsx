@@ -9,24 +9,19 @@ import DeploySidebar from '../../assets/icons/deploySidebar';
 import ExplorerSidebar from '../../assets/icons/explorerSidebar';
 import GetStarted from '../../assets/icons/getStarted';
 import NodeSidebar from '../../assets/icons/nodeSidebar';
-// import WalletSidebar from "../../assets/icons/walletSidebar";
 import HamburgerIcon from '../../assets/icons/hamburger';
 
 import NavLink from '../NavLink/NavLink';
 
-import { useAuth } from '../../services/useAuth';
-import { useModal } from '../../services/useModal';
 import { useSidebar } from '../../services/useSidebar';
 
 import './sidebar.scss';
 
 const Sidebar = () => {
-  const auth = useAuth();
-  const { listen, push } = useHistory();
+  const { listen } = useHistory();
   const { status, connect } = useCMetamask();
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
-  const { signIn } = useModal();
   const { isOpen, close } = useSidebar();
 
   useEffect(() => {
@@ -83,40 +78,9 @@ const Sidebar = () => {
             />
           ),
         },
-        // { Link: <NavLink label="Wallet" Icon={WalletSidebar} to="/wallet" />, name: "wallet" }
       ],
     },
   ];
-
-  const isLoggedIn = auth.user?.id;
-
-  const login = () => {
-    close!();
-    signIn!();
-  };
-
-  const goToProfile = () => {
-    close!();
-    push('/profile');
-  };
-
-  const button = !isLoggedIn ? (
-    <Button
-      label="Sign in / Sign up"
-      color="secondary"
-      variant="contained"
-      fullWidth
-      onClick={login}
-    />
-  ) : (
-    <Button
-      label="My Profile"
-      color="secondary"
-      variant="contained"
-      fullWidth
-      onClick={goToProfile}
-    />
-  );
 
   const mobileButtons = (
     <>
@@ -134,7 +98,6 @@ const Sidebar = () => {
           }}
         />
       )}
-      {button}
     </>
   );
 

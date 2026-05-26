@@ -21,7 +21,6 @@ import {
 } from '@ebla-network/ebla-ui';
 
 import { blocksToDays } from '../../utils/time';
-import { useAuth } from '../../services/useAuth';
 import { useLoading } from '../../services/useLoading';
 import Title from '../../components/Title/Title';
 import WrongNetwork from '../../components/WrongNetwork';
@@ -47,7 +46,6 @@ import { useAllValidators } from '../../services/useAllValidators';
 import { useRedelegation } from '../../services/useRedelegation';
 
 const Delegation = ({ location }: { location: Location }) => {
-  const { user } = useAuth();
   const { chainId, provider } = useChain();
   const { status, account } = useCMetamask();
   const { chainId: mainnetChainId } = useMainnet();
@@ -255,7 +253,7 @@ const Delegation = ({ location }: { location: Location }) => {
     })();
   }, [showMyValidators, ownValidators, allValidatorsWithStats]);
 
-  const isNotLoggedIn = !user;
+  const isNotLoggedIn = false; // wallet-only flow — see commit 3
 
   const isOnWrongChain = chainId !== mainnetChainId;
 

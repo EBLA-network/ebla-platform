@@ -17,7 +17,6 @@ import {
   TableHead,
   TableRow,
 } from '@ebla-network/ebla-ui';
-import { useAuth } from '../../services/useAuth';
 import useCMetamask from '../../services/useCMetamask';
 import useMainnet from '../../services/useMainnet';
 import useChain from '../../services/useChain';
@@ -47,7 +46,6 @@ import useExplorerStats from '../../services/useExplorerStats';
 import { useAllValidators } from '../../services/useAllValidators';
 
 const RunValidator = () => {
-  const auth = useAuth();
   const { chainId, provider } = useChain();
   const { status, account } = useCMetamask();
   const { chainId: mainnetChainId } = useMainnet();
@@ -58,7 +56,6 @@ const RunValidator = () => {
   const delegationApi = useDelegationApi();
   const networkParam = window.location.hash.replace('#', '');
 
-  const isLoggedIn = !!auth.user?.id;
   const isOnWrongChain = chainId !== mainnetChainId;
 
   const [isOpenRegisterValidatorModal, setIsOpenRegisterValidatorModal] = useState(false);
@@ -168,9 +165,7 @@ const RunValidator = () => {
   }
 
   if (validatorType === ValidatorType.TESTNET) {
-    if (isLoggedIn) {
-      canRegisterValidator = true;
-    }
+    canRegisterValidator = true;
   }
 
   let activeValidators = 0;
@@ -269,15 +264,6 @@ const RunValidator = () => {
             >
               <WrongNetwork />
             </Notification>
-          </div>
-        )}
-        {validatorType === ValidatorType.TESTNET && !isLoggedIn && (
-          <div className="notification">
-            <Notification
-              title="Notice:"
-              text="You need to sign in or sign up for a new account in order to register nodes."
-              variant="danger"
-            />
           </div>
         )}
         <Title title="Running a Node" />
