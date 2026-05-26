@@ -17,11 +17,6 @@ import Sidebar from './components/Sidebar/Sidebar';
 
 import Home from './pages/Home/Home';
 import Staking from './pages/Staking/Delegation';
-import Bounties from './pages/Bounties/Bounties';
-import BountyDetails from './pages/Bounties/BountyDetails';
-import BountySubmit from './pages/Bounties/BountySubmit';
-import Redeem from './pages/Redeem/Redeem';
-import Profile from './pages/Profile/Profile';
 import RunValidator from './pages/RunNode/RunValidator';
 import useCMetamask from './services/useCMetamask';
 import { WalletPopupProvider } from './services/useWalletPopup';
@@ -116,11 +111,6 @@ const Root = () => {
               <Route exact path="/reset-password/:code" component={Home} />
               <Route exact path="/delegation" component={Staking} />
               <Route exact path="/staking" component={Staking} />
-              <Route exact path="/bounties" component={Bounties} />
-              <Route exact path="/bounties/:id" component={BountyDetails} />
-              <Route exact path="/bounties/:id/submit" component={BountySubmit} />
-              <Route exact path="/redeem" component={Redeem} />
-              <Route exact path="/profile" component={Profile} />
               <Route exact path="/node" component={RunValidator} />
               <Route exact path="/" component={Home} />
             </Switch>

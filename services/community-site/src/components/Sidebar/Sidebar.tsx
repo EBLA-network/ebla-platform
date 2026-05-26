@@ -4,13 +4,11 @@ import { useMediaQuery } from 'react-responsive';
 import { Button, Sidebar as MSidebar } from '@ebla-network/ebla-ui';
 import useCMetamask from '../../services/useCMetamask';
 
-import BountiesSidebar from '../../assets/icons/bountiesSidebar';
 import StakingSidebar from '../../assets/icons/stakingSidebar';
 import DeploySidebar from '../../assets/icons/deploySidebar';
 import ExplorerSidebar from '../../assets/icons/explorerSidebar';
 import GetStarted from '../../assets/icons/getStarted';
 import NodeSidebar from '../../assets/icons/nodeSidebar';
-import RedeemSidebar from '../../assets/icons/redeemSidebar';
 // import WalletSidebar from "../../assets/icons/walletSidebar";
 import HamburgerIcon from '../../assets/icons/hamburger';
 
@@ -53,11 +51,6 @@ const Sidebar = () => {
           Link: <NavLink label="Staking" Icon={StakingSidebar} to="/staking" />,
           name: 'staking',
         },
-        {
-          Link: <NavLink label="Bounties" Icon={BountiesSidebar} to="/bounties" />,
-          name: 'bounties',
-        },
-        { Link: <NavLink label="Redeem" Icon={RedeemSidebar} to="/redeem" />, name: 'redeem' },
       ],
     },
     {
