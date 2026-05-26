@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
-import { useHistory, withRouter, RouteComponentProps } from 'react-router-dom';
+import { useHistory, withRouter } from 'react-router-dom';
 
 import { IconCard, ToggleButton, Notification } from '@ebla-network/ebla-ui';
 
@@ -9,13 +9,9 @@ import NodeIcon from '../../assets/icons/node';
 import ExplorerIcon from '../../assets/icons/explorer';
 import DeployIcon from '../../assets/icons/deploy';
 
-
 import Title from '../../components/Title/Title';
 
 import './home.scss';
-interface HomeProps {
-  code: string | undefined;
-}
 
 const Home: React.FC = () => {
 
