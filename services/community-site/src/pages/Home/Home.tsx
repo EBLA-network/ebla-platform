@@ -14,7 +14,6 @@ import Title from '../../components/Title/Title';
 import './home.scss';
 
 const Home: React.FC = () => {
-
   const history = useHistory();
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const [toggleValue, setToggleValue] = useState('earn');
