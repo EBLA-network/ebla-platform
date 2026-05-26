@@ -13,12 +13,11 @@ import DeployIcon from '../../assets/icons/deploy';
 import Title from '../../components/Title/Title';
 
 import './home.scss';
-
 interface HomeProps {
   code: string | undefined;
 }
 
-const Home = (_props: RouteComponentProps<HomeProps>) => {
+const Home: React.FC = () => {
 
   const history = useHistory();
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });

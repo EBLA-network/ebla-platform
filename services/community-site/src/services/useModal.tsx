@@ -17,16 +17,20 @@ type Context = {
   modal?: null | JSX.Element;
 };
 
+const noop = () => {
+  /* intentionally empty */
+};
+
 const initialState: Context = {
   isOpen: false,
   content: '',
   code: undefined,
   modal: null,
-  setIsOpen: () => { /* noop */ },
-  setContent: () => { /* noop */ },
-  signIn: () => { /* noop */ },
-  reset: () => { /* noop */ },
-  setCode: () => { /* noop */ },
+  setIsOpen: noop,
+  setContent: noop,
+  signIn: noop,
+  reset: noop,
+  setCode: noop,
 };
 
 const ModalContext = createContext<Context>(initialState);

@@ -43,19 +43,25 @@ type Context = {
 };
 
 const stubResult = { success: false, response: null };
+const noop = () => {
+  /* intentionally empty */
+};
+const noopAsync = async () => {
+  /* intentionally empty */
+};
 
 const initialState: Context = {
   user: null,
   signin: async () => stubResult,
   signup: async () => stubResult,
-  signout: () => { /* noop */ },
+  signout: noop,
   sendPasswordResetEmail: async () => stubResult,
   resetPassword: async () => stubResult,
   emailConfirmation: async () => stubResult,
   updateUser: async () => stubResult,
-  refreshUser: async () => { /* noop */ },
-  setSessionExpired: () => { /* noop */ },
-  clearSessionExpired: () => { /* noop */ },
+  refreshUser: noopAsync,
+  setSessionExpired: noop,
+  clearSessionExpired: noop,
   isSessionExpired: false,
   isLoggedIn: false,
 };
