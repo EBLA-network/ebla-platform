@@ -20,22 +20,6 @@ interface HomeProps {
 
 const Home = ({ match }: RouteComponentProps<HomeProps>) => {
 
-  useEffect(() => {
-    if (match.path.includes('/first-login')) {
-      if (auth.user !== null) {
-        auth.refreshUser!();
-      }
-
-      setIsOpen!(true);
-      setContent!('email-confirmed');
-    }
-    if (match.path.includes('/reset-password')) {
-      setIsOpen!(true);
-      setContent!('reset-password');
-      setCode!(match.params.code);
-    }
-  }, []);
-
   const history = useHistory();
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
   const [toggleValue, setToggleValue] = useState('earn');
