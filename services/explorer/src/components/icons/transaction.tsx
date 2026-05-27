@@ -9,8 +9,8 @@ const TransactionIcon = (): JSX.Element => (
     xmlns='http://www.w3.org/2000/svg'
   >
     <g clipPath='url(#clip0_421_1824)'>
-      <path d='M18 12L22 8L18 4V7H3V9H18V12Z' fill='#15AC5B' />
-      <path d='M6 12L2 16L6 20V17H21V15H6V12Z' fill='#15AC5B' />
+      <path d='M18 12L22 8L18 4V7H3V9H18V12Z' fill='#33d9dc' />
+      <path d='M6 12L2 16L6 20V17H21V15H6V12Z' fill='#33d9dc' />
     </g>
     <defs>
       <clipPath id='clip0_421_1824'>

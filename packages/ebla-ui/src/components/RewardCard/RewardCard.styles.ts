@@ -30,7 +30,7 @@ const useStyles = makeStyles(() => {
     },
     rewardContent: {
       color: 'white',
-      border: '1px solid #15AC5B',
+      border: '1px solid #33d9dc',
       padding: '16px 32px',
       margin: '16px 0',
       fontWeight: 700,
@@ -74,7 +74,7 @@ const useStyles = makeStyles(() => {
       marginRight: '10px',
     },
     active: {
-      backgroundColor: '#15AC5B',
+      backgroundColor: '#33d9dc',
     },
     inactive: {
       backgroundColor: '#6a7085',

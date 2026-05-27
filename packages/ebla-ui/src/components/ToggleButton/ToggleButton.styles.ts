@@ -12,9 +12,9 @@ const useStyles = makeStyles(() => {
       height: '32px',
     },
     selected: {
-      backgroundColor: '#15AC5B !important',
+      backgroundColor: '#33d9dc !important',
       borderRadius: '4px !important',
-      color: 'white !important',
+      color: '#151823 !important',
       margin: '0 8% 0 0 !important',
       width: '150px',
       height: '32px',

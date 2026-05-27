@@ -38,7 +38,7 @@
     font-size: 20px;
   }
   .nodeAddressWrapper {
-    color: #15ac5b;
+    color: #33d9dc;
     margin-bottom: 25px;
   }
   .nodeAddress {
@@ -86,7 +86,7 @@
   .eblaInputWrapper {
     width: 312px;
     padding: 20px;
-    border: 1px solid #15ac5b;
+    border: 1px solid #33d9dc;
     border-radius: 6px;
     margin: 28px auto 0 auto;
 
@@ -186,14 +186,14 @@ a.commissionChangeCheck {
     display: flex;
     align-items: center;
     text-align: center;
-    color: #15ac5b;
+    color: #33d9dc;
   }
 
   .fullyDelegatedSeparator::before,
   .fullyDelegatedSeparator::after {
     content: '';
     flex: 1;
-    border-bottom: 1px solid #15ac5b;
+    border-bottom: 1px solid #33d9dc;
   }
 
   .fullyDelegatedSeparator::before {

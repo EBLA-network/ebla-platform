@@ -18,7 +18,7 @@ Primary.args = {
       data: [10, 50, 100, 25, 30, 25],
       borderRadius: 5,
       barThickness: 20,
-      backgroundColor: '#15AC5B',
+      backgroundColor: '#33d9dc',
     },
   ],
   title: 'Transactions per second',
