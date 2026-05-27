@@ -1,7 +1,15 @@
-import React, { useContext, createContext, useEffect, useCallback, useRef } from 'react';
-import { networks } from '../utils/networks';
-import useApi from './useApi';
-import useMainnet from './useMainnet';
+import React, { useContext, createContext } from 'react';
+
+// Stub - returns empty stats for all validators.
+//
+// The original implementation fetched per-validator PBFT block production
+// stats from the indexer at networks[chainId].indexerUrl/validators?limit=N.
+// That indexer host doesn't exist (VM 611 deferred), so every fetch
+// returned ERR_NAME_NOT_RESOLVED and the while loop retried forever,
+// flooding the console with 30+ errors per page load.
+//
+// Until VM 611 lands, pbftsProduced shows 0 for every validator.
+// Restore the original logic when VM 611 has the indexer running.
 
 export type ValidatorStats = { address: string; pbftCount: number; rank: number };
 
@@ -12,74 +20,19 @@ type Context = {
 
 const initialState: Context = {
   validatorWeekStats: [],
-  getPbftBlocksProduced: () => {
-    return 0;
-  },
+  getPbftBlocksProduced: () => 0,
 };
 
-const ValdiatorWeeklyStatsContext = createContext<Context>(initialState);
-
-const useProvideValidatorWeeklyStats = () => {
-  const validatorWeekStats = useRef<ValidatorStats[]>([]);
-  const { get } = useApi();
-  const { chainId } = useMainnet();
-
-  const fetchValidatorStatsForWeek = useCallback(async (): Promise<void> => {
-    let start = 0;
-    let hasNextPage = true;
-    while (hasNextPage) {
-      try {
-        const allValidators = await get(
-          `${networks[chainId].indexerUrl}/validators?limit=100&start=${start}`,
-        );
-        if (allValidators.success) {
-          validatorWeekStats.current = [
-            ...validatorWeekStats.current,
-            ...allValidators.response.data,
-          ];
-          hasNextPage = allValidators.response.hasNext;
-          start += 100;
-        }
-      } catch (e) {
-        // eslint-disable-next-line no-console
-        console.error(e);
-        hasNextPage = false;
-      }
-    }
-  }, []);
-
-  const getPbftBlocksProduced = (address: string) => {
-    const pbftsProduced =
-      validatorWeekStats.current.find(
-        (stat) => stat.address.toLowerCase() === address.toLowerCase(),
-      )?.pbftCount || 0;
-
-    return pbftsProduced;
-  };
-
-  useEffect(() => {
-    if (validatorWeekStats.current.length === 0) {
-      // Fetch validator stats only if not already fetched
-      fetchValidatorStatsForWeek();
-    }
-  }, [fetchValidatorStatsForWeek]);
-
-  return {
-    validatorWeekStats: validatorWeekStats.current,
-    getPbftBlocksProduced,
-  };
-};
+const ValidatorWeeklyStatsContext = createContext<Context>(initialState);
 
 export const ValidatorWeeklyStatsProvider = ({ children }: { children: React.ReactNode }) => {
-  const value = useProvideValidatorWeeklyStats();
-
   return (
-    <ValdiatorWeeklyStatsContext.Provider value={value}>
+    <ValidatorWeeklyStatsContext.Provider value={initialState}>
       {children}
-    </ValdiatorWeeklyStatsContext.Provider>
+    </ValidatorWeeklyStatsContext.Provider>
   );
 };
 
 export const useValidatorsWeeklyStats = () => {
-  return useContext(ValdiatorWeeklyStatsContext);
+  return useContext(ValidatorWeeklyStatsContext);
 };
