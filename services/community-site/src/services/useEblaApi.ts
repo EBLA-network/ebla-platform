@@ -4,9 +4,9 @@ import useDpos from './useDpos';
 import { Validator, ValidatorStatus, ValidatorType } from '../interfaces/Validator';
 import { useLoading } from './useLoading';
 
-// Maximum delegation per validator: 80M EBLA in wei.
+// Maximum delegation per validator: 1,000,000 EBLA in wei.
 // Used to compute availableForDelegation and isFullyDelegated.
-const MAX_DELEGATION = BigNumber.from(80_000_000).mul(BigNumber.from(10).pow(18));
+const MAX_DELEGATION = BigNumber.from(1_000_000).mul(BigNumber.from(10).pow(18));
 
 // Safety cap on batch pagination - real validator counts are << 100 batches.
 const MAX_BATCHES = 100;

@@ -17,13 +17,13 @@ export default registerAs('delegation', () => {
   }
 
   return {
-    yield: 20,
+    yield: 7,
     commissionChangeThreshold: 5,
-    minDelegation: ethers.BigNumber.from(1000).mul(
+    minDelegation: ethers.BigNumber.from(100).mul(
       ethers.BigNumber.from(10).pow(18),
     ),
-    maxDelegation: 80000000,
-    eligibilityThreshold: 1000000,
+    maxDelegation: 1000000,
+    eligibilityThreshold: 5000,
     testnetDelegation: ethers.BigNumber.from(500000).mul(
       ethers.BigNumber.from(10).pow(18),
     ),
