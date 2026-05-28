@@ -8,16 +8,16 @@ function useDpos() {
   const { provider: browserProvider, signer } = useChain();
 
   const abi = [
-    'function cancelUndelegate(address validator)',
+    'function cancelUndelegate(address validator, uint64 undelegation_id)',
     'function claimAllRewards()',
     'function claimCommissionRewards(address validator)',
     'function claimRewards(address validator)',
-    'function confirmUndelegate(address validator)',
+    'function confirmUndelegate(address validator, uint64 undelegation_id)',
     'function delegate(address validator) payable',
     'function getDelegations(address delegator, uint32 batch) view returns (tuple(address account, tuple(uint256 stake, uint256 rewards) delegation)[] delegations, bool end)',
     'function getTotalDelegation(address delegator) view returns (uint256 total_delegation)',
     'function getTotalEligibleVotesCount() view returns (uint64)',
-    'function getUndelegations(address delegator, uint32 batch) view returns (tuple(uint256 stake, uint64 block, address validator, bool validator_exists)[] undelegations, bool end)',
+    'function getUndelegations(address delegator, uint32 batch) view returns (tuple(uint256 stake, uint64 block, address validator, bool validator_exists, uint64 undelegation_id)[] undelegations, bool end)',
     'function getValidatorEligibleVotesCount(address validator) view returns (uint64)',
     'function getValidator(address validator) view returns (tuple(uint256 total_stake, uint256 commission_reward, uint16 commission, uint64 last_commission_change, uint16 undelegations_count, address owner, string description, string endpoint) validator_info)',
     'function getValidators(uint32 batch) view returns (tuple(address account, tuple(uint256 total_stake, uint256 commission_reward, uint16 commission, uint64 last_commission_change, uint16 undelegations_count, address owner, string description, string endpoint) info)[] validators, bool end)',

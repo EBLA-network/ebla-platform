@@ -69,6 +69,7 @@ export default () => {
         stake: undelegation.stake,
         block: undelegation.block.toNumber(),
         validatorExists: undelegation.validator_exists,
+        undelegationId: undelegation.undelegation_id.toNumber(),
       }));
       return formattedUndelegations;
     },
@@ -109,15 +110,21 @@ export default () => {
   );
 
   const confirmUndelegate = useCallback(
-    async (address: string): Promise<ethers.providers.TransactionResponse> => {
-      return await browserDpos!.confirmUndelegate(address);
+    async (
+      address: string,
+      undelegationId: number,
+    ): Promise<ethers.providers.TransactionResponse> => {
+      return await browserDpos!.confirmUndelegate(address, undelegationId);
     },
     [browserDpos],
   );
 
   const cancelUndelegate = useCallback(
-    async (address: string): Promise<ethers.providers.TransactionResponse> => {
-      return await browserDpos!.cancelUndelegate(address);
+    async (
+      address: string,
+      undelegationId: number,
+    ): Promise<ethers.providers.TransactionResponse> => {
+      return await browserDpos!.cancelUndelegate(address, undelegationId);
     },
     [browserDpos],
   );

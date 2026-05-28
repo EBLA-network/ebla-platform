@@ -179,14 +179,14 @@ const Delegation = ({ location }: { location: Location }) => {
 
   const confirmUndelegation = async (undelegation: Undelegation) => {
     await asyncCallback(async () => {
-      return confirmUndelegate(undelegation.address);
+      return confirmUndelegate(undelegation.address, undelegation.undelegationId);
     });
     setFetchCounter((prev) => prev + 1);
   };
 
   const cancelUndelegation = async (undelegation: Undelegation) => {
     await asyncCallback(async () => {
-      return cancelUndelegate(undelegation.address);
+      return cancelUndelegate(undelegation.address, undelegation.undelegationId);
     });
     setFetchCounter((prev) => prev + 1);
   };
