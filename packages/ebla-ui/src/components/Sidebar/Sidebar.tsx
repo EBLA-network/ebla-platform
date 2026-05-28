@@ -167,13 +167,6 @@ const Sidebar = ({
         </List>
         {children}
       </div>
-      <div>
-        <Text
-          label={`© EBLA ${new Date().getFullYear()}`}
-          variant='body1'
-          color='textSecondary'
-        />
-      </div>
     </Drawer>
   );
 };
