@@ -8,7 +8,9 @@ export const Footer = (): JSX.Element => {
   return (
     <TFooter
       description="EBLA has the world's highest TPS/$, lowest node operating cost and lowest gas cost, on the world's only blockDAG & 100% EVM-compatible Layer-1 network."
-      links={[{ label: 'Privacy Policy', link: 'https://eblanetwork.com/privacy' }]}
+      links={[
+        { label: 'Privacy Policy', link: 'https://eblanetwork.com/privacy' },
+      ]}
       items={items}
     />
   );

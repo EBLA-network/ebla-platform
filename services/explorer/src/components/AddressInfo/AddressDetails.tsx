@@ -1,12 +1,6 @@
 import clsx from 'clsx';
 import { toSvg } from 'jdenticon';
-import {
-  Box,
-  Grid,
-  Typography,
-  CopyTo,
-  Loading,
-} from '@ebla-network/ebla-ui';
+import { Box, Grid, Typography, CopyTo, Loading } from '@ebla-network/ebla-ui';
 import { zeroX } from '../../utils';
 import useStyles from './AddressDetails.styles';
 import { useCopyToClipboard } from '../../hooks/useCopyToClipboard';

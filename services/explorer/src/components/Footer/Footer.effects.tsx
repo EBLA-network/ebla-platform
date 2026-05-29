@@ -31,11 +31,7 @@ export const useFooterEffects = (): { items: FooterItem[] } => {
     {
       label: 'Twitter',
       Icon: (
-        <a
-          href='https://x.com/EBLAnetwork'
-          target='_blank'
-          rel='noreferrer'
-        >
+        <a href='https://x.com/EBLAnetwork' target='_blank' rel='noreferrer'>
           <TwitterIcon />
         </a>
       ),
