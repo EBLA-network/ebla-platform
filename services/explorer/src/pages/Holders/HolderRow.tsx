@@ -32,10 +32,13 @@ export const toHolderTableRow = ({
   // Original formula should be balance * 100 / totalSupply
   // But the improved one that returns for smaller holders too is: balance * 100 * 100 / totalSupply
   const _balance = BigNumber.from(balance);
-  const percentageRaw = _balance
-    .mul(BigNumber.from(10000))
-    .mul(100)
-    .div(totalSupply);
+  const _totalSupply = BigNumber.from(totalSupply);
+  // Guard against a zero/unset total supply (e.g. still loading, or the
+  // /totalSupply request not yet resolved): ethers' BigNumber.div(0) throws,
+  // which would crash the entire Holders page to a blank screen.
+  const percentageRaw = _totalSupply.isZero()
+    ? BigNumber.from(0)
+    : _balance.mul(BigNumber.from(10000)).mul(100).div(_totalSupply);
   // We divide back by 10000 to get the floating point percentage
   const percentageNumber = parseFloat(percentageRaw.toString()) / 10000;
   const percentageWithFourDecimals = percentageNumber.toFixed(4);
