@@ -9,7 +9,7 @@ app:
   mainnetApiHost: "http://api/"
   testnetApiHost: "http://api/"
   devnetApiHost: "http://api/"
-  tokenInfoEndpoint: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=taraxa"
+  tokenInfoEndpoint: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ebla-network"
   overrideRpcProvider: ""
   overrideGraphQl: ""
   overrideApi: ""

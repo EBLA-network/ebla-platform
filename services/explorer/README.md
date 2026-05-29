@@ -1,15 +1,13 @@
 # Getting started with Exploring EBLA
 
 <p align="center">
-  <a href="http://taraxa.io/" target="blank"><img src="https://taraxa.io/static/taraxa_io/img/taraxa_logo_transparent_dark_bg.png" width="200" alt="EBLA Logo" /></a>
+  <a href="https://eblanetwork.com/" target="blank"><img src="https://raw.githubusercontent.com/EBLA-network/ebla-platform/ebla-stable/services/explorer/public/logo512.png" width="200" alt="EBLA Logo" /></a>
 </p>
 
-<a href="https://www.npmjs.com/~taraxa_project" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~taraxa_project" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://circleci.com/gh/EBLA-project/taraxa-platform" target="_blank"><img src="https://img.shields.io/circleci/build/github/EBLA-project/taraxa-platform/main" alt="CircleCI" /></a>
-<a href="https://discord.gg/Sqf9MHD2" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://github.com/EBLA-project" target="_blank"><img src="https://img.shields.io/github/followers/EBLA-project?style=social" alt="GitHub Followers" /></a>
-<a href="https://twitter.com/taraxa_project" target="_blank"><img src="https://img.shields.io/twitter/follow/taraxa_project?style=social"></a>
+<a href="https://github.com/EBLA-network/ebla-platform" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
+<a href="https://github.com/EBLA-network/ebla-platform" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
+<a href="https://github.com/EBLA-network/ebla-platform" target="_blank"><img src="https://img.shields.io/badge/build-EBLA--network%2Febla--platform-blue" alt="Build" /></a>
+<a href="https://github.com/EBLA-network" target="_blank"><img src="https://img.shields.io/github/followers/EBLA-network?style=social" alt="GitHub Followers" /></a>
 
 The current version of the Explorer is an [`EIP-3091`](https://eips.ethereum.org/EIPS/eip-3091) compatible. To browse through our data take a look at the standard.
 

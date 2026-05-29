@@ -20,7 +20,7 @@ export const IS_PRNET = OVERRIDE_RPC_PROVIDER !== '' && OVERRIDE_GRAPHQL !== '';
 
 export const TOKEN_PRICE_API_ENDPOINT = `${
   process.env.REACT_APP_TOKEN_PRICE_API_ENDPOINT ||
-  `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=taraxa`
+  `https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&ids=ebla-network`
 }`;
 
 export const POOLING_INTERVAL = 15000; // 15 seconds
