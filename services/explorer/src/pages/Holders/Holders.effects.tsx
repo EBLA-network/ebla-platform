@@ -119,7 +119,7 @@ export const useHoldersEffects = (): {
         label: findLabelFor(holder.address),
         balance: BigNumber.from(holder.balance || '0'),
         totalSupply: totalSupply || BigNumber.from(0),
-        eblaPrice: (tokenPriceData?.data[0].current_price as number) || 0,
+        eblaPrice: (tokenPriceData?.data?.[0]?.current_price as number) || 0,
       })
     ),
     rowsPerPage,

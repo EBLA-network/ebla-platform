@@ -81,7 +81,7 @@ export const useAddressInfoEffects = (
       addressDetails.transactionCount = account?.transactionCount;
     }
 
-    if (tokenPriceData?.data) {
+    if (tokenPriceData?.data?.[0]) {
       const price = tokenPriceData.data[0].current_price as number;
       addressDetails.pricePerEbla = price;
       addressDetails.valueCurrency = 'USD';
