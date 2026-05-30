@@ -155,7 +155,7 @@ const useProvideWalletPopup = () => {
               <>
                 <p>You can view the transaction here:</p>
                 <a
-                  href={`${networks[chainId].blockExplorerUrl}/tx/${message}`}
+                  href={`${networks[chainId].blockExplorerUrl.replace(/\/+$/, '')}/tx/${message}`}
                   rel="noreferrer"
                   target="_blank"
                   style={{ textDecoration: 'none' }}
