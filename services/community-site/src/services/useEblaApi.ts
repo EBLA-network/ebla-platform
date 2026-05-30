@@ -34,7 +34,11 @@ const chainValidatorToValidator = (chainValidator: {
   return {
     address: account.toLowerCase(),
     owner: info.owner.toLowerCase(),
-    commission: info.commission,
+    // On-chain commission is stored in basis points (uint16): 1000 = 10%, 1500 = 15%.
+    // The rest of the app treats validator.commission as a whole-percent value: the UI
+    // appends "%", and registerValidator/setCommission multiply by 100 to convert back
+    // to bps. So normalize bps -> percent here, at the single chain-read boundary.
+    commission: info.commission / 100,
     commissionReward: BigNumber.from(info.commission_reward),
     lastCommissionChange: BigNumber.from(info.last_commission_change).toNumber(),
     delegation,
