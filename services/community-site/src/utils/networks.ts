@@ -36,7 +36,7 @@ export const networks: Networks = {
       symbol: 'EBLA',
       decimals: 18,
     },
-    indexerUrl: 'https://indexer.testnet.explorer.eblanetwork.com',
+    indexerUrl: 'https://api.explorer.testnet.eblanetwork.com',
   },
   60188: {
     chainName: 'EBLA Devnet',
