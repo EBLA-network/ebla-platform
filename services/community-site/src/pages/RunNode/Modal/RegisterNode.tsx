@@ -99,7 +99,9 @@ const RegisterNode = ({
 
       const commissionValue = parseInt(commission, 10);
       if (!/^\d+$/.test(commission.trim()) || commissionValue < 10 || commissionValue > 100) {
-        setCommissionError('Commission must be a whole number between 10 and 100 (minimum is 10%).');
+        setCommissionError(
+          'Commission must be a whole number between 10 and 100 (minimum is 10%).',
+        );
         return;
       }
 
