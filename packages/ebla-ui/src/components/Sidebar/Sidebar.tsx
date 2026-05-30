@@ -3,7 +3,6 @@ import { useMediaQuery } from 'react-responsive';
 import { Drawer, DrawerProps, List } from '@mui/material';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
-import Text from '../Text';
 
 import '../app.scss';
 import useStyles from './Sidebar.styles';
@@ -130,11 +129,7 @@ const Sidebar = ({
 }: SidebarProps) => {
   const classes = useStyles();
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
-  let paperClasses = [(classes as any).drawerPaper];
-
-  if (isMobile) {
-    paperClasses = [...paperClasses, (classes as any).drawerPaperMobile];
-  }
+  const paperClasses = [(classes as any).drawerPaper];
 
   return (
     <Drawer

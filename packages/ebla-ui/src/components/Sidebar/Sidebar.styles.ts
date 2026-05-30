@@ -27,11 +27,6 @@ const useStyles = makeStyles(() =>
         padding: '64px 0',
       },
     },
-    drawerPaperMobile: {
-      '& > div:last-child': {
-        display: 'none',
-      },
-    },
     drawerContainer: {
       overflow: 'auto',
       backgroundColor: '#151823',
