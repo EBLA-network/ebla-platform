@@ -97,6 +97,12 @@ const RegisterNode = ({
         return;
       }
 
+      const commissionValue = parseInt(commission, 10);
+      if (!/^\d+$/.test(commission.trim()) || commissionValue < 10 || commissionValue > 100) {
+        setCommissionError('Commission must be a whole number between 10 and 100 (minimum is 10%).');
+        return;
+      }
+
       asyncCallback(async () => {
         onClose();
         return await registerValidator(
@@ -221,9 +227,9 @@ const RegisterNode = ({
           )}
           {type === ValidatorType.MAINNET && (
             <InputField
-              label="Commission"
+              label="Commission (%)"
               error={!!commissionError}
-              helperText={commissionError}
+              helperText={commissionError || 'Whole number between 10 and 100 (minimum is 10%)'}
               value={commission}
               variant="outlined"
               type="text"
