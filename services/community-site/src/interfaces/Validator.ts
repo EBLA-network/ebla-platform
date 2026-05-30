@@ -6,11 +6,6 @@ export enum ValidatorStatus {
   ELIGIBLE = 'eligible',
 }
 
-export enum ValidatorType {
-  MAINNET = 'mainnet',
-  TESTNET = 'testnet',
-}
-
 export interface Validator {
   address: string;
   owner: string;
@@ -27,7 +22,6 @@ export interface Validator {
   rank: number;
   pbftsProduced: number;
   yield: number;
-  type: ValidatorType;
   registrationBlock: number;
   ip?: string;
   id?: number;

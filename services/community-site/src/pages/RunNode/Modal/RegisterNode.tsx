@@ -2,24 +2,19 @@ import React, { useState } from 'react';
 import { ethers } from 'ethers';
 import { Button, Text, InputField } from '@ebla-network/ebla-ui';
 
-import { useDelegationApi } from '../../../services/useApi';
 import useValidators from '../../../services/useValidators';
 import { useWalletPopup } from '../../../services/useWalletPopup';
-import { ValidatorType } from '../../../interfaces/Validator';
 
 const RegisterNode = ({
   balance,
-  type,
   onSuccess,
   onClose,
 }: {
   balance: ethers.BigNumber;
-  type: ValidatorType;
   onSuccess: () => void;
   onClose: () => void;
 }) => {
   const minimumRequiredBalance = ethers.utils.parseUnits('1000', 'ether');
-  const delegationApi = useDelegationApi();
   const { registerValidator } = useValidators();
   const { asyncCallback } = useWalletPopup();
 
@@ -32,26 +27,20 @@ const RegisterNode = ({
   const [vrfKeyError, setVrfKeyError] = useState('');
   const [commission, setCommission] = useState('');
   const [commissionError, setCommissionError] = useState('');
-  const [ip, setIp] = useState('');
-  const [ipError, setIpError] = useState('');
 
-  const submit = async (
-    event: React.MouseEvent<HTMLElement> | React.FormEvent<HTMLFormElement>,
-  ) => {
+  const submit = (event: React.MouseEvent<HTMLElement> | React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
 
     setError('');
     setAddressError('');
     setAddressProofError('');
     setVrfKeyError('');
-    setIpError('');
     setCommissionError('');
 
     if (!address) {
       setAddressError('Node public address is required!');
       return;
     }
-
     if (!address.startsWith('0x')) {
       setAddressError('Node public address must start with 0x');
       return;
@@ -60,103 +49,36 @@ const RegisterNode = ({
       setAddressProofError('Proof of ownership is required!');
       return;
     }
-
     if (!addressProof.startsWith('0x')) {
       setAddressProofError('Proof of ownership must start with 0x');
+      return;
     }
-
     if (!vrfKey) {
       setVrfKeyError('VRF Public Key is required!');
       return;
     }
-
     if (!vrfKey.startsWith('0x')) {
       setVrfKeyError('VRF Public Key must start with 0x');
+      return;
+    }
+    if (balance.lt(minimumRequiredBalance)) {
+      setError('You don`t have enough balance to register a new validator');
+      return;
+    }
+    if (!commission) {
+      setCommissionError('Commission is required!');
+      return;
+    }
+    const commissionValue = parseInt(commission, 10);
+    if (!/^\d+$/.test(commission.trim()) || commissionValue < 10 || commissionValue > 100) {
+      setCommissionError('Commission must be a whole number between 10 and 100 (minimum is 10%).');
+      return;
     }
 
-    const payload: any = {
-      type,
-      address,
-      addressProof,
-      vrfKey,
-      commission: type === ValidatorType.MAINNET ? parseInt(commission, 10) : null,
-    };
-
-    if (ip) {
-      payload.ip = ip;
-    }
-
-    if (type === ValidatorType.MAINNET) {
-      if (balance.lt(minimumRequiredBalance)) {
-        setError('You don`t have enough balance to register a new validator');
-        return;
-      }
-
-      if (!commission) {
-        setCommissionError('Commission is required!');
-        return;
-      }
-
-      const commissionValue = parseInt(commission, 10);
-      if (!/^\d+$/.test(commission.trim()) || commissionValue < 10 || commissionValue > 100) {
-        setCommissionError(
-          'Commission must be a whole number between 10 and 100 (minimum is 10%).',
-        );
-        return;
-      }
-
-      asyncCallback(async () => {
-        onClose();
-        return await registerValidator(
-          payload.address,
-          payload.addressProof,
-          payload.vrfKey,
-          payload.commission,
-          '',
-          '',
-        );
-      }, onSuccess);
-    } else {
-      const result = await delegationApi.post(`/nodes`, payload, true);
-      if (result.success) {
-        onSuccess();
-      } else if (Array.isArray(result.response)) {
-        const generalErrors = result.response.filter((errMsg) => {
-          if (errMsg.startsWith('addressProof')) {
-            setAddressProofError(errMsg.slice('addressProof'.length + 1));
-            return false;
-          }
-          if (errMsg.startsWith('vrfKey')) {
-            setVrfKeyError(errMsg.slice('vrfKey'.length + 1));
-            return false;
-          }
-          if (errMsg.startsWith('address')) {
-            setAddressError(errMsg.slice('address'.length + 1));
-            return false;
-          }
-          if (errMsg.startsWith('commission')) {
-            setCommissionError(errMsg.slice('commission'.length + 1));
-            return false;
-          }
-          if (errMsg.startsWith('ip')) {
-            setIpError(errMsg.slice('ip'.length + 1));
-            return false;
-          }
-
-          return true;
-        });
-
-        if (generalErrors.length > 0) {
-          setError(generalErrors.join(', '));
-        }
-      } else if (typeof result.response === 'string') {
-        if (result.response.includes("doesn't have a profile")) {
-          setError('Please setup your profile before registering a node.');
-        } else {
-          setError(result.response);
-        }
-      }
-    }
+    asyncCallback(async () => {
+      onClose();
+      return registerValidator(address, addressProof, vrfKey, commissionValue, '', '');
+    }, onSuccess);
   };
 
   return (
@@ -212,36 +134,19 @@ const RegisterNode = ({
               setVrfKey(event.target.value);
             }}
           />
-          {type === ValidatorType.TESTNET && (
-            <InputField
-              label="Node IP (optional)"
-              error={!!ipError}
-              helperText={ipError}
-              value={ip}
-              variant="outlined"
-              type="text"
-              fullWidth
-              margin="normal"
-              onChange={(event) => {
-                setIp(event.target.value);
-              }}
-            />
-          )}
-          {type === ValidatorType.MAINNET && (
-            <InputField
-              label="Commission (%)"
-              error={!!commissionError}
-              helperText={commissionError || 'Whole number between 10 and 100 (minimum is 10%)'}
-              value={commission}
-              variant="outlined"
-              type="text"
-              fullWidth
-              margin="normal"
-              onChange={(event) => {
-                setCommission(event.target.value);
-              }}
-            />
-          )}
+          <InputField
+            label="Commission (%)"
+            error={!!commissionError}
+            helperText={commissionError || 'Whole number between 10 and 100 (minimum is 10%)'}
+            value={commission}
+            variant="outlined"
+            type="text"
+            fullWidth
+            margin="normal"
+            onChange={(event) => {
+              setCommission(event.target.value);
+            }}
+          />
           {error && (
             <Text variant="body1" color="error">
               {error}

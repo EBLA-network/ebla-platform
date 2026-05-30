@@ -107,8 +107,6 @@ export default () => {
     () => ({
       updateValidatorsStats,
       updateValidatorsRank: passthrough,
-      updateTestnetValidatorsStats: updateValidatorsStats,
-      updateTestnetValidatorsRank: passthrough,
     }),
     [updateValidatorsStats, passthrough],
   );

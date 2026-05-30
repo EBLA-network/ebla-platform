@@ -162,10 +162,6 @@ const useApi = (baseUrl = process.env.REACT_APP_API_HOST) => {
   return { post, put, patch, del, get };
 };
 
-export const useDelegationApi = () => {
-  return useApi(process.env.REACT_APP_DELEGATION_API_HOST);
-};
-
 export const useClaimApi = () => {
   return useApi(process.env.REACT_APP_API_CLAIM_HOST);
 };

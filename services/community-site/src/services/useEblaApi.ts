@@ -1,7 +1,7 @@
 import { useCallback, useMemo } from 'react';
 import { BigNumber } from 'ethers';
 import useDpos from './useDpos';
-import { Validator, ValidatorStatus, ValidatorType } from '../interfaces/Validator';
+import { Validator, ValidatorStatus } from '../interfaces/Validator';
 import { useLoading } from './useLoading';
 
 // Maximum delegation per validator: 1,000,000 EBLA in wei.
@@ -51,7 +51,6 @@ const chainValidatorToValidator = (chainValidator: {
     rank: 0,
     pbftsProduced: 0,
     yield: 0,
-    type: ValidatorType.MAINNET,
     registrationBlock: 0,
   };
 };

@@ -1,39 +1,3 @@
-.editNodeScreen {
-  .editnodeaddresswrapper {
-    text-align: left;
-    color: #33d9dc;
-    font-size: 16px;
-  }
-  .editNodeAddress {
-    background-color: #282c3e;
-    border-radius: 4px;
-    padding: 7px 10px;
-  }
-  .commissionWrapper {
-    position: relative;
-    margin-top: 50px;
-  }
-  .commissionUpdate {
-    position: absolute;
-    bottom: 10px;
-    right: 90px;
-  }
-  .commissionDisplay {
-    text-align: left;
-    padding-bottom: 5px;
-    border-bottom: 1px solid #878ca4;
-    display: block;
-    width: 65%;
-    margin-left: 140px;
-  }
-  .commissionDisplayPendingChange {
-    color: #e96828;
-    background-color: #3d2c2c;
-    padding: 5px 10px;
-    border-radius: 8px;
-  }
-}
-
 .runnode {
 
   .runnode-content {
@@ -207,11 +171,6 @@
       flex-direction: column;
       justify-content: flex-start;
       align-items: flex-start;
-      .nodeTitleContainer {
-        button.nodeTypeTab {
-          margin-left: 15px;
-        }
-      }
     }
 
     .nodeTitleContainer {
@@ -226,18 +185,6 @@
       h6 {
         margin-left: 10px;
         margin-right: 15px;
-      }
-
-      button.nodeTypeTab {
-        border-radius: 32px;
-        margin-left: 10px;
-        background: #31364b;
-        color: #fff;
-        width: fit-content;
-        height: 40px;
-      }
-      button.nodeTypeTab.active {
-        background: #33d9dc;
       }
     }
   }

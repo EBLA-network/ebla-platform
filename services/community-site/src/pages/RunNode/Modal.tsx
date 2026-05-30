@@ -5,32 +5,22 @@ import { Modal } from '@ebla-network/ebla-ui';
 
 import CloseIcon from '../../assets/icons/close';
 import RegisterNode from './Modal/RegisterNode';
-import { ValidatorType } from '../../interfaces/Validator';
 
 interface RunValidatorModalProps {
   balance: ethers.BigNumber;
   isOpen: boolean;
-  validatorType: ValidatorType;
   onClose: () => void;
   onSuccess: () => void;
 }
 
-const RunValidatorModal = ({
-  balance,
-  isOpen,
-  validatorType,
-  onClose,
-  onSuccess,
-}: RunValidatorModalProps) => {
+const RunValidatorModal = ({ balance, isOpen, onClose, onSuccess }: RunValidatorModalProps) => {
   const isMobile = useMediaQuery({ query: `(max-width: 760px)` });
 
   if (!isOpen) {
     return null;
   }
 
-  const modal = (
-    <RegisterNode balance={balance} type={validatorType} onSuccess={onSuccess} onClose={onClose} />
-  );
+  const modal = <RegisterNode balance={balance} onSuccess={onSuccess} onClose={onClose} />;
 
   return (
     <Modal
