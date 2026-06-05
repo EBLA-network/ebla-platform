@@ -17,6 +17,7 @@ import Sidebar from './components/Sidebar/Sidebar';
 import Home from './pages/Home/Home';
 import Staking from './pages/Staking/Delegation';
 import RunValidator from './pages/RunNode/RunValidator';
+import NetworkStatus from './pages/NetworkStatus/NetworkStatus';
 import { WalletPopupProvider } from './services/useWalletPopup';
 
 import './App.scss';
@@ -64,6 +65,7 @@ const Root = () => {
               <Route exact path="/delegation" component={Staking} />
               <Route exact path="/staking" component={Staking} />
               <Route exact path="/node" component={RunValidator} />
+              <Route exact path="/network-status" component={NetworkStatus} />
               <Route exact path="/" component={Home} />
             </Switch>
           </div>

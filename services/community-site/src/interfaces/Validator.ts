@@ -25,6 +25,11 @@ export interface Validator {
   registrationBlock: number;
   ip?: string;
   id?: number;
+  // Slashing state, filled by useSlashing (undefined until the eligible-votes
+  // read resolves). isSlashed is true when eligibleVotes < expectedVotes.
+  isSlashed?: boolean;
+  eligibleVotes?: number;
+  expectedVotes?: number;
 }
 
 export interface ValidatorApi {

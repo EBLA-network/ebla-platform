@@ -9,6 +9,7 @@ import DeploySidebar from '../../assets/icons/deploySidebar';
 import ExplorerSidebar from '../../assets/icons/explorerSidebar';
 import GetStarted from '../../assets/icons/getStarted';
 import NodeSidebar from '../../assets/icons/nodeSidebar';
+import NetworkStatusSidebar from '../../assets/icons/networkStatusSidebar';
 import HamburgerIcon from '../../assets/icons/hamburger';
 
 import NavLink from '../NavLink/NavLink';
@@ -55,6 +56,10 @@ const Sidebar = () => {
         {
           Link: <NavLink label="Run a node" Icon={NodeSidebar} to="/node" />,
           name: 'node',
+        },
+        {
+          Link: <NavLink label="Network Status" Icon={NetworkStatusSidebar} to="/network-status" />,
+          name: 'network-status',
         },
         {
           Link: (

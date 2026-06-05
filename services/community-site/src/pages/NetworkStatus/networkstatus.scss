@@ -1,0 +1,30 @@
+.runnode {
+  .slashedCell {
+    width: 120px;
+    text-align: center;
+  }
+
+  .slashBadge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.4;
+
+    &.slashed {
+      color: #e23b3b;
+      background-color: rgba(226, 59, 59, 0.12);
+    }
+
+    &.ok {
+      color: #15ac5b;
+      background-color: rgba(21, 172, 91, 0.12);
+    }
+
+    &.unknown {
+      color: #6a7085;
+      background-color: rgba(106, 112, 133, 0.12);
+    }
+  }
+}
