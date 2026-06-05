@@ -1,0 +1,153 @@
+.vpGauge {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+
+  &-ring {
+    position: relative;
+    width: 240px;
+    height: 240px;
+  }
+
+  &-track {
+    stroke: rgba(255, 255, 255, 0.08);
+  }
+
+  &-arc {
+    transition: stroke-dasharray 1.2s cubic-bezier(0.4, 0, 0.2, 1),
+      stroke-dashoffset 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    &.active {
+      stroke: #15ac5b;
+    }
+
+    &.dead {
+      stroke: #e23b3b;
+    }
+  }
+
+  &-tick {
+    stroke: #ffffff;
+    stroke-width: 2.5;
+    stroke-dasharray: 2 2;
+  }
+
+  &-tickLabel {
+    fill: #c7cbe0;
+    font-size: 12px;
+    font-weight: 700;
+    text-anchor: middle;
+    dominant-baseline: middle;
+  }
+
+  &-center {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    pointer-events: none;
+  }
+
+  &-pct {
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 1;
+    color: #ffffff;
+  }
+
+  &-pctLabel {
+    margin-top: 4px;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    color: #878ca4;
+  }
+
+  &-margin {
+    margin-top: 8px;
+    font-size: 13px;
+    font-weight: 700;
+
+    &.safe {
+      color: #15ac5b;
+    }
+
+    &.warning {
+      color: #ffb020;
+    }
+
+    &.blocked {
+      color: #e23b3b;
+    }
+  }
+
+  &-legend {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 18px;
+    font-size: 13px;
+    color: #c7cbe0;
+  }
+
+  &-legendItem {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .dotLegend {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+
+    &.active {
+      background: #15ac5b;
+    }
+
+    &.dead {
+      background: #e23b3b;
+    }
+
+    &.quorum {
+      background: #ffffff;
+    }
+  }
+
+  // FX: pulse the ring red at/below quorum; soft amber glow when margin is thin.
+  &.blocked .vpGauge-ring {
+    animation: vpPulse 1.2s ease-in-out infinite;
+  }
+
+  &.warning .vpGauge-arc.active {
+    animation: vpGlow 1.6s ease-in-out infinite;
+  }
+}
+
+@keyframes vpPulse {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 2px rgba(226, 59, 59, 0.5));
+  }
+  50% {
+    filter: drop-shadow(0 0 14px rgba(226, 59, 59, 0.95));
+  }
+}
+
+@keyframes vpGlow {
+  0%,
+  100% {
+    filter: drop-shadow(0 0 1px rgba(255, 176, 32, 0.4));
+  }
+  50% {
+    filter: drop-shadow(0 0 10px rgba(255, 176, 32, 0.9));
+  }
+}

@@ -19,6 +19,7 @@ function useDpos() {
     'function getTotalEligibleVotesCount() view returns (uint64)',
     'function getUndelegations(address delegator, uint32 batch) view returns (tuple(uint256 stake, uint64 block, address validator, bool validator_exists, uint64 undelegation_id)[] undelegations, bool end)',
     'function getValidatorEligibleVotesCount(address validator) view returns (uint64)',
+    'function isValidatorEligible(address validator) view returns (bool)',
     'function getValidator(address validator) view returns (tuple(uint256 total_stake, uint256 commission_reward, uint16 commission, uint64 last_commission_change, uint16 undelegations_count, address owner, string description, string endpoint) validator_info)',
     'function getValidators(uint32 batch) view returns (tuple(address account, tuple(uint256 total_stake, uint256 commission_reward, uint16 commission, uint64 last_commission_change, uint16 undelegations_count, address owner, string description, string endpoint) info)[] validators, bool end)',
     'function getValidatorsFor(address owner, uint32 batch) view returns (tuple(address account, tuple(uint256 total_stake, uint256 commission_reward, uint16 commission, uint64 last_commission_change, uint16 undelegations_count, address owner, string description, string endpoint) info)[] validators, bool end)',

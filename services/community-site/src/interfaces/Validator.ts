@@ -6,6 +6,10 @@ export enum ValidatorStatus {
   ELIGIBLE = 'eligible',
 }
 
+// Authoritative on-chain node state, derived in useSlashing from the DPoS
+// precompile (isValidatorEligible + eligible/expected votes + total_stake).
+export type NodeState = 'active' | 'slashed' | 'ineligible' | 'inactive';
+
 export interface Validator {
   address: string;
   owner: string;
@@ -25,11 +29,13 @@ export interface Validator {
   registrationBlock: number;
   ip?: string;
   id?: number;
-  // Slashing state, filled by useSlashing (undefined until the eligible-votes
-  // read resolves). isSlashed is true when eligibleVotes < expectedVotes.
+  // On-chain status, filled by useSlashing (undefined until the reads resolve).
+  // isSlashed is true when an eligible validator's eligibleVotes < expectedVotes.
   isSlashed?: boolean;
   eligibleVotes?: number;
   expectedVotes?: number;
+  isEligibleOnchain?: boolean;
+  nodeState?: NodeState;
 }
 
 export interface ValidatorApi {
